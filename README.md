@@ -4,3 +4,4 @@
 
 
  Group Members: Banaag, Jayssen S.
+ Hotohot, John Vincent V.
