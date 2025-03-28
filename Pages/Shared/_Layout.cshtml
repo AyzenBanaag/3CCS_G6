@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Freeman&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarangayBayanihan Online</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Add your custom CSS -->
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <style>
+        /* 🌟 Background Style */
+        body {
+            background: url('/Images/BBO.png') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #f24c4c;
+        }
+
+            .navbar a, .navbar-brand {
+                color: white;
+            }
+
+                .navbar a:hover {
+                    color: #ffd700;
+                }
+
+        .btn-donate {
+            background-color: #ffcc00;
+            color: black;
+            border: none;
+        }
+
+            .btn-donate:hover {
+                background-color: #ff9900;
+            }
+
+        /* 🌟 Dropdown and Popup Styling */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            background-color: #ff6666;
+            border: none;
+            text-align: center; /* Center text horizontally */
+            width: 100%; /* Make dropdown full width */
+            left: 50%; /* Center dropdown horizontally */
+            transform: translateX(-50%); /* Adjust for centering */
+        }
+
+            .dropdown-menu a {
+                color: white;
+                font-weight: bold;
+                transition: 0.3s;
+                display: block; /* Make links block-level for full width */
+                padding: 10px 0; /* Add padding for better spacing */
+                text-align: center; /* Center text inside links */
+            }
+
+                .dropdown-menu a:hover {
+                    background-color: #ffcc00;
+                    color: black;
+                }
+
+        /* 🌟 Popup Styling */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1050;
+            width: 60%;
+            height: auto;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center; /* Center text horizontally */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center text vertically */
+            align-items: center; /* Center text horizontally */
+        }
+
+            .popup h2 {
+                color: #f24c4c;
+                margin-bottom: 20px; /* Add spacing below the title */
+            }
+
+            .popup p {
+                font-size: 18px;
+                margin-bottom: 20px; /* Add spacing below the content */
+            }
+
+            .popup button {
+                background: #f24c4c;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                margin-top: 15px;
+                transition: 0.3s;
+            }
+
+                .popup button:hover {
+                    background: #ffcc00;
+                    color: black;
+                }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1040;
+        }
+
+        .welcome-text {
+            text-transform: uppercase; /* Convert text to uppercase */
+            font-weight: bold; /* Make text bold */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Bayanihan Online</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Events at the BBO</a></li>
+
+                        <!-- ✅ Dropdown with Popup for "Who we are" -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="whoWeAre" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Who we are
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" onclick="openPopup('Our Mission')">Our Mission</a></li>
+                                <li><a href="#" onclick="openPopup('Meet the Team')">Meet the Team</a></li>
+                                <li><a href="#" onclick="openPopup('Murals')">Murals</a></li>
+                                <li><a href="#" onclick="openPopup('Blog')">Blog</a></li>
+                                <li><a href="#" onclick="openPopup('Media Landings')">Media Landings</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- ✅ Dropdown with Popup for "Programs & Projects" -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="programsAndProjects" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Programs & Projects
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" onclick="openPopup('Community Based Health Program')">Community Based Health Program</a></li>
+                                <li><a href="#" onclick="openPopup('Education Initiatives')">Education Initiatives</a></li>
+                                <li><a href="#" onclick="openPopup('Environmental Projects')">Environmental Projects</a></li>
+                                <li><a href="#" onclick="openPopup('Youth Development')">Youth Development</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="#">Volunteer</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Reservations</a></li>
+                        <li class="nav-item"><a class="btn btn-donate" href="#">Donate</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="text-center p-4">
+        <p>&copy; 2025 Bayanihan Online. All rights reserved.</p>
+    </footer>
+
+    <!-- Add jQuery -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <!-- Add Bootstrap JS -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // 🌟 JavaScript for Popup Functionality
+        function openPopup(title) {
+            document.getElementById('popup-title').innerText = title;
+
+            // Popup Content Based on Menu
+            let content = '';
+            switch (title) {
+                case 'Our Mission':
+                    content = 'Our mission is to empower the community through service and collaboration.';
+                    break;
+                case 'Meet the Team':
+                    content = 'Meet the passionate individuals behind Bayanihan Online.';
+                    break;
+                case 'Murals':
+                    content = 'Explore the beautiful and meaningful murals created by local artists.';
+                    break;
+                case 'Blog':
+                    content = 'Read our latest blogs and stay updated with our activities.';
+                    break;
+                case 'Media Landings':
+                    content = 'Check out our media presence and featured stories.';
+                    break;
+                case 'Community Based Health Program':
+                    content = 'Our Community Based Health Program focuses on providing accessible healthcare services to underserved areas.';
+                    break;
+                case 'Education Initiatives':
+                    content = 'We support education through scholarships, school supplies, and after-school programs.';
+                    break;
+                case 'Environmental Projects':
+                    content = 'Our environmental projects aim to promote sustainability and protect natural resources.';
+                    break;
+                case 'Youth Development':
+                    content = 'We empower youth through leadership training, mentorship, and skills development programs.';
+                    break;
+                default:
+                    content = 'Information not available.';
+            }
+
+            document.getElementById('popup-content').innerText = content;
+
+            // Show Popup
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* Styling for header */
+header {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 200px;
+}
+
+h1, h2 {
+    margin-left: 50px;
+}
+
+/* Styling for navbar links */
+.navbar a {
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+    .navbar a:hover {
+        color: #ffc107 !important;
+    }
+
+/* Button Styling */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: 0.3s;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+.btn-outline-danger {
+    transition: 0.3s;
+}
+
+    .btn-outline-danger:hover {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+/* Footer */
+footer {
+    font-size: 14px;
+}
