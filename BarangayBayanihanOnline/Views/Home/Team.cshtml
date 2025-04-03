@@ -1,0 +1,217 @@
+﻿@{
+    ViewData["Title"] = "Meet The Team";
+}
+
+<div class="team-page">
+    <div class="team-hero">
+        <h1>Meet Our Team</h1>
+        <p class="lead">The passionate individuals behind Barangay Bayanihan Online</p>
+    </div>
+
+    <div class="container">
+        <!-- Leadership Team -->
+        <div class="team-section">
+            <h2 class="section-title">GROUP 6</h2>
+            <div class="row">
+                <div class="col-md-4 team-member">
+                    <img src="/images/team1.jpg" alt="Banias" class="img-fluid team-photo">
+                    <div class="team-info">
+                        <h3>Charles Adrian Banias</h3>
+                        <p class="position">Leader</p>
+                        <p class="bio">Hindi marunong mag code.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 team-member">
+                    <img src="/images/team2.jpg" alt="Hotohot" class="img-fluid team-photo">
+                    <div class="team-info">
+                        <h3>John Vincent Hotohot</h3>
+                        <p class="position">Programmer</p>
+                        <p class="bio">Malala.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 team-member">
+                    <img src="/images/team3.jpg" alt="Banaag" class="img-fluid team-photo">
+                    <div class="team-info">
+                        <h3>Jayssen S. Banaag</h3>
+                        <p class="position">Programmer</p>
+                        <p class="bio">Biker.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 team-member">
+                    <img src="/images/team3.jpg" alt="Sudlon" class="img-fluid team-photo">
+                    <div class="team-info">
+                        <h3>John Sidrick Sudlon</h3>
+                        <p class="position">Programmer</p>
+                        <p class="bio">Biker.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 team-member">
+                    <img src="/images/team3.jpg" alt="Gadudo" class="img-fluid team-photo">
+                    <div class="team-info">
+                        <h3>Mary Rose Gadudo</h3>
+                        <p class="position">Programmer</p>
+                        <p class="bio">Biker.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+@section Styles {
+    <style>
+        .team-page {
+            padding-bottom: 50px;
+        }
+
+        .team-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), url('/images/team-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+            .team-hero h1 {
+                font-family: 'Kaushan Script', cursive;
+                font-size: 4rem;
+                color: #FFD700;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            }
+
+            .team-hero .lead {
+                font-size: 1.5rem;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+        .team-section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            color: #f24c4c;
+            font-family: 'Freeman', sans-serif;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+            .section-title::after {
+                content: '';
+                display: block;
+                width: 100px;
+                height: 3px;
+                background: #FFD700;
+                margin: 15px auto;
+            }
+
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+            transition: all 0.3s;
+        }
+
+        .team-photo {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #f24c4c;
+            margin: 0 auto 20px;
+            transition: all 0.3s;
+        }
+
+        .team-member:hover .team-photo {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .team-info h3 {
+            color: #f24c4c;
+            font-family: 'Poppins', sans-serif;
+            margin-top: 15px;
+        }
+
+        .position {
+            color: #FFD700;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            margin-top: 15px;
+        }
+
+            .social-links a {
+                color: #f24c4c;
+                font-size: 1.2rem;
+                margin: 0 5px;
+                transition: all 0.3s;
+            }
+
+                .social-links a:hover {
+                    color: #FFD700;
+                    transform: translateY(-3px);
+                }
+
+        .volunteer {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .volunteer-photo {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #f24c4c;
+            margin: 0 auto 15px;
+        }
+
+        .volunteer h4 {
+            color: #f24c4c;
+            font-family: 'Poppins', sans-serif;
+            margin-top: 10px;
+        }
+
+        @@media (max-width: 768px) {
+            .team-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .team-hero .lead {
+                font-size: 1.2rem;
+            }
+
+            .team-photo {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+}

@@ -1,0 +1,200 @@
+/* Base Styles */
+body {
+    background: url('/images/BBO.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #f24c4c;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1.5rem;
+}
+
+.navbar a, .navbar-brand {
+    color: white !important;
+}
+
+.navbar a:hover {
+    color: #ffd700 !important;
+}
+
+.btn-donate {
+    background-color: #ffcc00;
+    color: black !important;
+    border: none;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.btn-donate:hover {
+    background-color: #ff9900;
+}
+
+/* Dropdown Menu */
+.navbar .dropdown-menu {
+    background-color: #f24c4c;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar .dropdown-item {
+    color: white;
+    padding: 10px 20px;
+    transition: all 0.3s;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: #ffcc00;
+    color: black !important;
+    padding-left: 25px;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding-bottom: 60px;
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(242, 76, 76, 0.9);
+    color: white;
+}
+
+/* Home Page */
+.home-hero {
+    text-align: center;
+    padding: 100px 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.home-hero h1 {
+    font-size: 3.5rem;
+}
+
+.home-hero .mabuhay-blue {
+    font-family: 'Poppins', sans-serif;
+    color: #1E90FF;
+    font-weight: bold;
+}
+
+.home-hero .welcome-yellow {
+    font-family: 'Freeman', sans-serif;
+    color: #FFD700;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.home-hero .bayanihan-red {
+    font-family: 'Kaushan Script', cursive;
+    color: #FF4500;
+    font-size: 3rem;
+}
+
+.btn-twitter {
+    background-color: #1DA1F2;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.btn-twitter:hover {
+    background-color: #1991DB;
+    color: white;
+}
+
+/* Mission Page */
+.mission-hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/mission-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.mission-hero h1 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 4rem;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.mission-content h2 {
+    color: #f24c4c;
+    font-family: 'Freeman', sans-serif;
+    margin-bottom: 20px;
+}
+
+.value-card {
+    background: rgba(255,255,255,0.9);
+    padding: 25px;
+    border-radius: 10px;
+    height: 100%;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+    border-left: 5px solid #f24c4c;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.value-card h3 {
+    color: #f24c4c;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Who We Are Page */
+.team-section {
+    padding: 60px 0;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #f24c4c;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+.team-member img:hover {
+    transform: scale(1.05);
+}
+
+.team-member h3 {
+    color: #f24c4c;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .home-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .mission-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
