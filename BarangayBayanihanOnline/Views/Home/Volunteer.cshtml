@@ -1,0 +1,354 @@
+﻿@{
+    ViewData["Title"] = "Join the Bayanihan Spirit";
+}
+
+<div class="volunteer-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Join the Bayanihan Spirit</h1>
+            <p class="subtitle">Be part of our community's growth and cultural preservation</p>
+            <div class="cta-buttons">
+                <a href="#opportunities" class="btn btn-outline">View Opportunities</a>
+                <a href="#volunteer-form" class="btn btn-primary">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="stats-section">
+        <div class="stat-item">
+            <div class="stat-number">250+</div>
+            <div class="stat-label">Active Volunteers</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Events Yearly</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">1000+</div>
+            <div class="stat-label">Lives Impacted</div>
+        </div>
+    </section>
+
+    <!-- Opportunities Section -->
+    <section id="opportunities" class="opportunities-section">
+        <div class="section-header">
+            <h2>Volunteer Opportunities</h2>
+            <p>Find the perfect way to contribute your skills and passion</p>
+        </div>
+
+        <div class="opportunity-cards">
+            <div class="opportunity-card">
+                <h3>Event Volunteers</h3>
+                <ul class="benefits-list">
+                    <li>Flexible hours</li>
+                    <li>Team environment</li>
+                    <li>Various roles available</li>
+                </ul>
+                <a href="#volunteer-form" class="btn btn-card">Apply Now</a>
+            </div>
+
+            <!-- Additional opportunity cards can be added here -->
+        </div>
+    </section>
+
+    <!-- Volunteer Form -->
+    <section id="volunteer-form" class="form-section">
+        <h2>Ready to Volunteer?</h2>
+        <form class="volunteer-form">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label>Areas of Interest</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="interest" value="events"> Event Volunteers</label>
+                    <label><input type="checkbox" name="interest" value="youth"> Youth Programs</label>
+                    <label><input type="checkbox" name="interest" value="cultural"> Cultural Activities</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-submit">Submit Application</button>
+        </form>
+    </section>
+</div>
+
+@section Styles {
+    <style>
+        /* Base Styles */
+        .volunteer-page {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/community-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 0 20px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #e74c3c;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Opportunities Section */
+        .opportunities-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+            .section-header h2 {
+                font-size: 2rem;
+                color: #2c3e50;
+                margin-bottom: 1rem;
+            }
+
+        .opportunity-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .opportunity-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid #e74c3c;
+        }
+
+            .opportunity-card h3 {
+                color: #2c3e50;
+                margin-bottom: 1.5rem;
+                font-size: 1.5rem;
+            }
+
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+            .benefits-list li {
+                margin-bottom: 0.8rem;
+                position: relative;
+                padding-left: 25px;
+            }
+
+                .benefits-list li:before {
+                    content: "•";
+                    color: #e74c3c;
+                    font-size: 1.5rem;
+                    position: absolute;
+                    left: 0;
+                    top: -3px;
+                }
+
+        /* Form Section */
+        .form-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+            .form-section h2 {
+                font-size: 2rem;
+                color: #2c3e50;
+                margin-bottom: 1.5rem;
+            }
+
+        .volunteer-form {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+            .checkbox-group label {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-weight: normal;
+                cursor: pointer;
+            }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+        }
+
+            .btn-primary:hover {
+                background-color: #c0392b;
+                transform: translateY(-2px);
+            }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+            .btn-outline:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                transform: translateY(-2px);
+            }
+
+        .btn-card {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+            .btn-card:hover {
+                background-color: #c0392b;
+            }
+
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+            .btn-submit:hover {
+                background-color: #219653;
+                transform: translateY(-2px);
+            }
+
+        /* Responsive Design */
+        @@media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stats-section {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .volunteer-form {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+}

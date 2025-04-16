@@ -2,13 +2,13 @@
     ViewData["Title"] = "Home";
 }
 
-<div class="home-hero">
+<!-- Fixed Header Text -->
+<div class="fixed-text">
     <h1 class="display-4">
         <span class="mabuhay-blue">Mabuhay!</span>
         <span class="welcome-yellow">WELCOME TO</span>
     </h1>
     <h2 class="bayanihan-red">Barangay Bayanihan Online</h2>
-
     <div class="mt-5">
         <a href="#" class="btn btn-twitter">
             <i class="fab fa-twitter"></i> Learn More
@@ -18,3 +18,92 @@
         </a>
     </div>
 </div>
+
+<!-- Slideshow -->
+<div id="homeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="home-hero slide-1"></div>
+        </div>
+        <div class="carousel-item">
+            <div class="home-hero slide-2"></div>
+        </div>
+        <div class="carousel-item">
+            <div class="home-hero slide-3"></div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        /* Home Page */
+        .home-hero {
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Fixed Text on Top */
+        .fixed-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+
+            .fixed-text h1 {
+                font-size: 3.5rem;
+            }
+
+            .fixed-text .mabuhay-blue {
+                font-family: 'Kaushan Script', cursive;
+                color: #1E90FF;
+                font-weight: bold;
+            }
+
+            .fixed-text .welcome-yellow {
+                font-family: 'Freeman', sans-serif;
+                color: #FFD700;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            .fixed-text .bayanihan-red {
+                font-family: 'Kaushan Script', cursive;
+                color: #FF4500;
+                font-size: 3rem;
+            }
+
+        .btn-twitter {
+            background-color: #1DA1F2;
+            color: white;
+            border-radius: 20px;
+            padding: 8px 20px;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+            .btn-twitter:hover {
+                background-color: #1991DB;
+                color: white;
+            }
+
+        /* Slideshow Backgrounds */
+        .slide-1 {
+            background-image: url('/Images/alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1).jpg');
+        }
+
+        .slide-2 {
+            background-image: url('/Images/larm-rmah-AEaTUnvneik-unsplash.jpg');
+        }
+
+        .slide-3 {
+            background-image: url('/Images/trinh-minh-th-kD4xYPPYmlg-unsplash.jpg');
+        }
+    </style>
+}

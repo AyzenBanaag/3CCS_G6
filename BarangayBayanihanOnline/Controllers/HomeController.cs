@@ -22,5 +22,23 @@ namespace BarangayBayanihanOnline.Controllers
         {
             return View();
         }
+
+        public IActionResult OurProgram()
+        {
+            return View();
+        }
+        public IActionResult ContactUs()
+        {
+            return View();
+        }
+        public IActionResult MyEvents()
+        {
+            return View();
+        }
+        public IActionResult Volunteer()
+        {
+            return View();
+        }
+
     }
 }

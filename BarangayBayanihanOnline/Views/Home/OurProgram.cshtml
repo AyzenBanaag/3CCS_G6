@@ -1,0 +1,546 @@
+﻿@{
+    ViewData["Title"] = "Our Programs & Projects";
+}
+
+<div class="programs-page">
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1>Building Community Through Bayanihan</h1>
+            <p class="hero-subtitle">Discover how we're creating impact through collective action</p>
+            <div class="hero-cta">
+                <a href="#programs" class="btn btn-primary">Our Programs</a>
+                <a href="#projects" class="btn btn-outline">Current Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs-section">
+        <div class="section-header">
+            <h2>Our Core Programs</h2>
+            <p>Sustained initiatives that strengthen our community</p>
+        </div>
+
+        <div class="program-cards">
+            <!-- Program 1 -->
+            <div class="program-card donation-program">
+                <div class="program-image">
+                    <img src="/images/bayanihan1.jpg" alt="Community donation program">
+                </div>
+                <div class="program-body">
+                    <h3>Community Based Donation Program</h3>
+                    <p>The Barangay Bayanihan donation program encourages community members to contribute what they can to support those in need.</p>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check-circle"></i> Food, clothing & educational materials</li>
+                        <li><i class="fas fa-check-circle"></i> Supports vulnerable community members</li>
+                        <li><i class="fas fa-check-circle"></i> Organized by local barangay leaders</li>
+                    </ul>
+                    <div class="program-footer">
+                        <a href="#" class="btn btn-program">Learn More</a>
+                        <a href="https://barangay_bayanihan.org" class="program-link">barangay_bayanihan.org</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program 2 -->
+            <div class="program-card pantry-program">
+                <div class="program-image">
+                    <img src="/images/bayanihan2.jpg" alt="Community pantry program">
+                </div>
+                <div class="program-body">
+                    <h3>Barangay Bayanihan Program</h3>
+                    <p>Various initiatives to support and uplift the community, especially those facing difficult circumstances.</p>
+                    <ul class="program-features">
+                        <li><i class="fas fa-check-circle"></i> Barangay-led donation drives</li>
+                        <li><i class="fas fa-check-circle"></i> Essential goods distribution</li>
+                        <li><i class="fas fa-check-circle"></i> Community volunteer activities</li>
+                    </ul>
+                    <div class="program-footer">
+                        <a href="#" class="btn btn-program">Learn More</a>
+                        <a href="https://barangay_bayanihan.org" class="program-link">barangay_bayanihan.org</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="section-header">
+            <h2>Current Projects</h2>
+            <p>Active initiatives making a difference today</p>
+        </div>
+
+        <div class="project-showcase">
+            <!-- Project 1 -->
+            <div class="project-item health-project">
+                <div class="project-image">
+                    <img src="/images/project1.jpg" alt="Community Health Project">
+                    <div class="project-badge">Daily</div>
+                </div>
+                <div class="project-info">
+                    <h3>Community Health Initiative</h3>
+                    <p>Providing free medical check-ups and health education to underserved families in our barangay.</p>
+                    <div class="project-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Barangay Health Center</span>
+                        <span><i class="fas fa-users"></i> 150+ beneficiaries monthly</span>
+                    </div>
+                    <a href="#" class="project-cta">View Project Details →</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-item education-project">
+                <div class="project-image">
+                    <img src="/images/project2.jpg" alt="Youth Education Program">
+                    <div class="project-badge">Weekly</div>
+                </div>
+                <div class="project-info">
+                    <h3>Youth Education Program</h3>
+                    <p>After-school tutoring and mentorship program for elementary and high school students.</p>
+                    <div class="project-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Barangay Hall</span>
+                        <span><i class="fas fa-users"></i> 80+ students enrolled</span>
+                    </div>
+                    <a href="#" class="project-cta">View Project Details →</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-item senior-project">
+                <div class="project-image">
+                    <img src="/images/project3.jpg" alt="Senior Citizen Care">
+                    <div class="project-badge">Weekly</div>
+                </div>
+                <div class="project-info">
+                    <h3>Senior Citizen Care</h3>
+                    <p>Weekly wellness checks and social activities for our elderly community members.</p>
+                    <div class="project-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Multi-Purpose Hall</span>
+                        <span><i class="fas fa-users"></i> 45+ seniors served</span>
+                    </div>
+                    <a href="#" class="project-cta">View Project Details →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-card">
+            <h2>Join the Bayanihan Spirit</h2>
+            <p>Your participation can help strengthen our community</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-donate">Donate Now</a>
+                <a href="#" class="btn btn-volunteer">Volunteer Today</a>
+            </div>
+        </div>
+    </section>
+</div>
+
+@section Styles {
+    <style>
+        /* Base Styles */
+        .programs-page {
+            font-family: 'Poppins', sans-serif;
+            color: #2d3436;
+            line-height: 1.6;
+        }
+
+        /* Hero Banner */
+        .hero-banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/community-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-banner h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        /* Section Header */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 0 20px;
+        }
+
+            .section-header h2 {
+                font-size: 2.3rem;
+                color: #1b1d32;
+                margin-bottom: 1rem;
+                font-weight: 700;
+            }
+
+            .section-header p {
+                font-size: 1.1rem;
+                color: #7f8c8d;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+        /* Programs Section */
+        .programs-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .program-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+            .program-card:hover {
+                transform: translateY(-5px);
+            }
+
+        .program-image {
+            height: 220px;
+            overflow: hidden;
+        }
+
+            .program-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s;
+            }
+
+        .program-card:hover .program-image img {
+            transform: scale(1.05);
+        }
+
+        .program-body {
+            padding: 25px;
+        }
+
+            .program-body h3 {
+                font-size: 1.5rem;
+                color: #1b1d32;
+                margin-top: 0;
+                margin-bottom: 15px;
+            }
+
+            .program-body p {
+                color: #555;
+                margin-bottom: 20px;
+            }
+
+        .program-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+            .program-features li {
+                margin-bottom: 10px;
+                display: flex;
+                align-items: flex-start;
+            }
+
+            .program-features i {
+                color: #e74c3c;
+                margin-right: 10px;
+                margin-top: 3px;
+                flex-shrink: 0;
+            }
+
+        .program-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .program-link {
+            color: #3498db;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+            .program-link:hover {
+                text-decoration: underline;
+            }
+
+        /* Projects Section */
+        .projects-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .project-showcase {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .project-item {
+            display: flex;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+            .project-item:hover {
+                transform: translateY(-5px);
+            }
+
+        .project-image {
+            width: 40%;
+            position: relative;
+        }
+
+            .project-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        .project-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #e74c3c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .project-info {
+            width: 60%;
+            padding: 30px;
+            background: white;
+        }
+
+            .project-info h3 {
+                font-size: 1.5rem;
+                color: #1b1d32;
+                margin-top: 0;
+                margin-bottom: 15px;
+            }
+
+            .project-info p {
+                color: #555;
+                margin-bottom: 20px;
+            }
+
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+            .project-meta i {
+                color: #e74c3c;
+                margin-right: 5px;
+            }
+
+        .project-cta {
+            color: #e74c3c;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+            .project-cta:hover {
+                text-decoration: underline;
+            }
+
+            .project-cta::after {
+                content: "→";
+                margin-left: 8px;
+                transition: transform 0.3s;
+            }
+
+            .project-cta:hover::after {
+                transform: translateX(5px);
+            }
+
+        /* Impact Section */
+        .impact-section {
+            background: linear-gradient(135deg, #1b1d32, #2c3e50);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .impact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+            .impact-content h2 {
+                font-size: 2.3rem;
+                margin-bottom: 1rem;
+            }
+
+            .impact-content p {
+                font-size: 1.1rem;
+                opacity: 0.9;
+                margin-bottom: 40px;
+            }
+
+        .impact-stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .stat-item {
+            padding: 0 20px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #e74c3c;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .cta-card {
+            background: white;
+            border-radius: 10px;
+            padding: 50px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+            .cta-card h2 {
+                font-size: 2rem;
+                color: #1b1d32;
+                margin-bottom: 1rem;
+            }
+
+            .cta-card p {
+                font-size: 1.1rem;
+                color: #7f8c8d;
+                margin-bottom: 30px;
+            }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+        }
+
+            .btn-primary:hover {
+                background-color: #c0392b;
+                transform: translateY(-3px);
+            }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+            .btn-outline:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                transform: translateY(-3px);
+            }
+
+        .btn-program {
+            background-color: #1b1d32;
+            color: white;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-radius: 5px;
+        }
+
+            .btn-program:hover {
+                background-color: #2c3e50;
+            }
+
+        .btn-donate {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+            .btn-donate:hover {
+                background-color: #c0392b;
+                transform: translateY(-3px);
+            }
+
+        .btn-volunteer {
+            background-color: #1b1d32;
+            color: white;
+        }
+
+            .btn-volunteer:hover {
+                background-color: #2c3e50;
+                transform: translateY(-3px);
+            }
+    </style>
+}

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BarangayBayanihanOnline")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c22256990b8c66d77e69f5da27b356a5f4bf68c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BarangayBayanihanOnline")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BarangayBayanihanOnline")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,6 +1,6 @@
-/* Base Styles */
+/* Base Styles*/
 body {
-    background: url('/images/BBO.png') no-repeat center center fixed;
+    background: url('') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     font-family: Arial, sans-serif;
@@ -71,94 +71,9 @@ main {
     color: white;
 }
 
-/* Home Page */
-.home-hero {
-    text-align: center;
-    padding: 100px 0;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-}
 
-.home-hero h1 {
-    font-size: 3.5rem;
-}
 
-.home-hero .mabuhay-blue {
-    font-family: 'Poppins', sans-serif;
-    color: #1E90FF;
-    font-weight: bold;
-}
 
-.home-hero .welcome-yellow {
-    font-family: 'Freeman', sans-serif;
-    color: #FFD700;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.home-hero .bayanihan-red {
-    font-family: 'Kaushan Script', cursive;
-    color: #FF4500;
-    font-size: 3rem;
-}
-
-.btn-twitter {
-    background-color: #1DA1F2;
-    color: white;
-    border-radius: 20px;
-    padding: 8px 20px;
-    font-weight: bold;
-    margin: 10px;
-}
-
-.btn-twitter:hover {
-    background-color: #1991DB;
-    color: white;
-}
-
-/* Mission Page */
-.mission-hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/mission-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 100px 0;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.mission-hero h1 {
-    font-family: 'Kaushan Script', cursive;
-    font-size: 4rem;
-    color: #FFD700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-.mission-content h2 {
-    color: #f24c4c;
-    font-family: 'Freeman', sans-serif;
-    margin-bottom: 20px;
-}
-
-.value-card {
-    background: rgba(255,255,255,0.9);
-    padding: 25px;
-    border-radius: 10px;
-    height: 100%;
-    transition: all 0.3s;
-    margin-bottom: 20px;
-    border-left: 5px solid #f24c4c;
-}
-
-.value-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.value-card h3 {
-    color: #f24c4c;
-    font-family: 'Poppins', sans-serif;
-}
 
 /* Who We Are Page */
 .team-section {
@@ -170,7 +85,7 @@ main {
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid #f24c4c;
+    border: 5px solid s#f24c4c;
     margin-bottom: 20px;
     transition: all 0.3s;
 }
@@ -198,3 +113,37 @@ main {
         font-size: 1.2rem;
     }
 }
+/* Custom Modal Styling */
+.modal-content {
+    border-radius: 20px;
+    border: none;
+}
+
+.modal-header {
+    text-align: center;
+    border-bottom: none;
+}
+
+.form-control {
+    border-radius: 50px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+.btn-light {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+}
+
+    .btn-light:hover {
+        background-color: #e2e6ea;
+    }

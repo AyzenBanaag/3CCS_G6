@@ -1,10 +1,22 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\Images\alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1).jpg
+wwwroot\Images\alejandra-ezquerro-WQWJd6mZS7Q-unsplash.jpg
+wwwroot\Images\banaag.jpg
+wwwroot\Images\banias.jpg
+wwwroot\Images\bayanihan1.jpg
+wwwroot\Images\bayanihan2.jpg
 wwwroot\Images\BBO.png
 wwwroot\Images\BBO1.png
 wwwroot\Images\BBO2.png
 wwwroot\Images\BBO3.png
 wwwroot\Images\BBO4.png
+wwwroot\Images\gadudo.jpg
+wwwroot\Images\hotohot.png
+wwwroot\Images\larm-rmah-AEaTUnvneik-unsplash.jpg
+wwwroot\Images\Logo.png
+wwwroot\Images\sudlon.png
+wwwroot\Images\trinh-minh-th-kD4xYPPYmlg-unsplash.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

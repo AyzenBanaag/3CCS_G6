@@ -1,0 +1,316 @@
+﻿@{
+    ViewData["Title"] = "Create Event";
+}
+
+<div class="event-creation-page">
+    <div class="event-header">
+        <div class="header-content">
+            <h1>Create New Event</h1>
+            <p class="subtitle">Bring your community together with memorable events</p>
+        </div>
+        <div class="header-icon">
+            <i class="fas fa-calendar-plus"></i>
+        </div>
+    </div>
+
+    <form method="post" class="event-form">
+        <!-- Event Basics Section -->
+        <div class="form-section">
+            <h2 class="section-title">
+                <span class="icon-circle"><i class="fas fa-info-circle"></i></span>
+                Event Basics
+            </h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="eventName">Event Name <span class="required">*</span></label>
+                    <input type="text" id="eventName" name="eventName" required placeholder="Community Fiesta Night">
+                </div>
+
+                <div class="form-group">
+                    <label for="startDate">Start Date & Time <span class="required">*</span></label>
+                    <input type="datetime-local" id="startDate" name="startDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="endDate">End Date & Time <span class="required">*</span></label>
+                    <input type="datetime-local" id="endDate" name="endDate" required>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event Settings Section -->
+        <div class="form-section">
+            <h2 class="section-title">
+                <span class="icon-circle"><i class="fas fa-cog"></i></span>
+                Event Settings
+            </h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="isVirtual">Event Type</label>
+                    <div class="select-wrapper">
+                        <select id="isVirtual" name="isVirtual">
+                            <option value="in-person">In-Person</option>
+                            <option value="virtual">Virtual</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="visibility">Visibility</label>
+                    <div class="select-wrapper">
+                        <select id="visibility" name="visibility">
+                            <option value="public">Public</option>
+                            <option value="private">Private</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="repeatEvent">Repeat</label>
+                    <div class="select-wrapper">
+                        <select id="repeatEvent" name="repeatEvent">
+                            <option value="never">Does not repeat</option>
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event Details Section -->
+        <div class="form-section">
+            <h2 class="section-title">
+                <span class="icon-circle"><i class="fas fa-align-left"></i></span>
+                Event Details
+            </h2>
+            <div class="form-group">
+                <label for="details">Description</label>
+                <textarea id="details" name="details" rows="5" placeholder="Tell attendees what to expect..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="coHosts">Co-Hosts</label>
+                <div class="input-with-tag">
+                    <input type="text" id="coHosts" name="coHosts" placeholder="Enter email addresses">
+                    <span class="input-tag">Separate with commas</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-create">
+                <i class="fas fa-check-circle"></i> Create Event
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Styles {
+    <style>
+        /* Base Styles */
+        .event-creation-page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            font-family: 'Poppins', sans-serif;
+            color: #2d3436;
+        }
+
+        /* Header Styles */
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            background: linear-gradient(135deg, #0984e3, #6c5ce7);
+            padding: 2rem;
+            border-radius: 12px;
+            color: white;
+            box-shadow: 0 4px 20px rgba(108, 92, 231, 0.2);
+        }
+
+        .header-content h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .header-icon {
+            font-size: 3.5rem;
+            opacity: 0.2;
+        }
+
+        /* Form Sections */
+        .form-section {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            color: #2d3436;
+        }
+
+        .icon-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: #dfe6e9;
+            border-radius: 50%;
+            margin-right: 12px;
+            color: #0984e3;
+        }
+
+        /* Form Grid Layout */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .required {
+            color: #e17055;
+        }
+
+        input[type="text"],
+        input[type="datetime-local"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #dfe6e9;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.2s;
+            background-color: #f9f9f9;
+        }
+
+        input[type="text"]:focus,
+        input[type="datetime-local"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #74b9ff;
+            box-shadow: 0 0 0 3px rgba(116, 185, 255, 0.2);
+            outline: none;
+            background-color: white;
+        }
+
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .select-wrapper {
+            position: relative;
+        }
+
+        .select-wrapper::after {
+            content: "▼";
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: #636e72;
+            font-size: 0.7rem;
+        }
+
+        select {
+            appearance: none;
+            padding-right: 2.5rem;
+        }
+
+        .input-with-tag {
+            position: relative;
+        }
+
+        .input-tag {
+            position: absolute;
+            right: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #dfe6e9;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: #636e72;
+        }
+
+        /* Submit Button */
+        .form-actions {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .btn-create {
+            background: linear-gradient(135deg, #00b894, #55efc4);
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
+        }
+
+        .btn-create:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4);
+        }
+
+        /* Responsive Adjustments */
+        @@media (max-width: 768px) {
+            .event-header {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+            }
+
+            .header-icon {
+                margin-top: 1rem;
+                font-size: 2.5rem;
+            }
+
+            .form-section {
+                padding: 1.25rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+}

@@ -10,55 +10,45 @@
 
     <div class="container">
         <div class="social-embed">
-            <div class="row">
-                <!-- Facebook Post 1 -->
-                <div class="col-md-6 mb-4">
-                    <div class="fb-post-card">
-                        <div class="fb-post-header">
-                            <img src="/images/facebook-icon.png" alt="Facebook" class="fb-icon">
-                            <div>
-                                <h4>Barangay Bayanihan Online</h4>
-                                <span class="post-date">June 15, 2023</span>
-                            </div>
-                        </div>
-                        <div class="fb-post-content">
-                            <p>Celebrating our community's resilience at the annual Barangay Fiesta! See how we're keeping traditions alive in the digital age.</p>
-                            <img src="/images/media1.jpg" alt="Event photo" class="img-fluid post-image">
-                        </div>
-                        <div class="fb-post-actions">
-                            <span><i class="fas fa-thumbs-up"></i> 245</span>
-                            <span><i class="fas fa-comment"></i> 38</span>
-                            <span><i class="fas fa-share"></i> 12</span>
-                        </div>
-                    </div>
+            <!-- Facebook Post 1 -->
+            <div class="fb-post">
+                <div class="fb-post-header">
+                    <span class="platform-name">Facebook</span>
+                    <h3>Barangay Bayanihan Online</h3>
+                    <span class="post-date">June 15, 2023</span>
                 </div>
+                <div class="fb-post-content">
+                    <p>Celebrating our community's resilience at the annual Barangay Fiesta! See how we're keeping traditions alive in the digital age.</p>
+                    <div class="post-image-label">Event photo</div>
+                </div>
+                <div class="fb-post-actions">
+                    <span>245</span>
+                    <span>38</span>
+                    <span>12</span>
+                </div>
+            </div>
 
-                <!-- Facebook Post 2 -->
-                <div class="col-md-6 mb-4">
-                    <div class="fb-post-card">
-                        <div class="fb-post-header">
-                            <img src="/images/facebook-icon.png" alt="Facebook" class="fb-icon">
-                            <div>
-                                <h4>Barangay Bayanihan Online</h4>
-                                <span class="post-date">May 28, 2023</span>
-                            </div>
-                        </div>
-                        <div class="fb-post-content">
-                            <p>Our youth mentorship program is changing lives! Meet some of our amazing participants and learn about their cultural journey.</p>
-                            <img src="/images/media2.jpg" alt="Program photo" class="img-fluid post-image">
-                        </div>
-                        <div class="fb-post-actions">
-                            <span><i class="fas fa-thumbs-up"></i> 189</span>
-                            <span><i class="fas fa-comment"></i> 24</span>
-                            <span><i class="fas fa-share"></i> 8</span>
-                        </div>
-                    </div>
+            <!-- Facebook Post 2 -->
+            <div class="fb-post">
+                <div class="fb-post-header">
+                    <span class="platform-name">Facebook</span>
+                    <h3>Barangay Bayanihan Online</h3>
+                    <span class="post-date">May 28, 2023</span>
+                </div>
+                <div class="fb-post-content">
+                    <p>Our youth mentorship program is changing lives! Meet some of our amazing participants and learn about their cultural journey.</p>
+                    <div class="post-image-label">Program photo</div>
+                </div>
+                <div class="fb-post-actions">
+                    <span>189</span>
+                    <span>24</span>
+                    <span>8</span>
                 </div>
             </div>
 
             <div class="text-center mt-5">
-                <a href="https://www.facebook.com/charlesadrianbanias" class="btn btn-facebook" target="_blank">
-                    <i class="fab fa-facebook-f"></i> Visit Our Facebook Page
+                <a href="https://www.facebook.com/charlesadrianbanias" class="btn btn-visit" target="_blank">
+                    Visit Our Facebook Page
                 </a>
             </div>
         </div>
@@ -68,112 +58,109 @@
 @section Styles {
     <style>
         .media-page {
-            padding-bottom: 50px;
+            padding: 20px 0 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
         }
 
         .media-hero {
-            background: linear-gradient(rgba(0,0,0,0.6), url('/images/media-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 0;
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
+            padding: 40px 0;
         }
 
-            .media-hero h1 {
-                font-family: 'Kaushan Script', cursive;
-                font-size: 4rem;
-                color: #FFD700;
-                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            }
-
-            .media-hero .lead {
-                font-size: 1.5rem;
-                max-width: 800px;
-                margin: 0 auto;
-            }
-
-        .fb-post-card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-
-        .fb-post-header {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            background: #f8f9fa;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .fb-icon {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .fb-post-header h4 {
-            margin: 0;
-            color: #385898;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .post-date {
-            color: #606770;
-            font-size: 0.9rem;
-        }
-
-        .fb-post-content {
-            padding: 15px;
-        }
-
-            .fb-post-content p {
-                margin-bottom: 15px;
-                font-size: 1.1rem;
-            }
-
-        .post-image {
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
-        .fb-post-actions {
-            padding: 10px 15px;
-            border-top: 1px solid #ddd;
-            display: flex;
-            gap: 20px;
-            color: #606770;
-        }
-
-        .btn-facebook {
-            background-color: #1877f2;
-            color: white;
-            padding: 10px 25px;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-
-            .btn-facebook:hover {
-                background-color: #166fe5;
-                color: white;
-                transform: translateY(-2px);
-            }
-
-        @@media (max-width: 768px) {
             .media-hero h1 {
                 font-size: 2.5rem;
+                font-weight: 600;
+                margin-bottom: 15px;
+                color: #333;
             }
 
             .media-hero .lead {
                 font-size: 1.2rem;
+                color: #666;
             }
 
-            .fb-post-card {
-                margin-bottom: 20px;
+        .fb-post {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+
+        .fb-post-header {
+            margin-bottom: 15px;
+        }
+
+        .platform-name {
+            display: block;
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .fb-post-header h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0 0 5px 0;
+            color: #333;
+        }
+
+        .post-date {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .fb-post-content p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .post-image-label {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .fb-post-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .btn-visit {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: #1877f2;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s;  
+        }
+
+            .btn-visit:hover {
+                background-color: #166fe5;
+            }
+
+        @@media (max-width: 768px) {
+            .media-hero h1 {
+                font-size: 2rem;
+            }
+
+            .media-hero .lead {
+                font-size: 1rem;
+            }
+
+            .fb-post {
+                padding: 15px;
             }
         }
     </style>

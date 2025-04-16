@@ -10,37 +10,54 @@
     <div class="container mission-content">
         <div class="row">
             <div class="col-md-6">
-                <h2>What Drives Us</h2>
-                <p>Barangay Bayanihan Online is dedicated to preserving and promoting Filipino culture through digital innovation and community engagement. We strive to create a vibrant online space that connects Filipinos worldwide.</p>
+                <h2>What Drives Us?</h2>
+                <p>Barangay Bayanihan Online is dedicated to preserving and promoting Filipino culture through digital innovation and community engagement.</p>
                 <p>Our platform serves as a bridge between generations, helping to maintain cultural traditions while adapting to modern technology.</p>
             </div>
             <div class="col-md-6">
-                <img src="/images/mission-photo.jpg" alt="Community gathering" class="img-fluid rounded shadow">
-            </div>
-        </div>
-
-        <div class="mission-values mt-5">
-            <h2>Our Core Values</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="value-card">
-                        <h3>Community</h3>
-                        <p>Building bridges between Filipinos across generations and geographies through shared experiences and mutual support.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="value-card">
-                        <h3>Culture</h3>
-                        <p>Preserving and celebrating Filipino traditions, arts, and heritage in the digital age.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="value-card">
-                        <h3>Innovation</h3>
-                        <p>Using technology to enhance cultural connections while maintaining authentic Filipino values.</p>
-                    </div>
-                </div>
+                <img src="~/Images/larm-rmah-AEaTUnvneik-unsplash.jpg" alt="Community gathering" class="img-fluid rounded shadow">
             </div>
         </div>
     </div>
 </div>
+
+@section Styles {
+    <style>
+                        /* Mission Page */
+    .mission-hero {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/mission-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .mission-hero h1 {
+        font-family: 'Kaushan Script', cursive;
+        font-size: 4rem;
+        color: #FFD700;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .mission-content h2 {
+        color: #f24c4c;
+        font-family: 'Freeman', sans-serif;
+        margin-bottom: 20px;
+    }
+
+    .value-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .value-card h3 {
+        color: #f24c4c;
+        font-family: 'Poppins', sans-serif;
+    }
+    .mission-page body{
+        background: red;
+    }
+    </style>
+    }

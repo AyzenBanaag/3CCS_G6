@@ -23,14 +23,18 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" asp-controller="Home" asp-action="Index">Barangay Bayanihan Online</a>
+                <a class="navbar-brand d-flex align-items-center" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/logo.png" alt="Logo" width="40" height="40" class="me-2" />
+                    <span class="fw-bold">Barangay Bayanihan Online</span>
+                </a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-action='MyEvents'>Create Events</a></li>
 
                         <!-- Who We Are Dropdown -->
                         <li class="nav-item dropdown">
@@ -40,15 +44,22 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
                                 <li><a class="dropdown-item" asp-controller="Home" asp-action="Mission">Our Mission</a></li>
-                                <li><a class="dropdown-item" asp-controller="Home" asp-action="Team">Meet the Team</a></li>
                                 <li><a class="dropdown-item" asp-controller="Home" asp-action="Media">Media Landings</a></li>
                             </ul>
                         </li>
 
-                        <li class="nav-item"><a class="nav-link" href="#">Programs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Volunteer</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-action='OurProgram'>Programs & Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-action='Volunteer'>Volunteer</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-action='ContactUS'>Contact</a></li>
                         <li class="nav-item"><a class="btn btn-donate" href="#">Donate</a></li>
+
+                        <!-- Login Button (Triggers Modal) -->
+                        <li class="nav-item">
+                            <button class="btn btn-outline-light ms-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                <i class="fas fa-sign-in-alt"></i> Login
+                            </button>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -65,10 +76,144 @@
         </div>
     </footer>
 
+    <!-- Login Modal -->
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow-lg">
+                <div class="modal-header border-0 justify-content-center">
+                    <h5 class="modal-title fw-bold text-center" id="loginModalLabel">Welcome Back!</h5>
+                    <button type="button" class="btn-close position-absolute end-0 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control rounded-pill p-3" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control rounded-pill p-3" id="password" placeholder="Enter your password">
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                            </div>
+                            <a href="#" class="text-decoration-none text-primary" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal" data-bs-dismiss="modal">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 rounded-pill p-3 fw-bold">Login</button>
+                    </form>
+                    <p class="text-center mt-3">Don't have an account? <a href="#" class="text-decoration-none text-primary" data-bs-toggle="modal" data-bs-target="#signupModal" data-bs-dismiss="modal">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Forgot Password Modal -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow-lg">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title mx-auto fw-bold" id="forgotPasswordModalLabel">Forgot Password?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="forgotPasswordForm">
+                        <div class="mb-3">
+                            <label for="forgotEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control rounded-pill p-3" id="forgotEmail" placeholder="Enter your email to reset your password">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 rounded-pill p-3 fw-bold">Send Reset Link</button>
+                    </form>
+                    <p class="text-center mt-3">
+                        Remember your password? <a href="#" class="text-decoration-none text-primary" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow-lg">
+                <div class="modal-header border-0 justify-content-center">
+                    <h5 class="modal-title fw-bold text-center" id="signupModalLabel">Create Your Account</h5>
+                    <button type="button" class="btn-close position-absolute end-0 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label for="signupName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control rounded-pill p-3" id="signupName" placeholder="Enter your full name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control rounded-pill p-3" id="signupEmail" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control rounded-pill p-3" id="signupPassword" placeholder="Enter a password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control rounded-pill p-3" id="confirmPassword" placeholder="Confirm your password">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 rounded-pill p-3 fw-bold">Sign Up</button>
+                    </form>
+                    <p class="text-center mt-3">
+                        Already have an account? <a href="#" class="text-decoration-none text-primary" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- jQuery for handling login submission -->
+    <script>
+        $(document).ready(function () {
+            $("#loginForm").submit(function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                var email = $("#email").val();
+                var password = $("#password").val();
+
+                if (email === "" || password === "") {
+                    alert("Please enter your email and password.");
+                    return;
+                }
+
+                // Simulate login (Replace this with an actual authentication call)
+                alert("Login successful for: " + email);
+                $("#loginModal").modal("hide");
+            });
+
+            // Handling Forgot Password
+            $("#forgotPasswordForm").submit(function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                var email = $("#forgotEmail").val();
+                if (email === "") {
+                    alert("Please enter your email.");
+                    return;
+                }
+
+                // Simulate password reset (Replace this with actual reset logic)
+                alert("Password reset link sent to: " + email);
+                $("#forgotPasswordModal").modal("hide");
+            });
+        });
+    </script>
+
 </body>
 </html>

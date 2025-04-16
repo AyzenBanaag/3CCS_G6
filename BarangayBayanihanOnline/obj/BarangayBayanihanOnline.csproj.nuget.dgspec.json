@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nerdl\\source\\repos\\BarangayBayanihanOnline\\BarangayBayanihanOnline.csproj": {}
+    "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\BarangayBayanihanOnline.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nerdl\\source\\repos\\BarangayBayanihanOnline\\BarangayBayanihanOnline.csproj": {
+    "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\BarangayBayanihanOnline.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nerdl\\source\\repos\\BarangayBayanihanOnline\\BarangayBayanihanOnline.csproj",
+        "projectUniqueName": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\BarangayBayanihanOnline.csproj",
         "projectName": "BarangayBayanihanOnline",
-        "projectPath": "C:\\Users\\nerdl\\source\\repos\\BarangayBayanihanOnline\\BarangayBayanihanOnline.csproj",
+        "projectPath": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\BarangayBayanihanOnline.csproj",
         "packagesPath": "C:\\Users\\nerdl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nerdl\\source\\repos\\BarangayBayanihanOnline\\obj\\",
+        "outputPath": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -62,7 +62,19 @@
           "warn": true,
           "downloadDependencies": [
             {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.14, 8.0.14]"
+            },
+            {
               "name": "Microsoft.NETCore.App.Host.win-x86",
+              "version": "[8.0.14, 8.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.14, 8.0.14]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
               "version": "[8.0.14, 8.0.14]"
             }
           ],
