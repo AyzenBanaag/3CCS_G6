@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qqiVX3WwCc/CvyOPPlT9T7oIIigUwSGz461nqX4Ylu0=",
+  "Hash": "h/moNsI2ZSPOBeBp69rvHyIwY7w+hv99TVxLeMmJ+I4=",
   "Source": "BarangayBayanihanOnline",
   "BasePath": "_content/BarangayBayanihanOnline",
   "Mode": "Default",
@@ -99,6 +99,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\asenb\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\ADVOCACY.png",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\asenb\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/ADVOCACY#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2tonp2bxsl",
+      "Integrity": "Vs7ydAd94sElCnGlmdEw8iYJbAIwUnspU/h3rVkh6oM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ADVOCACY.png"
     },
     {
       "Identity": "C:\\Users\\asenb\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1).jpg",
@@ -2065,6 +2086,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "Images/ADVOCACY.2tonp2bxsl.png",
+      "AssetFile": "C:\\Users\\asenb\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\ADVOCACY.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1304957"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Vs7ydAd94sElCnGlmdEw8iYJbAIwUnspU/h3rVkh6oM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 16:05:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2tonp2bxsl"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/ADVOCACY.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Vs7ydAd94sElCnGlmdEw8iYJbAIwUnspU/h3rVkh6oM="
+        }
+      ]
+    },
+    {
+      "Route": "Images/ADVOCACY.png",
+      "AssetFile": "C:\\Users\\asenb\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\ADVOCACY.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1304957"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Vs7ydAd94sElCnGlmdEw8iYJbAIwUnspU/h3rVkh6oM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 16:05:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Vs7ydAd94sElCnGlmdEw8iYJbAIwUnspU/h3rVkh6oM="
         }
       ]
     },
