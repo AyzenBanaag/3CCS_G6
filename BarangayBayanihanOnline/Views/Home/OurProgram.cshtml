@@ -132,8 +132,12 @@
             <h2>Join the Bayanihan Spirit</h2>
             <p>Your participation can help strengthen our community</p>
             <div class="cta-buttons">
-                <a href="#" class="btn btn-donate">Donate Now</a>
-                <a href="#" class="btn btn-volunteer">Volunteer Today</a>
+                <a href="Donate" class="btn btn-primary">
+                    <i class="fas fa-donate"></i> Donate Now
+                </a>
+                <a href="Volunteer" class="btn btn-volunteer">
+                    <i class="fas fa-hands-helping"></i> Volunteer Today
+                </a>
             </div>
         </div>
     </section>
@@ -399,53 +403,6 @@
                 transform: translateX(5px);
             }
 
-        /* Impact Section */
-        .impact-section {
-            background: linear-gradient(135deg, #1b1d32, #2c3e50);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .impact-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-            .impact-content h2 {
-                font-size: 2.3rem;
-                margin-bottom: 1rem;
-            }
-
-            .impact-content p {
-                font-size: 1.1rem;
-                opacity: 0.9;
-                margin-bottom: 40px;
-            }
-
-        .impact-stats {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .stat-item {
-            padding: 0 20px;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #e74c3c;
-            margin-bottom: 5px;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
         /* CTA Section */
         .cta-section {
             padding: 80px 20px;
@@ -482,22 +439,27 @@
 
         /* Buttons */
         .btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             padding: 12px 30px;
             border-radius: 50px;
             text-decoration: none;
             transition: all 0.3s;
+            font-weight: 500;
         }
 
         .btn-primary {
-            background-color: #e74c3c;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
             color: white;
             border: none;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
         }
 
             .btn-primary:hover {
-                background-color: #c0392b;
                 transform: translateY(-3px);
+                box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+                background: linear-gradient(135deg, #c0392b, #a5281b);
             }
 
         .btn-outline {
@@ -523,24 +485,46 @@
                 background-color: #2c3e50;
             }
 
-        .btn-donate {
-            background-color: #e74c3c;
-            color: white;
-        }
-
-            .btn-donate:hover {
-                background-color: #c0392b;
-                transform: translateY(-3px);
-            }
-
         .btn-volunteer {
-            background-color: #1b1d32;
+            background: linear-gradient(135deg, #1b1d32, #2c3e50);
             color: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(27, 29, 50, 0.3);
         }
 
             .btn-volunteer:hover {
-                background-color: #2c3e50;
                 transform: translateY(-3px);
+                box-shadow: 0 6px 20px rgba(27, 29, 50, 0.4);
+                background: linear-gradient(135deg, #2c3e50, #1b1d32);
             }
+
+        @@media (max-width: 768px) {
+            .hero-banner h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-item {
+                flex-direction: column;
+            }
+
+            .project-image,
+            .project-info {
+                width: 100%;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     </style>
 }

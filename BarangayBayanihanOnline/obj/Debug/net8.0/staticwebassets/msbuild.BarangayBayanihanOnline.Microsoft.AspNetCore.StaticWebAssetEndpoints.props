@@ -180,6 +180,18 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ytkleud5la"},{"Name":"integrity","Value":"sha256-tnI9k3T4uApkJuOo2X5nX0KxXTOLHIQ5Mocf6HsCAuI="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/gadudo.jpg"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"17307"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022tnI9k3T4uApkJuOo2X5nX0KxXTOLHIQ5Mocf6HsCAuI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 12 Apr 2025 15:42:14 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/gcash.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\gcash.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-csnzwOsE9rdoXsmI0GpYnDciv2hJhWAMoAmeku\u002Bqsns="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5811"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022csnzwOsE9rdoXsmI0GpYnDciv2hJhWAMoAmeku\u002Bqsns=\u0022"},{"Name":"Last-Modified","Value":"Thu, 17 Apr 2025 13:32:41 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/gcash.mnmf124qr4.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\gcash.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"mnmf124qr4"},{"Name":"integrity","Value":"sha256-csnzwOsE9rdoXsmI0GpYnDciv2hJhWAMoAmeku\u002Bqsns="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/gcash.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5811"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022csnzwOsE9rdoXsmI0GpYnDciv2hJhWAMoAmeku\u002Bqsns=\u0022"},{"Name":"Last-Modified","Value":"Thu, 17 Apr 2025 13:32:41 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/hotohot.maljygktxy.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\hotohot.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

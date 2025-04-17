@@ -39,6 +39,10 @@ namespace BarangayBayanihanOnline.Controllers
         {
             return View();
         }
+        public IActionResult Donate()
+        {
+            return View();
+        }
 
     }
 }

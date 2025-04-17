@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ymeZc0Uyk2ZhdybSLGRqRs0LUQN/vp1Q1IjEE6TFfqk=",
+  "Hash": "3N3jSnf8g8bLbtwUbj925tcpQuinhiC+8KCXS+z75MI=",
   "Source": "BarangayBayanihanOnline",
   "BasePath": "_content/BarangayBayanihanOnline",
   "Mode": "Default",
@@ -351,6 +351,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\gadudo.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\gcash.jpg",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/gcash#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mnmf124qr4",
+      "Integrity": "csnzwOsE9rdoXsmI0GpYnDciv2hJhWAMoAmeku+qsns=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\gcash.jpg"
     },
     {
       "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\hotohot.png",
@@ -2986,6 +3007,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-tnI9k3T4uApkJuOo2X5nX0KxXTOLHIQ5Mocf6HsCAuI="
+        }
+      ]
+    },
+    {
+      "Route": "Images/gcash.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\gcash.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5811"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"csnzwOsE9rdoXsmI0GpYnDciv2hJhWAMoAmeku+qsns=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 13:32:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-csnzwOsE9rdoXsmI0GpYnDciv2hJhWAMoAmeku+qsns="
+        }
+      ]
+    },
+    {
+      "Route": "Images/gcash.mnmf124qr4.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\gcash.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5811"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"csnzwOsE9rdoXsmI0GpYnDciv2hJhWAMoAmeku+qsns=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 13:32:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mnmf124qr4"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/gcash.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-csnzwOsE9rdoXsmI0GpYnDciv2hJhWAMoAmeku+qsns="
         }
       ]
     },

@@ -12,6 +12,7 @@ wwwroot\Images\BBO2.png
 wwwroot\Images\BBO3.png
 wwwroot\Images\BBO4.png
 wwwroot\Images\gadudo.jpg
+wwwroot\Images\gcash.jpg
 wwwroot\Images\hotohot.png
 wwwroot\Images\larm-rmah-AEaTUnvneik-unsplash.jpg
 wwwroot\Images\Logo.png
