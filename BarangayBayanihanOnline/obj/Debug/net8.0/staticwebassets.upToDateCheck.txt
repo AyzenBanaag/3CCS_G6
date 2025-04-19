@@ -1,5 +1,6 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\Images\ADVOCACY.png
 wwwroot\Images\alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1).jpg
 wwwroot\Images\alejandra-ezquerro-WQWJd6mZS7Q-unsplash.jpg
 wwwroot\Images\banaag.jpg

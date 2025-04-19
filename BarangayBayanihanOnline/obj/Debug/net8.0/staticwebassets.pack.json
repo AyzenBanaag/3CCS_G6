@@ -5,7 +5,15 @@
       "PackagePath": "staticwebassets\\BarangayBayanihanOnline.qni6895sv8.bundle.scp.css"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO.png",
+=======
+      "Id": "C:\\Users\\asenb\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\ADVOCACY.png",
+      "PackagePath": "staticwebassets\\Images\\ADVOCACY.png"
+    },
+    {
+      "Id": "C:\\Users\\asenb\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO.png",
+>>>>>>> 109e808bc738b26718113cd65c939914acfedc23
       "PackagePath": "staticwebassets\\Images\\BBO.png"
     },
     {
