@@ -1,0 +1,117 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\BarangayBayanihanOnline.bundle.scp.css",
+      "PackagePath": "staticwebassets\\BarangayBayanihanOnline.qni6895sv8.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\ADVOCACY.png",
+      "PackagePath": "staticwebassets\\Images\\ADVOCACY.png"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO.png",
+      "PackagePath": "staticwebassets\\Images\\BBO.png"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO1.png",
+      "PackagePath": "staticwebassets\\Images\\BBO1.png"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO2.png",
+      "PackagePath": "staticwebassets\\Images\\BBO2.png"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO3.png",
+      "PackagePath": "staticwebassets\\Images\\BBO3.png"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO4.png",
+      "PackagePath": "staticwebassets\\Images\\BBO4.png"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\CARAVAN.png",
+      "PackagePath": "staticwebassets\\Images\\CARAVAN.png"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\Logo.png",
+      "PackagePath": "staticwebassets\\Images\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1).jpg",
+      "PackagePath": "staticwebassets\\Images\\alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1).jpg"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\alejandra-ezquerro-WQWJd6mZS7Q-unsplash.jpg",
+      "PackagePath": "staticwebassets\\Images\\alejandra-ezquerro-WQWJd6mZS7Q-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\banaag.jpg",
+      "PackagePath": "staticwebassets\\Images\\banaag.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\banias.jpg",
+      "PackagePath": "staticwebassets\\Images\\banias.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\bayanihan1.jpg",
+      "PackagePath": "staticwebassets\\Images\\bayanihan1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\bayanihan2.jpg",
+      "PackagePath": "staticwebassets\\Images\\bayanihan2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\gadudo.jpg",
+      "PackagePath": "staticwebassets\\Images\\gadudo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\gcash-qr.png",
+      "PackagePath": "staticwebassets\\Images\\gcash-qr.png"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\gcash.jpg",
+      "PackagePath": "staticwebassets\\Images\\gcash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\hotohot.png",
+      "PackagePath": "staticwebassets\\Images\\hotohot.png"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\larm-rmah-AEaTUnvneik-unsplash.jpg",
+      "PackagePath": "staticwebassets\\Images\\larm-rmah-AEaTUnvneik-unsplash.jpg"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.BarangayBayanihanOnline.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.BarangayBayanihanOnline.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.BarangayBayanihanOnline.props",
+      "PackagePath": "build\\BarangayBayanihanOnline.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BarangayBayanihanOnline.props",
+      "PackagePath": "buildMultiTargeting\\BarangayBayanihanOnline.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.BarangayBayanihanOnline.props",
+      "PackagePath": "buildTransitive\\BarangayBayanihanOnline.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

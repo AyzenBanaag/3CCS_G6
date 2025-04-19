@@ -1,0 +1,280 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/BarangayBayanihanOnline.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\BarangayBayanihanOnline.qni6895sv8.bundle.scp.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-9r\u002BqowRhNGweymgvxQDr/cS/\u002Bt0S3o6zJlJHlJWDosI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1141"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00229r\u002BqowRhNGweymgvxQDr/cS/\u002Bt0S3o6zJlJHlJWDosI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 17:35:21 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/BarangayBayanihanOnline.qni6895sv8.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\BarangayBayanihanOnline.qni6895sv8.bundle.scp.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"qni6895sv8"},{"Name":"integrity","Value":"sha256-9r\u002BqowRhNGweymgvxQDr/cS/\u002Bt0S3o6zJlJHlJWDosI="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/BarangayBayanihanOnline.bundle.scp.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1141"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00229r\u002BqowRhNGweymgvxQDr/cS/\u002Bt0S3o6zJlJHlJWDosI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 17:35:21 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/css/site.apmjvyq8si.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"apmjvyq8si"},{"Name":"integrity","Value":"sha256-Uh8wpostPQTzq\u002B8vd3fqMcF5kzYb8zlrJ6dILaVYfgk="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2655"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Uh8wpostPQTzq\u002B8vd3fqMcF5kzYb8zlrJ6dILaVYfgk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/css/site.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Uh8wpostPQTzq\u002B8vd3fqMcF5kzYb8zlrJ6dILaVYfgk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2655"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Uh8wpostPQTzq\u002B8vd3fqMcF5kzYb8zlrJ6dILaVYfgk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/favicon.61n19gt1b8.ico">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"61n19gt1b8"},{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/favicon.ico"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/favicon.ico">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/ADVOCACY.2tonp2bxsl.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\ADVOCACY.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"2tonp2bxsl"},{"Name":"integrity","Value":"sha256-Vs7ydAd94sElCnGlmdEw8iYJbAIwUnspU/h3rVkh6oM="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/ADVOCACY.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1304957"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Vs7ydAd94sElCnGlmdEw8iYJbAIwUnspU/h3rVkh6oM=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/ADVOCACY.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\ADVOCACY.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Vs7ydAd94sElCnGlmdEw8iYJbAIwUnspU/h3rVkh6oM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1304957"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Vs7ydAd94sElCnGlmdEw8iYJbAIwUnspU/h3rVkh6oM=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1).jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1).jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-vTFrmEXnbqQiZ\u002BbdP/gCOl0sqO48Z5GguGO72GQBh6I="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"2439347"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022vTFrmEXnbqQiZ\u002BbdP/gCOl0sqO48Z5GguGO72GQBh6I=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1).p9m0x0g4nz.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1).jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"p9m0x0g4nz"},{"Name":"integrity","Value":"sha256-vTFrmEXnbqQiZ\u002BbdP/gCOl0sqO48Z5GguGO72GQBh6I="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1).jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2439347"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022vTFrmEXnbqQiZ\u002BbdP/gCOl0sqO48Z5GguGO72GQBh6I=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/alejandra-ezquerro-WQWJd6mZS7Q-unsplash.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\alejandra-ezquerro-WQWJd6mZS7Q-unsplash.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-vTFrmEXnbqQiZ\u002BbdP/gCOl0sqO48Z5GguGO72GQBh6I="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"2439347"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022vTFrmEXnbqQiZ\u002BbdP/gCOl0sqO48Z5GguGO72GQBh6I=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/alejandra-ezquerro-WQWJd6mZS7Q-unsplash.p9m0x0g4nz.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\alejandra-ezquerro-WQWJd6mZS7Q-unsplash.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"p9m0x0g4nz"},{"Name":"integrity","Value":"sha256-vTFrmEXnbqQiZ\u002BbdP/gCOl0sqO48Z5GguGO72GQBh6I="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/alejandra-ezquerro-WQWJd6mZS7Q-unsplash.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2439347"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022vTFrmEXnbqQiZ\u002BbdP/gCOl0sqO48Z5GguGO72GQBh6I=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/banaag.cqurien9tp.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\banaag.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"cqurien9tp"},{"Name":"integrity","Value":"sha256-rDE\u002Bd6J8QpjTGj6IPDSNu\u002BKsJpUdMK64cyBh/oU24Nk="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/banaag.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"17523"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022rDE\u002Bd6J8QpjTGj6IPDSNu\u002BKsJpUdMK64cyBh/oU24Nk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/banaag.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\banaag.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-rDE\u002Bd6J8QpjTGj6IPDSNu\u002BKsJpUdMK64cyBh/oU24Nk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"17523"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022rDE\u002Bd6J8QpjTGj6IPDSNu\u002BKsJpUdMK64cyBh/oU24Nk=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/banias.1cpxflv3mm.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\banias.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"1cpxflv3mm"},{"Name":"integrity","Value":"sha256-gZFjNQfFmfEkPv1bThrNe54exGOCtscmI\u002BGfofcJZT8="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/banias.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"19024"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022gZFjNQfFmfEkPv1bThrNe54exGOCtscmI\u002BGfofcJZT8=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/banias.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\banias.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-gZFjNQfFmfEkPv1bThrNe54exGOCtscmI\u002BGfofcJZT8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"19024"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022gZFjNQfFmfEkPv1bThrNe54exGOCtscmI\u002BGfofcJZT8=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/bayanihan1.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\bayanihan1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-/8LVYB8bmkgq1nQdKZTT76Up0xsZ8HTNQ6LdnZCIG00="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"58493"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022/8LVYB8bmkgq1nQdKZTT76Up0xsZ8HTNQ6LdnZCIG00=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/bayanihan1.vk103emmv8.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\bayanihan1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vk103emmv8"},{"Name":"integrity","Value":"sha256-/8LVYB8bmkgq1nQdKZTT76Up0xsZ8HTNQ6LdnZCIG00="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/bayanihan1.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"58493"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022/8LVYB8bmkgq1nQdKZTT76Up0xsZ8HTNQ6LdnZCIG00=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/bayanihan2.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\bayanihan2.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-UYrKx16G45G3LgtVkVgJTRgs1XfgiD3gByRuoZcO7nc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"99050"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022UYrKx16G45G3LgtVkVgJTRgs1XfgiD3gByRuoZcO7nc=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/bayanihan2.nu297qblu6.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\bayanihan2.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"nu297qblu6"},{"Name":"integrity","Value":"sha256-UYrKx16G45G3LgtVkVgJTRgs1XfgiD3gByRuoZcO7nc="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/bayanihan2.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"99050"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022UYrKx16G45G3LgtVkVgJTRgs1XfgiD3gByRuoZcO7nc=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/BBO.0ancg4d7ne.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\BBO.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"0ancg4d7ne"},{"Name":"integrity","Value":"sha256-KM\u002BLVZoS86zFeBo49ZBxVeiNnORq/yVfz1tJ\u002BVqKpWE="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/BBO.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"485317"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022KM\u002BLVZoS86zFeBo49ZBxVeiNnORq/yVfz1tJ\u002BVqKpWE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/BBO.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\BBO.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-KM\u002BLVZoS86zFeBo49ZBxVeiNnORq/yVfz1tJ\u002BVqKpWE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"485317"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022KM\u002BLVZoS86zFeBo49ZBxVeiNnORq/yVfz1tJ\u002BVqKpWE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/BBO1.5qfmvodipk.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\BBO1.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"5qfmvodipk"},{"Name":"integrity","Value":"sha256-HShn/Jyiv\u002Bcs7Lc8D1LQecvuf1mZQ83rpyhrLeLk5BA="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/BBO1.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1836462"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022HShn/Jyiv\u002Bcs7Lc8D1LQecvuf1mZQ83rpyhrLeLk5BA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/BBO1.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\BBO1.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-HShn/Jyiv\u002Bcs7Lc8D1LQecvuf1mZQ83rpyhrLeLk5BA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1836462"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022HShn/Jyiv\u002Bcs7Lc8D1LQecvuf1mZQ83rpyhrLeLk5BA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/BBO2.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\BBO2.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-A7Fr0nCHTzH8Di7UPRX4\u002BycfN0wcSvsyX7upEpiPYCs="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1915286"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022A7Fr0nCHTzH8Di7UPRX4\u002BycfN0wcSvsyX7upEpiPYCs=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/BBO2.twavitu5tp.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\BBO2.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"twavitu5tp"},{"Name":"integrity","Value":"sha256-A7Fr0nCHTzH8Di7UPRX4\u002BycfN0wcSvsyX7upEpiPYCs="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/BBO2.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1915286"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022A7Fr0nCHTzH8Di7UPRX4\u002BycfN0wcSvsyX7upEpiPYCs=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/BBO3.0ancg4d7ne.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\BBO3.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"0ancg4d7ne"},{"Name":"integrity","Value":"sha256-KM\u002BLVZoS86zFeBo49ZBxVeiNnORq/yVfz1tJ\u002BVqKpWE="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/BBO3.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"485317"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022KM\u002BLVZoS86zFeBo49ZBxVeiNnORq/yVfz1tJ\u002BVqKpWE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/BBO3.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\BBO3.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-KM\u002BLVZoS86zFeBo49ZBxVeiNnORq/yVfz1tJ\u002BVqKpWE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"485317"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022KM\u002BLVZoS86zFeBo49ZBxVeiNnORq/yVfz1tJ\u002BVqKpWE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/BBO4.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\BBO4.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-A7Fr0nCHTzH8Di7UPRX4\u002BycfN0wcSvsyX7upEpiPYCs="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1915286"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022A7Fr0nCHTzH8Di7UPRX4\u002BycfN0wcSvsyX7upEpiPYCs=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/BBO4.twavitu5tp.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\BBO4.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"twavitu5tp"},{"Name":"integrity","Value":"sha256-A7Fr0nCHTzH8Di7UPRX4\u002BycfN0wcSvsyX7upEpiPYCs="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/BBO4.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1915286"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022A7Fr0nCHTzH8Di7UPRX4\u002BycfN0wcSvsyX7upEpiPYCs=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/CARAVAN.98o77gg5mp.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\CARAVAN.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"98o77gg5mp"},{"Name":"integrity","Value":"sha256-l6K6TSeimITFFV\u002BWbtAfhb963V7zZQ6ytrxXlAq1OyY="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/CARAVAN.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1425227"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022l6K6TSeimITFFV\u002BWbtAfhb963V7zZQ6ytrxXlAq1OyY=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/CARAVAN.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\CARAVAN.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-l6K6TSeimITFFV\u002BWbtAfhb963V7zZQ6ytrxXlAq1OyY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1425227"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022l6K6TSeimITFFV\u002BWbtAfhb963V7zZQ6ytrxXlAq1OyY=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/gadudo.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\gadudo.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-tnI9k3T4uApkJuOo2X5nX0KxXTOLHIQ5Mocf6HsCAuI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"17307"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022tnI9k3T4uApkJuOo2X5nX0KxXTOLHIQ5Mocf6HsCAuI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/gadudo.ytkleud5la.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\gadudo.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ytkleud5la"},{"Name":"integrity","Value":"sha256-tnI9k3T4uApkJuOo2X5nX0KxXTOLHIQ5Mocf6HsCAuI="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/gadudo.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"17307"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022tnI9k3T4uApkJuOo2X5nX0KxXTOLHIQ5Mocf6HsCAuI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/gcash-qr.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\gcash-qr.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-vR//CHG/etCOiXYBJrctgNyXFiT2hkbq5FNrQJM0h5s="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"41467"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022vR//CHG/etCOiXYBJrctgNyXFiT2hkbq5FNrQJM0h5s=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 15:21:43 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/gcash-qr.zg6mmouwel.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\gcash-qr.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"zg6mmouwel"},{"Name":"integrity","Value":"sha256-vR//CHG/etCOiXYBJrctgNyXFiT2hkbq5FNrQJM0h5s="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/gcash-qr.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"41467"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022vR//CHG/etCOiXYBJrctgNyXFiT2hkbq5FNrQJM0h5s=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 15:21:43 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/gcash.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\gcash.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-csnzwOsE9rdoXsmI0GpYnDciv2hJhWAMoAmeku\u002Bqsns="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5811"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022csnzwOsE9rdoXsmI0GpYnDciv2hJhWAMoAmeku\u002Bqsns=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/gcash.mnmf124qr4.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\gcash.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"mnmf124qr4"},{"Name":"integrity","Value":"sha256-csnzwOsE9rdoXsmI0GpYnDciv2hJhWAMoAmeku\u002Bqsns="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/gcash.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5811"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022csnzwOsE9rdoXsmI0GpYnDciv2hJhWAMoAmeku\u002Bqsns=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/hotohot.maljygktxy.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\hotohot.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"maljygktxy"},{"Name":"integrity","Value":"sha256-cuuspUGG1b6P2Tdmzddg4DRPTkoUYlMPZxgfdeCpSwA="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/hotohot.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"112846"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022cuuspUGG1b6P2Tdmzddg4DRPTkoUYlMPZxgfdeCpSwA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/hotohot.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\hotohot.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-cuuspUGG1b6P2Tdmzddg4DRPTkoUYlMPZxgfdeCpSwA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"112846"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022cuuspUGG1b6P2Tdmzddg4DRPTkoUYlMPZxgfdeCpSwA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/larm-rmah-AEaTUnvneik-unsplash.drwp974f49.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\larm-rmah-AEaTUnvneik-unsplash.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"drwp974f49"},{"Name":"integrity","Value":"sha256-52iSEY6Lg0qNcMde7UiD7qmgRIb1NtypSVCRUDtFIz0="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/larm-rmah-AEaTUnvneik-unsplash.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5157137"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u002252iSEY6Lg0qNcMde7UiD7qmgRIb1NtypSVCRUDtFIz0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/larm-rmah-AEaTUnvneik-unsplash.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\larm-rmah-AEaTUnvneik-unsplash.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-52iSEY6Lg0qNcMde7UiD7qmgRIb1NtypSVCRUDtFIz0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5157137"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u002252iSEY6Lg0qNcMde7UiD7qmgRIb1NtypSVCRUDtFIz0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/Logo.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\Logo.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-nvo1WQuH9CLUGG7VFU8ps7CTbOrVtjMo8/wDB5wvb40="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"312715"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022nvo1WQuH9CLUGG7VFU8ps7CTbOrVtjMo8/wDB5wvb40=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/Images/Logo.u90gwc1z98.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\Logo.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"u90gwc1z98"},{"Name":"integrity","Value":"sha256-nvo1WQuH9CLUGG7VFU8ps7CTbOrVtjMo8/wDB5wvb40="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/Images/Logo.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"312715"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022nvo1WQuH9CLUGG7VFU8ps7CTbOrVtjMo8/wDB5wvb40=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/js/site.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-BKRN2r29ynKunY9\u002BDMYZ9Mid7wm3e465bOglx6zkWds="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"423"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022BKRN2r29ynKunY9\u002BDMYZ9Mid7wm3e465bOglx6zkWds=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/js/site.km5uk8fhjk.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"km5uk8fhjk"},{"Name":"integrity","Value":"sha256-BKRN2r29ynKunY9\u002BDMYZ9Mid7wm3e465bOglx6zkWds="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/js/site.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"423"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022BKRN2r29ynKunY9\u002BDMYZ9Mid7wm3e465bOglx6zkWds=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Apr 2025 14:00:13 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

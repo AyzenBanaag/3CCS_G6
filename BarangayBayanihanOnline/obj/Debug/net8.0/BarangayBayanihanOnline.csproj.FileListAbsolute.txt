@@ -27,9 +27,9 @@ C:\Users\nerdl\source\repos\3CCS_G6\BarangayBayanihanOnline\obj\Debug\net8.0\sta
 C:\Users\nerdl\source\repos\3CCS_G6\BarangayBayanihanOnline\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.BarangayBayanihanOnline.props
 C:\Users\nerdl\source\repos\3CCS_G6\BarangayBayanihanOnline\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.BarangayBayanihanOnline.props
 C:\Users\nerdl\source\repos\3CCS_G6\BarangayBayanihanOnline\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\nerdl\source\repos\3CCS_G6\BarangayBayanihanOnline\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\nerdl\source\repos\3CCS_G6\BarangayBayanihanOnline\obj\Debug\net8.0\BarangayBayanihanOnline.dll
 C:\Users\nerdl\source\repos\3CCS_G6\BarangayBayanihanOnline\obj\Debug\net8.0\refint\BarangayBayanihanOnline.dll
 C:\Users\nerdl\source\repos\3CCS_G6\BarangayBayanihanOnline\obj\Debug\net8.0\BarangayBayanihanOnline.pdb
 C:\Users\nerdl\source\repos\3CCS_G6\BarangayBayanihanOnline\obj\Debug\net8.0\BarangayBayanihanOnline.genruntimeconfig.cache
 C:\Users\nerdl\source\repos\3CCS_G6\BarangayBayanihanOnline\obj\Debug\net8.0\ref\BarangayBayanihanOnline.dll
+C:\Users\nerdl\source\repos\3CCS_G6\BarangayBayanihanOnline\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

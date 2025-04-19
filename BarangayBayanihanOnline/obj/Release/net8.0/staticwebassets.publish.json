@@ -1,0 +1,2494 @@
+{
+  "Version": 1,
+  "Hash": "nxxtnzDVPOVeCxJllZydXSRjuRAkd4oekO3ZMqxunbE=",
+  "Source": "BarangayBayanihanOnline",
+  "BasePath": "_content/BarangayBayanihanOnline",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "BarangayBayanihanOnline\\wwwroot",
+      "Source": "BarangayBayanihanOnline",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\obj\\Release\\net8.0\\scopedcss\\bundle\\BarangayBayanihanOnline.styles.css",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\obj\\Release\\net8.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "BarangayBayanihanOnline#[.{fingerprint}]?.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "qni6895sv8",
+      "Integrity": "9r+qowRhNGweymgvxQDr/cS/+t0S3o6zJlJHlJWDosI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\obj\\Release\\net8.0\\scopedcss\\bundle\\BarangayBayanihanOnline.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\BarangayBayanihanOnline.bundle.scp.css",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "BarangayBayanihanOnline#[.{fingerprint}]!.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "qni6895sv8",
+      "Integrity": "9r+qowRhNGweymgvxQDr/cS/+t0S3o6zJlJHlJWDosI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\BarangayBayanihanOnline.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\css\\site.css",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "apmjvyq8si",
+      "Integrity": "Uh8wpostPQTzq+8vd3fqMcF5kzYb8zlrJ6dILaVYfgk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\favicon.ico",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "favicon#[.{fingerprint}]?.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "61n19gt1b8",
+      "Integrity": "Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\ADVOCACY.png",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/ADVOCACY#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2tonp2bxsl",
+      "Integrity": "Vs7ydAd94sElCnGlmdEw8iYJbAIwUnspU/h3rVkh6oM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ADVOCACY.png"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1).jpg",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1)#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "p9m0x0g4nz",
+      "Integrity": "vTFrmEXnbqQiZ+bdP/gCOl0sqO48Z5GguGO72GQBh6I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1).jpg"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\alejandra-ezquerro-WQWJd6mZS7Q-unsplash.jpg",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/alejandra-ezquerro-WQWJd6mZS7Q-unsplash#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "p9m0x0g4nz",
+      "Integrity": "vTFrmEXnbqQiZ+bdP/gCOl0sqO48Z5GguGO72GQBh6I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\alejandra-ezquerro-WQWJd6mZS7Q-unsplash.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\banaag.jpg",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/banaag#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cqurien9tp",
+      "Integrity": "rDE+d6J8QpjTGj6IPDSNu+KsJpUdMK64cyBh/oU24Nk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\banaag.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\banias.jpg",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/banias#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1cpxflv3mm",
+      "Integrity": "gZFjNQfFmfEkPv1bThrNe54exGOCtscmI+GfofcJZT8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\banias.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\bayanihan1.jpg",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/bayanihan1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vk103emmv8",
+      "Integrity": "/8LVYB8bmkgq1nQdKZTT76Up0xsZ8HTNQ6LdnZCIG00=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\bayanihan1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\bayanihan2.jpg",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/bayanihan2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nu297qblu6",
+      "Integrity": "UYrKx16G45G3LgtVkVgJTRgs1XfgiD3gByRuoZcO7nc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\bayanihan2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO.png",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/BBO#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0ancg4d7ne",
+      "Integrity": "KM+LVZoS86zFeBo49ZBxVeiNnORq/yVfz1tJ+VqKpWE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\BBO.png"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO1.png",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/BBO1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5qfmvodipk",
+      "Integrity": "HShn/Jyiv+cs7Lc8D1LQecvuf1mZQ83rpyhrLeLk5BA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\BBO1.png"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO2.png",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/BBO2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "twavitu5tp",
+      "Integrity": "A7Fr0nCHTzH8Di7UPRX4+ycfN0wcSvsyX7upEpiPYCs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\BBO2.png"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO3.png",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/BBO3#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0ancg4d7ne",
+      "Integrity": "KM+LVZoS86zFeBo49ZBxVeiNnORq/yVfz1tJ+VqKpWE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\BBO3.png"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO4.png",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/BBO4#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "twavitu5tp",
+      "Integrity": "A7Fr0nCHTzH8Di7UPRX4+ycfN0wcSvsyX7upEpiPYCs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\BBO4.png"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\CARAVAN.png",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/CARAVAN#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "98o77gg5mp",
+      "Integrity": "l6K6TSeimITFFV+WbtAfhb963V7zZQ6ytrxXlAq1OyY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\CARAVAN.png"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\gadudo.jpg",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/gadudo#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ytkleud5la",
+      "Integrity": "tnI9k3T4uApkJuOo2X5nX0KxXTOLHIQ5Mocf6HsCAuI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\gadudo.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\gcash-qr.png",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/gcash-qr#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zg6mmouwel",
+      "Integrity": "vR//CHG/etCOiXYBJrctgNyXFiT2hkbq5FNrQJM0h5s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\gcash-qr.png"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\gcash.jpg",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/gcash#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mnmf124qr4",
+      "Integrity": "csnzwOsE9rdoXsmI0GpYnDciv2hJhWAMoAmeku+qsns=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\gcash.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\hotohot.png",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/hotohot#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "maljygktxy",
+      "Integrity": "cuuspUGG1b6P2Tdmzddg4DRPTkoUYlMPZxgfdeCpSwA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\hotohot.png"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\larm-rmah-AEaTUnvneik-unsplash.jpg",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/larm-rmah-AEaTUnvneik-unsplash#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "drwp974f49",
+      "Integrity": "52iSEY6Lg0qNcMde7UiD7qmgRIb1NtypSVCRUDtFIz0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\larm-rmah-AEaTUnvneik-unsplash.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\Logo.png",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "Images/Logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u90gwc1z98",
+      "Integrity": "nvo1WQuH9CLUGG7VFU8ps7CTbOrVtjMo8/wDB5wvb40=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\js\\site.js",
+      "SourceId": "BarangayBayanihanOnline",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\",
+      "BasePath": "_content/BarangayBayanihanOnline",
+      "RelativePath": "js/site#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "km5uk8fhjk",
+      "Integrity": "BKRN2r29ynKunY9+DMYZ9Mid7wm3e465bOglx6zkWds=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "BarangayBayanihanOnline.bundle.scp.css",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\BarangayBayanihanOnline.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1141"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9r+qowRhNGweymgvxQDr/cS/+t0S3o6zJlJHlJWDosI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 17:35:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9r+qowRhNGweymgvxQDr/cS/+t0S3o6zJlJHlJWDosI="
+        }
+      ]
+    },
+    {
+      "Route": "BarangayBayanihanOnline.qni6895sv8.bundle.scp.css",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\BarangayBayanihanOnline.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1141"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9r+qowRhNGweymgvxQDr/cS/+t0S3o6zJlJHlJWDosI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 17:35:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qni6895sv8"
+        },
+        {
+          "Name": "label",
+          "Value": "BarangayBayanihanOnline.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9r+qowRhNGweymgvxQDr/cS/+t0S3o6zJlJHlJWDosI="
+        }
+      ]
+    },
+    {
+      "Route": "BarangayBayanihanOnline.qni6895sv8.styles.css",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\obj\\Release\\net8.0\\scopedcss\\bundle\\BarangayBayanihanOnline.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1141"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9r+qowRhNGweymgvxQDr/cS/+t0S3o6zJlJHlJWDosI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 17:35:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qni6895sv8"
+        },
+        {
+          "Name": "label",
+          "Value": "BarangayBayanihanOnline.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9r+qowRhNGweymgvxQDr/cS/+t0S3o6zJlJHlJWDosI="
+        }
+      ]
+    },
+    {
+      "Route": "BarangayBayanihanOnline.styles.css",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\obj\\Release\\net8.0\\scopedcss\\bundle\\BarangayBayanihanOnline.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1141"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9r+qowRhNGweymgvxQDr/cS/+t0S3o6zJlJHlJWDosI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 17:35:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9r+qowRhNGweymgvxQDr/cS/+t0S3o6zJlJHlJWDosI="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.apmjvyq8si.css",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2655"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Uh8wpostPQTzq+8vd3fqMcF5kzYb8zlrJ6dILaVYfgk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "apmjvyq8si"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Uh8wpostPQTzq+8vd3fqMcF5kzYb8zlrJ6dILaVYfgk="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2655"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Uh8wpostPQTzq+8vd3fqMcF5kzYb8zlrJ6dILaVYfgk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Uh8wpostPQTzq+8vd3fqMcF5kzYb8zlrJ6dILaVYfgk="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.61n19gt1b8.ico",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5430"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "61n19gt1b8"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5430"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "Images/ADVOCACY.2tonp2bxsl.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\ADVOCACY.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1304957"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Vs7ydAd94sElCnGlmdEw8iYJbAIwUnspU/h3rVkh6oM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2tonp2bxsl"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/ADVOCACY.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Vs7ydAd94sElCnGlmdEw8iYJbAIwUnspU/h3rVkh6oM="
+        }
+      ]
+    },
+    {
+      "Route": "Images/ADVOCACY.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\ADVOCACY.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1304957"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Vs7ydAd94sElCnGlmdEw8iYJbAIwUnspU/h3rVkh6oM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Vs7ydAd94sElCnGlmdEw8iYJbAIwUnspU/h3rVkh6oM="
+        }
+      ]
+    },
+    {
+      "Route": "Images/alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1).jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1).jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2439347"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vTFrmEXnbqQiZ+bdP/gCOl0sqO48Z5GguGO72GQBh6I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vTFrmEXnbqQiZ+bdP/gCOl0sqO48Z5GguGO72GQBh6I="
+        }
+      ]
+    },
+    {
+      "Route": "Images/alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1).p9m0x0g4nz.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1).jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2439347"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vTFrmEXnbqQiZ+bdP/gCOl0sqO48Z5GguGO72GQBh6I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p9m0x0g4nz"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/alejandra-ezquerro-WQWJd6mZS7Q-unsplash (1).jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vTFrmEXnbqQiZ+bdP/gCOl0sqO48Z5GguGO72GQBh6I="
+        }
+      ]
+    },
+    {
+      "Route": "Images/alejandra-ezquerro-WQWJd6mZS7Q-unsplash.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\alejandra-ezquerro-WQWJd6mZS7Q-unsplash.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2439347"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vTFrmEXnbqQiZ+bdP/gCOl0sqO48Z5GguGO72GQBh6I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vTFrmEXnbqQiZ+bdP/gCOl0sqO48Z5GguGO72GQBh6I="
+        }
+      ]
+    },
+    {
+      "Route": "Images/alejandra-ezquerro-WQWJd6mZS7Q-unsplash.p9m0x0g4nz.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\alejandra-ezquerro-WQWJd6mZS7Q-unsplash.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2439347"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vTFrmEXnbqQiZ+bdP/gCOl0sqO48Z5GguGO72GQBh6I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p9m0x0g4nz"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/alejandra-ezquerro-WQWJd6mZS7Q-unsplash.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vTFrmEXnbqQiZ+bdP/gCOl0sqO48Z5GguGO72GQBh6I="
+        }
+      ]
+    },
+    {
+      "Route": "Images/banaag.cqurien9tp.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\banaag.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17523"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rDE+d6J8QpjTGj6IPDSNu+KsJpUdMK64cyBh/oU24Nk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cqurien9tp"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/banaag.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rDE+d6J8QpjTGj6IPDSNu+KsJpUdMK64cyBh/oU24Nk="
+        }
+      ]
+    },
+    {
+      "Route": "Images/banaag.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\banaag.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17523"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rDE+d6J8QpjTGj6IPDSNu+KsJpUdMK64cyBh/oU24Nk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rDE+d6J8QpjTGj6IPDSNu+KsJpUdMK64cyBh/oU24Nk="
+        }
+      ]
+    },
+    {
+      "Route": "Images/banias.1cpxflv3mm.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\banias.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19024"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gZFjNQfFmfEkPv1bThrNe54exGOCtscmI+GfofcJZT8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1cpxflv3mm"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/banias.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gZFjNQfFmfEkPv1bThrNe54exGOCtscmI+GfofcJZT8="
+        }
+      ]
+    },
+    {
+      "Route": "Images/banias.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\banias.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19024"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gZFjNQfFmfEkPv1bThrNe54exGOCtscmI+GfofcJZT8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gZFjNQfFmfEkPv1bThrNe54exGOCtscmI+GfofcJZT8="
+        }
+      ]
+    },
+    {
+      "Route": "Images/bayanihan1.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\bayanihan1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "58493"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/8LVYB8bmkgq1nQdKZTT76Up0xsZ8HTNQ6LdnZCIG00=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/8LVYB8bmkgq1nQdKZTT76Up0xsZ8HTNQ6LdnZCIG00="
+        }
+      ]
+    },
+    {
+      "Route": "Images/bayanihan1.vk103emmv8.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\bayanihan1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "58493"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/8LVYB8bmkgq1nQdKZTT76Up0xsZ8HTNQ6LdnZCIG00=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vk103emmv8"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/bayanihan1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/8LVYB8bmkgq1nQdKZTT76Up0xsZ8HTNQ6LdnZCIG00="
+        }
+      ]
+    },
+    {
+      "Route": "Images/bayanihan2.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\bayanihan2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "99050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UYrKx16G45G3LgtVkVgJTRgs1XfgiD3gByRuoZcO7nc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UYrKx16G45G3LgtVkVgJTRgs1XfgiD3gByRuoZcO7nc="
+        }
+      ]
+    },
+    {
+      "Route": "Images/bayanihan2.nu297qblu6.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\bayanihan2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "99050"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UYrKx16G45G3LgtVkVgJTRgs1XfgiD3gByRuoZcO7nc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nu297qblu6"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/bayanihan2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UYrKx16G45G3LgtVkVgJTRgs1XfgiD3gByRuoZcO7nc="
+        }
+      ]
+    },
+    {
+      "Route": "Images/BBO.0ancg4d7ne.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "485317"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KM+LVZoS86zFeBo49ZBxVeiNnORq/yVfz1tJ+VqKpWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0ancg4d7ne"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/BBO.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KM+LVZoS86zFeBo49ZBxVeiNnORq/yVfz1tJ+VqKpWE="
+        }
+      ]
+    },
+    {
+      "Route": "Images/BBO.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "485317"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KM+LVZoS86zFeBo49ZBxVeiNnORq/yVfz1tJ+VqKpWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KM+LVZoS86zFeBo49ZBxVeiNnORq/yVfz1tJ+VqKpWE="
+        }
+      ]
+    },
+    {
+      "Route": "Images/BBO1.5qfmvodipk.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1836462"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HShn/Jyiv+cs7Lc8D1LQecvuf1mZQ83rpyhrLeLk5BA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5qfmvodipk"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/BBO1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HShn/Jyiv+cs7Lc8D1LQecvuf1mZQ83rpyhrLeLk5BA="
+        }
+      ]
+    },
+    {
+      "Route": "Images/BBO1.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1836462"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HShn/Jyiv+cs7Lc8D1LQecvuf1mZQ83rpyhrLeLk5BA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HShn/Jyiv+cs7Lc8D1LQecvuf1mZQ83rpyhrLeLk5BA="
+        }
+      ]
+    },
+    {
+      "Route": "Images/BBO2.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1915286"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A7Fr0nCHTzH8Di7UPRX4+ycfN0wcSvsyX7upEpiPYCs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-A7Fr0nCHTzH8Di7UPRX4+ycfN0wcSvsyX7upEpiPYCs="
+        }
+      ]
+    },
+    {
+      "Route": "Images/BBO2.twavitu5tp.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1915286"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A7Fr0nCHTzH8Di7UPRX4+ycfN0wcSvsyX7upEpiPYCs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "twavitu5tp"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/BBO2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-A7Fr0nCHTzH8Di7UPRX4+ycfN0wcSvsyX7upEpiPYCs="
+        }
+      ]
+    },
+    {
+      "Route": "Images/BBO3.0ancg4d7ne.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "485317"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KM+LVZoS86zFeBo49ZBxVeiNnORq/yVfz1tJ+VqKpWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0ancg4d7ne"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/BBO3.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KM+LVZoS86zFeBo49ZBxVeiNnORq/yVfz1tJ+VqKpWE="
+        }
+      ]
+    },
+    {
+      "Route": "Images/BBO3.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO3.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "485317"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KM+LVZoS86zFeBo49ZBxVeiNnORq/yVfz1tJ+VqKpWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KM+LVZoS86zFeBo49ZBxVeiNnORq/yVfz1tJ+VqKpWE="
+        }
+      ]
+    },
+    {
+      "Route": "Images/BBO4.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO4.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1915286"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A7Fr0nCHTzH8Di7UPRX4+ycfN0wcSvsyX7upEpiPYCs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-A7Fr0nCHTzH8Di7UPRX4+ycfN0wcSvsyX7upEpiPYCs="
+        }
+      ]
+    },
+    {
+      "Route": "Images/BBO4.twavitu5tp.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\BBO4.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1915286"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"A7Fr0nCHTzH8Di7UPRX4+ycfN0wcSvsyX7upEpiPYCs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "twavitu5tp"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/BBO4.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-A7Fr0nCHTzH8Di7UPRX4+ycfN0wcSvsyX7upEpiPYCs="
+        }
+      ]
+    },
+    {
+      "Route": "Images/CARAVAN.98o77gg5mp.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\CARAVAN.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1425227"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l6K6TSeimITFFV+WbtAfhb963V7zZQ6ytrxXlAq1OyY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "98o77gg5mp"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/CARAVAN.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-l6K6TSeimITFFV+WbtAfhb963V7zZQ6ytrxXlAq1OyY="
+        }
+      ]
+    },
+    {
+      "Route": "Images/CARAVAN.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\CARAVAN.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1425227"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l6K6TSeimITFFV+WbtAfhb963V7zZQ6ytrxXlAq1OyY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-l6K6TSeimITFFV+WbtAfhb963V7zZQ6ytrxXlAq1OyY="
+        }
+      ]
+    },
+    {
+      "Route": "Images/gadudo.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\gadudo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17307"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tnI9k3T4uApkJuOo2X5nX0KxXTOLHIQ5Mocf6HsCAuI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tnI9k3T4uApkJuOo2X5nX0KxXTOLHIQ5Mocf6HsCAuI="
+        }
+      ]
+    },
+    {
+      "Route": "Images/gadudo.ytkleud5la.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\gadudo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17307"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tnI9k3T4uApkJuOo2X5nX0KxXTOLHIQ5Mocf6HsCAuI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ytkleud5la"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/gadudo.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tnI9k3T4uApkJuOo2X5nX0KxXTOLHIQ5Mocf6HsCAuI="
+        }
+      ]
+    },
+    {
+      "Route": "Images/gcash-qr.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\gcash-qr.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41467"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vR//CHG/etCOiXYBJrctgNyXFiT2hkbq5FNrQJM0h5s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 15:21:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vR//CHG/etCOiXYBJrctgNyXFiT2hkbq5FNrQJM0h5s="
+        }
+      ]
+    },
+    {
+      "Route": "Images/gcash-qr.zg6mmouwel.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\gcash-qr.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41467"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vR//CHG/etCOiXYBJrctgNyXFiT2hkbq5FNrQJM0h5s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 15:21:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zg6mmouwel"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/gcash-qr.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vR//CHG/etCOiXYBJrctgNyXFiT2hkbq5FNrQJM0h5s="
+        }
+      ]
+    },
+    {
+      "Route": "Images/gcash.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\gcash.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5811"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"csnzwOsE9rdoXsmI0GpYnDciv2hJhWAMoAmeku+qsns=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-csnzwOsE9rdoXsmI0GpYnDciv2hJhWAMoAmeku+qsns="
+        }
+      ]
+    },
+    {
+      "Route": "Images/gcash.mnmf124qr4.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\gcash.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5811"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"csnzwOsE9rdoXsmI0GpYnDciv2hJhWAMoAmeku+qsns=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mnmf124qr4"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/gcash.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-csnzwOsE9rdoXsmI0GpYnDciv2hJhWAMoAmeku+qsns="
+        }
+      ]
+    },
+    {
+      "Route": "Images/hotohot.maljygktxy.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\hotohot.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "112846"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cuuspUGG1b6P2Tdmzddg4DRPTkoUYlMPZxgfdeCpSwA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "maljygktxy"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/hotohot.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cuuspUGG1b6P2Tdmzddg4DRPTkoUYlMPZxgfdeCpSwA="
+        }
+      ]
+    },
+    {
+      "Route": "Images/hotohot.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\hotohot.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "112846"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cuuspUGG1b6P2Tdmzddg4DRPTkoUYlMPZxgfdeCpSwA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cuuspUGG1b6P2Tdmzddg4DRPTkoUYlMPZxgfdeCpSwA="
+        }
+      ]
+    },
+    {
+      "Route": "Images/larm-rmah-AEaTUnvneik-unsplash.drwp974f49.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\larm-rmah-AEaTUnvneik-unsplash.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5157137"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"52iSEY6Lg0qNcMde7UiD7qmgRIb1NtypSVCRUDtFIz0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "drwp974f49"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/larm-rmah-AEaTUnvneik-unsplash.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-52iSEY6Lg0qNcMde7UiD7qmgRIb1NtypSVCRUDtFIz0="
+        }
+      ]
+    },
+    {
+      "Route": "Images/larm-rmah-AEaTUnvneik-unsplash.jpg",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\larm-rmah-AEaTUnvneik-unsplash.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5157137"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"52iSEY6Lg0qNcMde7UiD7qmgRIb1NtypSVCRUDtFIz0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-52iSEY6Lg0qNcMde7UiD7qmgRIb1NtypSVCRUDtFIz0="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Logo.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\Logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "312715"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nvo1WQuH9CLUGG7VFU8ps7CTbOrVtjMo8/wDB5wvb40=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nvo1WQuH9CLUGG7VFU8ps7CTbOrVtjMo8/wDB5wvb40="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Logo.u90gwc1z98.png",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\Images\\Logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "312715"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nvo1WQuH9CLUGG7VFU8ps7CTbOrVtjMo8/wDB5wvb40=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u90gwc1z98"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/Logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nvo1WQuH9CLUGG7VFU8ps7CTbOrVtjMo8/wDB5wvb40="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "423"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BKRN2r29ynKunY9+DMYZ9Mid7wm3e465bOglx6zkWds=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BKRN2r29ynKunY9+DMYZ9Mid7wm3e465bOglx6zkWds="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.km5uk8fhjk.js",
+      "AssetFile": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "423"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BKRN2r29ynKunY9+DMYZ9Mid7wm3e465bOglx6zkWds=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Apr 2025 14:00:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "km5uk8fhjk"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BKRN2r29ynKunY9+DMYZ9Mid7wm3e465bOglx6zkWds="
+        }
+      ]
+    }
+  ]
+}

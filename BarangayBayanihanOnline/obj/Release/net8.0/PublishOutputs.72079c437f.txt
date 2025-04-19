@@ -1,0 +1,7 @@
+C:\Users\nerdl\source\repos\3CCS_G6\BarangayBayanihanOnline\bin\Release\net8.0\publish\BarangayBayanihanOnline.exe
+C:\Users\nerdl\source\repos\3CCS_G6\BarangayBayanihanOnline\bin\Release\net8.0\publish\appsettings.Development.json
+C:\Users\nerdl\source\repos\3CCS_G6\BarangayBayanihanOnline\bin\Release\net8.0\publish\appsettings.json
+C:\Users\nerdl\source\repos\3CCS_G6\BarangayBayanihanOnline\bin\Release\net8.0\publish\BarangayBayanihanOnline.dll
+C:\Users\nerdl\source\repos\3CCS_G6\BarangayBayanihanOnline\bin\Release\net8.0\publish\BarangayBayanihanOnline.deps.json
+C:\Users\nerdl\source\repos\3CCS_G6\BarangayBayanihanOnline\bin\Release\net8.0\publish\BarangayBayanihanOnline.runtimeconfig.json
+C:\Users\nerdl\source\repos\3CCS_G6\BarangayBayanihanOnline\bin\Release\net8.0\publish\BarangayBayanihanOnline.pdb
