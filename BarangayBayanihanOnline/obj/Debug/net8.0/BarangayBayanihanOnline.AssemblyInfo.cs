@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BarangayBayanihanOnline")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+109e808bc738b26718113cd65c939914acfedc23")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a83c469fbd085a5e280c7837b8d978e0cc8f580")]
+>>>>>>> 4a7e719bc92008b08f1ea2d6a5c8da00593b4996
 [assembly: System.Reflection.AssemblyProductAttribute("BarangayBayanihanOnline")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BarangayBayanihanOnline")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

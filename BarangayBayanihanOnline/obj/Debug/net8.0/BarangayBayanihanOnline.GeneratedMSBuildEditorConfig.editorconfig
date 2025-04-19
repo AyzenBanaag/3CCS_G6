@@ -48,10 +48,13 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< HEAD
 [C:/Users/nerdl/source/repos/3CCS_G6/BarangayBayanihanOnline/Views/Home/Submit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdWJtaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+=======
+>>>>>>> 4a7e719bc92008b08f1ea2d6a5c8da00593b4996
 [C:/Users/nerdl/source/repos/3CCS_G6/BarangayBayanihanOnline/Views/Home/Volunteer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWb2x1bnRlZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
