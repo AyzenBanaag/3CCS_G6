@@ -1,0 +1,161 @@
+﻿@{
+    ViewData["Title"] = "Message Sent";
+}
+
+<div class="submission-confirmation">
+    <div class="confirmation-header">
+        <div class="icon-circle">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h1>Thank You!</h1>
+        <p class="lead">Your message has been successfully sent.</p>
+    </div>
+
+    <div class="confirmation-details">
+        <div class="detail-card">
+            <h3><i class="fas fa-info-circle"></i> What Happens Next?</h3>
+            <ul>
+                <li>Our team will review your message</li>
+                <li>You'll receive a response within 2 business days</li>
+                <li>We may contact you for additional details if needed</li>
+            </ul>
+        </div>
+
+        <div class="action-buttons">
+            <a href="/" class="btn btn-home">
+                <i class="fas fa-home"></i> Return Home
+            </a>
+            <a href="ContactUs" class="btn btn-contact">
+                <i class="fas fa-envelope"></i> Send Another Message
+            </a>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .submission-confirmation {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .confirmation-header {
+            margin-bottom: 3rem;
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background: #28a745;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+            .icon-circle i {
+                color: white;
+                font-size: 2.5rem;
+            }
+
+        .confirmation-header h1 {
+            color: #28a745;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .confirmation-header .lead {
+            font-size: 1.25rem;
+            color: #6c757d;
+        }
+
+        .confirmation-details {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .detail-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: left;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+            .detail-card h3 {
+                color: #495057;
+                margin-bottom: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+                .detail-card h3 i {
+                    color: #17a2b8;
+                }
+
+            .detail-card ul {
+                list-style: none;
+                padding-left: 0;
+            }
+
+            .detail-card li {
+                padding: 0.5rem 0;
+                position: relative;
+                padding-left: 30px;
+            }
+
+                .detail-card li:before {
+                    content: "✓";
+                    color: #28a745;
+                    font-weight: bold;
+                    position: absolute;
+                    left: 0;
+                }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 2rem;
+        }
+
+        .btn-home, .btn-contact {
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .btn-home {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-contact {
+            background: #17a2b8;
+            color: white;
+        }
+
+            .btn-home:hover, .btn-contact:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+
+        @@media (max-width: 576px) {
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+}

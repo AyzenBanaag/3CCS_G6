@@ -24,12 +24,12 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0VXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nerdl/source/repos/3CCS_G6/BarangayBayanihanOnline/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/nerdl/source/repos/3CCS_G6/BarangayBayanihanOnline/Views/Home/Donate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEb25hdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nerdl/source/repos/3CCS_G6/BarangayBayanihanOnline/Views/Home/Media.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZWRpYS5jc2h0bWw=
+[C:/Users/nerdl/source/repos/3CCS_G6/BarangayBayanihanOnline/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/nerdl/source/repos/3CCS_G6/BarangayBayanihanOnline/Views/Home/Mission.cshtml]
@@ -48,8 +48,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nerdl/source/repos/3CCS_G6/BarangayBayanihanOnline/Views/Home/Team.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZWFtLmNzaHRtbA==
+[C:/Users/nerdl/source/repos/3CCS_G6/BarangayBayanihanOnline/Views/Home/Submit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdWJtaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/nerdl/source/repos/3CCS_G6/BarangayBayanihanOnline/Views/Home/Volunteer.cshtml]

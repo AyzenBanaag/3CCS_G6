@@ -147,3 +147,8 @@ main {
     .btn-light:hover {
         background-color: #e2e6ea;
     }
+
+.button-click-highlight {
+    box-shadow: 0 0 15px 4px rgba(255, 223, 0, 0.8);
+    transition: box-shadow 0.3s ease;
+}

@@ -8,23 +8,23 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\asenb\\.nuget\\packages\\": {},
+    "C:\\Users\\nerdl\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\asenb\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\BarangayBayanihanOnline.csproj",
+      "projectUniqueName": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\BarangayBayanihanOnline.csproj",
       "projectName": "BarangayBayanihanOnline",
-      "projectPath": "C:\\Users\\asenb\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\BarangayBayanihanOnline.csproj",
-      "packagesPath": "C:\\Users\\asenb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\asenb\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\obj\\",
+      "projectPath": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\BarangayBayanihanOnline.csproj",
+      "packagesPath": "C:\\Users\\nerdl\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\asenb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nerdl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -70,19 +70,19 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.15, 8.0.15]"
+            "version": "[8.0.14, 8.0.14]"
           },
           {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.15, 8.0.15]"
+            "name": "Microsoft.NETCore.App.Host.win-x86",
+            "version": "[8.0.14, 8.0.14]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.15, 8.0.15]"
+            "version": "[8.0.14, 8.0.14]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.15, 8.0.15]"
+            "version": "[8.0.14, 8.0.14]"
           }
         ],
         "frameworkReferences": {
@@ -93,7 +93,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

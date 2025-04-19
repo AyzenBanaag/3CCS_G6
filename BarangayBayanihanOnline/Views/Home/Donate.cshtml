@@ -1,321 +1,98 @@
 ﻿@{
-    ViewData["Title"] = "Donate Now";
+    ViewBag.Title = "Donate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="donation-page">
-    <div class="donation-header">
-        <h1>Donate Now</h1>
-        <div class="donation-frequency">
-            <button id="one-time-btn" class="frequency-btn active">ONE TIME</button>
-            <button id="monthly-btn" class="frequency-btn">MONTHLY</button>
+<div style="max-width: 600px; margin: 3rem auto; padding: 2.5rem; border-radius: 16px; background: linear-gradient(145deg, #ffffff, #f3f3f3); box-shadow: 0 6px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1.5rem; color: #333;">Support Our Mission</h2>
+
+    <div style="text-align: center; margin-bottom: 2rem;">
+        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">Send your donation via <strong>GCash</strong> to:</p>
+        <div style="font-size: 1.6rem; font-weight: 600; color: #0d6efd;">0910 836 1699</div>
+        <p style="color: #6c757d; font-size: 0.9rem;">(Account Name: Charles Banias)</p>
+
+        <!-- QR Code -->
+        <div style="margin-top: 1rem;">
+            <img src="~/images/gcash-qr.png" alt="GCash QR Code" style="max-width: 200px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+            <p style="font-size: 0.85rem; color: #888; margin-top: 0.5rem;">Scan this QR Code to donate instantly</p>
         </div>
     </div>
 
-    <div class="donation-message">
-        <p>We are proudly non-profit, non-corporate, and non-compromised. Thousands of people like you help us stand up for a healthy community for all. We rely on donations to carry out our mission to keep our programs open and accessible. Will you give today?</p>
-    </div>
+    <div style="border-top: 1px solid #ddd; margin: 2rem 0;"></div>
 
-    <div class="payment-section">
-        <h3>Donate with GCash</h3>
-
-        <div class="payment-options">
-            <div class="payment-method active" data-method="gcash">
-                <img src="/images/gcash.jpg" alt="GCash" class="payment-logo"> GCash
-            </div>
+    <div style="text-align: center;">
+        <p style="margin-bottom: 0.5rem;">Choose an amount:</p>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 0.75rem;">
+            @foreach (var amount in new[] { 100, 300, 500, 1000 })
+            {
+                <button class="amount-btn" style="padding: 0.6rem 1.2rem; border: 1px solid #0d6efd; background: white; color: #0d6efd; font-weight: 500; border-radius: 8px; cursor: pointer; transition: all 0.2s ease-in-out;">
+                    ₱@amount
+                </button>
+            }
         </div>
 
-        <div class="payment-form" id="gcash-form">
-            <form id="donation-form">
-                <div class="form-group">
-                    <label for="amount">Donation Amount (PHP)</label>
-                    <div class="amount-options">
-                        <button type="button" class="amount-btn" data-amount="100">₱100</button>
-                        <button type="button" class="amount-btn" data-amount="250">₱250</button>
-                        <button type="button" class="amount-btn" data-amount="500">₱500</button>
-                        <button type="button" class="amount-btn" data-amount="1000">₱1,000</button>
-                        <button type="button" class="amount-btn" data-amount="2500">₱2,500</button>
-                        <input type="number" id="custom-amount" placeholder="Other amount" min="50">
-                    </div>
-                </div>
+        <p style="margin-top: 1.5rem;">Or enter a custom amount:</p>
+        <input id="custom-amount" type="number" placeholder="Enter amount (₱)" style="padding: 0.6rem 1rem; width: 80%; max-width: 300px; border: 1px solid #ccc; border-radius: 8px; margin-top: 0.5rem;" />
 
-                <div class="form-group">
-                    <label for="mobile-number">GCash Mobile Number</label>
-                    <input type="text" id="mobile-number" placeholder="09XX XXX XXXX" pattern="09[0-9]{9}" required>
-                </div>
+        <p style="margin-top: 1.5rem;">Enter your GCash Reference Number:</p>
+        <input id="reference-number" type="text" placeholder="e.g. 9027 765 744387"
+               style="padding: 0.6rem 1rem; width: 80%; max-width: 300px; border: 1px solid #ccc; border-radius: 8px; margin-top: 0.5rem;" />
 
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" placeholder="John Vincent Hotohot" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="your@email.com" required>
-                </div>
-
-                <button type="submit" class="donate-btn">Donate Now</button>
-            </form>
-        </div>
     </div>
 
-    <div class="donation-footer">
-        <p>Barangay Bayanihan is committed to your privacy; please read our <a href="/privacy">privacy policy</a> here. Your payment details will be processed securely.</p>
-        <p>Other ways to give: <a href="#">Bank Transfer</a> | <a href="#">Check</a></p>
-        <p>Problems donating? Visit our <a href="/faq">FAQ</a> for answers to most common questions. Still have problems? <a href="/contact">Send us an email</a>.</p>
-        <p>Contributions go to the Barangay Bayanihan Foundation, to be used in its discretion for its charitable purposes.</p>
+
+    <div style="text-align: center; margin-top: 2.5rem;">
+        <button id="donatedBtn" style="background: #198754; color: white; padding: 0.8rem 2rem; border: none; border-radius: 10px; font-size: 1rem; font-weight: bold; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: background 0.3s;">
+            ✅ I Have Donated
+        </button>
     </div>
 </div>
 
-@section Styles {
-    <style>
-        /* Base Styles */
-        .donation-page {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-        }
+<!-- Confirmation Modal -->
+<div id="confirmationModal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 999;">
+    <div style="background: white; width: 90%; max-width: 400px; margin: 10% auto; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 6px 16px rgba(0,0,0,0.2);">
+        <h3 style="margin-bottom: 1rem;">🙏 Thank You!</h3>
+        <p>Your donation helps us continue our mission. We appreciate your generosity!</p>
+        <button onclick="closeModal()" style="margin-top: 1.5rem; padding: 0.6rem 1.2rem; background: #0d6efd; color: white; border: none; border-radius: 8px; font-weight: bold;">Close</button>
+    </div>
+</div>
 
-        /* Header Styles */
-        .donation-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
+<style>
+    .amount-btn:hover {
+        background-color: #0d6efd;
+        color: white;
+        transform: scale(1.05);
+    }
 
-            .donation-header h1 {
-                font-size: 2.5rem;
-                color: #2c3e50;
-                margin-bottom: 1.5rem;
-            }
+    .amount-btn.active {
+        background-color: #0d6efd !important;
+        color: white !important;
+    }
+</style>
 
-        .donation-frequency {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
+<script>
+    const amountButtons = document.querySelectorAll('.amount-btn');
+    const customAmountInput = document.getElementById('custom-amount');
+    const donatedBtn = document.getElementById('donatedBtn');
+    const modal = document.getElementById('confirmationModal');
 
-        .frequency-btn {
-            padding: 0.8rem 2rem;
-            font-size: 1rem;
-            font-weight: bold;
-            border: none;
-            background-color: #f8f9fa;
-            color: #6c757d;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-            .frequency-btn:first-child {
-                border-radius: 5px 0 0 5px;
-            }
-
-            .frequency-btn:last-child {
-                border-radius: 0 5px 5px 0;
-            }
-
-            .frequency-btn.active {
-                background-color: #0057b8; /* GCash blue */
-                color: white;
-            }
-
-        /* Message Section */
-        .donation-message {
-            background-color: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            text-align: center;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        /* Payment Section */
-        .payment-section {
-            background-color: white;
-            border-radius: 8px;
-            padding: 2rem;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
-        }
-
-            .payment-section h3 {
-                font-size: 1.3rem;
-                color: #2c3e50;
-                margin-bottom: 1.5rem;
-                text-align: center;
-            }
-
-        .security-badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #27ae60;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-        }
-
-            .security-badge i {
-                margin-right: 0.5rem;
-            }
-
-        /* Payment Options */
-        .payment-options {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .payment-method {
-            padding: 1rem 1.5rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .payment-logo {
-            height: 24px;
-        }
-
-        .payment-method.active {
-            border-color: #0057b8;
-            background-color: #e6f0fa;
-        }
-
-        /* Form Styles */
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .amount-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .amount-btn {
-            padding: 0.7rem 1rem;
-            background-color: #f8f9fa;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-            .amount-btn:hover {
-                background-color: #e9ecef;
-            }
-
-            .amount-btn.active {
-                background-color: #0057b8;
-                color: white;
-                border-color: #0057b8;
-            }
-
-        #custom-amount {
-            flex: 1;
-            min-width: 150px;
-            padding: 0.7rem 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        input[type="text"],
-        input[type="number"],
-        input[type="email"] {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        /* Donate Button */
-        .donate-btn {
-            width: 100%;
-            padding: 1rem;
-            background-color: #0057b8;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s;
-            margin-top: 1rem;
-        }
-
-            .donate-btn:hover {
-                background-color: #003d82;
-            }
-
-        /* Footer */
-        .donation-footer {
-            font-size: 0.9rem;
-            color: #6c757d;
-            line-height: 1.6;
-            text-align: center;
-        }
-
-            .donation-footer a {
-                color: #0057b8;
-                text-decoration: none;
-            }
-
-                .donation-footer a:hover {
-                    text-decoration: underline;
-                }
-
-    </style>
-}
-
-@section Scripts {
-    <script>
-        // Frequency selection
-        document.getElementById('one-time-btn').addEventListener('click', function () {
-            this.classList.add('active');
-            document.getElementById('monthly-btn').classList.remove('active');
+    amountButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            amountButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            customAmountInput.value = '';
         });
+    });
 
-        document.getElementById('monthly-btn').addEventListener('click', function () {
-            this.classList.add('active');
-            document.getElementById('one-time-btn').classList.remove('active');
-        });
+    customAmountInput.addEventListener('input', () => {
+        amountButtons.forEach(b => b.classList.remove('active'));
+    });
 
-        // Amount selection
-        const amountBtns = document.querySelectorAll('.amount-btn');
-        amountBtns.forEach(btn => {
-            btn.addEventListener('click', function () {
-                amountBtns.forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                document.getElementById('custom-amount').value = '';
-            });
-        });
+    donatedBtn.addEventListener('click', () => {
+        modal.style.display = 'block';
+    });
 
-        document.getElementById('custom-amount').addEventListener('input', function () {
-            amountBtns.forEach(b => b.classList.remove('active'));
-        });
-
-        // Form submission
-        document.getElementById('donation-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const mobileNumber = document.getElementById('mobile-number').value;
-            if (!mobileNumber.match(/^09[0-9]{9}$/)) {
-                alert('Please enter a valid 11-digit GCash mobile number starting with 09.');
-                return;
-            }
-            // In a real implementation, you would integrate with a payment gateway (e.g., PayMongo) to process GCash payments
-            alert('Thank you for your donation! GCash payment would be processed in a real implementation.');
-        });
-    </script>
-}
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+</script>
