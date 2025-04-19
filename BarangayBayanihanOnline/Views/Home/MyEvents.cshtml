@@ -1,121 +1,117 @@
-﻿@model BarangayBayanihanOnline.Models.EventViewModel
-@{
-    ViewData["Title"] = "Manage Events";
+﻿@{
+    ViewData["Title"] = "Create Event";
 }
 
-<div class="event-management-page">
-    <!-- Header Section -->
+<div class="event-creation-page">
     <div class="event-header">
         <div class="header-content">
-            <h1>Event Management</h1>
-            <p class="subtitle">Create and manage community events</p>
+            <h1>Create New Event</h1>
+            <p class="subtitle">Bring your community together with memorable events</p>
         </div>
         <div class="header-icon">
-            <i class="fas fa-calendar-alt"></i>
+            <i class="fas fa-calendar-plus"></i>
         </div>
     </div>
 
-    <!-- Main Content -->
-    <div class="event-container">
-        <!-- Create Event Form -->
-        <div class="create-event-section">
-            <h2>Create New Event</h2>
-            <form method="post" class="event-form" asp-action="CreateEvent">
-                <!-- Event Basics Section -->
-                <div class="form-section">
-                    <h3 class="section-title">
-                        <span class="icon-circle"><i class="fas fa-info-circle"></i></span>
-                        Event Basics
-                    </h3>
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label asp-for="NewEvent.Name">Event Name <span class="required">*</span></label>
-                            <input asp-for="NewEvent.Name" type="text" required placeholder="Community Fiesta Night">
-                        </div>
-
-                        <div class="form-group">
-                            <label asp-for="NewEvent.StartDate">Start Date & Time <span class="required">*</span></label>
-                            <input asp-for="NewEvent.StartDate" type="datetime-local" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label asp-for="NewEvent.EndDate">End Date & Time <span class="required">*</span></label>
-                            <input asp-for="NewEvent.EndDate" type="datetime-local" required>
-                        </div>
-                    </div>
+    <form method="post" class="event-form">
+        <!-- Event Basics Section -->
+        <div class="form-section">
+            <h2 class="section-title">
+                <span class="icon-circle"><i class="fas fa-info-circle"></i></span>
+                Event Basics
+            </h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="eventName">Event Name <span class="required">*</span></label>
+                    <input type="text" id="eventName" name="eventName" required placeholder="Community Fiesta Night">
                 </div>
 
-                <!-- Event Details Section -->
-                <div class="form-section">
-                    <h3 class="section-title">
-                        <span class="icon-circle"><i class="fas fa-align-left"></i></span>
-                        Event Details
-                    </h3>
-                    <div class="form-group">
-                        <label asp-for="NewEvent.Description">Description</label>
-                        <textarea asp-for="NewEvent.Description" rows="5" placeholder="Tell attendees what to expect..."></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label asp-for="NewEvent.Location">Location</label>
-                        <input asp-for="NewEvent.Location" type="text" placeholder="Barangay Hall">
-                    </div>
+                <div class="form-group">
+                    <label for="startDate">Start Date & Time <span class="required">*</span></label>
+                    <input type="datetime-local" id="startDate" name="startDate" required>
                 </div>
 
-                <div class="form-actions">
-                    <button type="submit" class="btn-create">
-                        <i class="fas fa-check-circle"></i> Create Event
-                    </button>
+                <div class="form-group">
+                    <label for="endDate">End Date & Time <span class="required">*</span></label>
+                    <input type="datetime-local" id="endDate" name="endDate" required>
                 </div>
-            </form>
+            </div>
         </div>
 
-        <!-- Events List Section -->
-        <div class="events-list-section">
-            <h2>Upcoming Events</h2>
-            
-            @if (Model.Events.Any())
-            {
-                <div class="events-list">
-                    @foreach (var e in Model.Events)
-                    {
-                        <div class="event-card">
-                            <div class="event-card-header">
-                                <h3>@e.Name</h3>
-                                <span class="event-date">@e.StartDate.ToString("MMM dd, yyyy hh:mm tt")</span>
-                            </div>
-                            <div class="event-card-body">
-                                <p class="event-description">@e.Description</p>
-                                <div class="event-meta">
-                                    <span><i class="fas fa-map-marker-alt"></i> @e.Location</span>
-                                    <span><i class="fas fa-users"></i> @(e.Attendees?.Count ?? 0) attending</span>
-                                </div>
-                            </div>
-                            <div class="event-card-footer">
-                                <a href="@Url.Action("ViewEvent", "Event", new { id = e.Id })" class="btn-view">
-                                    <i class="fas fa-eye"></i> View Details
-                                </a>
-                            </div>
-                        </div>
-                    }
+        <!-- Event Settings Section -->
+        <div class="form-section">
+            <h2 class="section-title">
+                <span class="icon-circle"><i class="fas fa-cog"></i></span>
+                Event Settings
+            </h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="isVirtual">Event Type</label>
+                    <div class="select-wrapper">
+                        <select id="isVirtual" name="isVirtual">
+                            <option value="in-person">In-Person</option>
+                            <option value="virtual">Virtual</option>
+                        </select>
+                    </div>
                 </div>
-            }
-            else
-            {
-                <div class="no-events">
-                    <i class="fas fa-calendar-times"></i>
-                    <p>No upcoming events scheduled</p>
+
+                <div class="form-group">
+                    <label for="visibility">Visibility</label>
+                    <div class="select-wrapper">
+                        <select id="visibility" name="visibility">
+                            <option value="public">Public</option>
+                            <option value="private">Private</option>
+                        </select>
+                    </div>
                 </div>
-            }
+
+                <div class="form-group">
+                    <label for="repeatEvent">Repeat</label>
+                    <div class="select-wrapper">
+                        <select id="repeatEvent" name="repeatEvent">
+                            <option value="never">Does not repeat</option>
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <!-- Event Details Section -->
+        <div class="form-section">
+            <h2 class="section-title">
+                <span class="icon-circle"><i class="fas fa-align-left"></i></span>
+                Event Details
+            </h2>
+            <div class="form-group">
+                <label for="details">Description</label>
+                <textarea id="details" name="details" rows="5" placeholder="Tell attendees what to expect..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="coHosts">Co-Hosts</label>
+                <div class="input-with-tag">
+                    <input type="text" id="coHosts" name="coHosts" placeholder="Enter email addresses">
+                    <span class="input-tag">Separate with commas</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-create">
+                <i class="fas fa-check-circle"></i> Create Event
+            </button>
+        </div>
+    </form>
 </div>
 
 @section Styles {
     <style>
         /* Base Styles */
-        .event-management-page {
-            max-width: 1200px;
+        .event-creation-page {
+            max-width: 900px;
             margin: 0 auto;
             padding: 2rem 1.5rem;
             font-family: 'Poppins', sans-serif;
@@ -151,30 +147,19 @@
             opacity: 0.2;
         }
 
-        /* Main Container */
-        .event-container {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 2rem;
-        }
-
-        /* Create Event Section */
-        .create-event-section {
+        /* Form Sections */
+        .form-section {
             background: white;
             border-radius: 10px;
-            padding: 1.5rem;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
         }
 
-        /* Form Sections */
-        .form-section {
-            margin-bottom: 1.5rem;
-        }
-
         .section-title {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
             color: #2d3436;
@@ -184,19 +169,19 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 30px;
-            height: 30px;
+            width: 36px;
+            height: 36px;
             background: #dfe6e9;
             border-radius: 50%;
-            margin-right: 10px;
+            margin-right: 12px;
             color: #0984e3;
         }
 
         /* Form Grid Layout */
         .form-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
         }
 
         /* Form Elements */
@@ -208,7 +193,7 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
 
         .required {
@@ -217,158 +202,96 @@
 
         input[type="text"],
         input[type="datetime-local"],
+        select,
         textarea {
             width: 100%;
-            padding: 0.7rem 1rem;
+            padding: 0.8rem 1rem;
             border: 1px solid #dfe6e9;
             border-radius: 8px;
-            font-size: 0.95rem;
+            font-size: 1rem;
             transition: all 0.2s;
             background-color: #f9f9f9;
         }
 
-        input[type="text"]:focus,
-        input[type="datetime-local"]:focus,
-        textarea:focus {
-            border-color: #74b9ff;
-            box-shadow: 0 0 0 3px rgba(116, 185, 255, 0.2);
-            outline: none;
-            background-color: white;
-        }
+            input[type="text"]:focus,
+            input[type="datetime-local"]:focus,
+            select:focus,
+            textarea:focus {
+                border-color: #74b9ff;
+                box-shadow: 0 0 0 3px rgba(116, 185, 255, 0.2);
+                outline: none;
+                background-color: white;
+            }
 
         textarea {
-            min-height: 120px;
+            min-height: 140px;
             resize: vertical;
+        }
+
+        .select-wrapper {
+            position: relative;
+        }
+
+            .select-wrapper::after {
+                content: "▼";
+                position: absolute;
+                top: 50%;
+                right: 1rem;
+                transform: translateY(-50%);
+                pointer-events: none;
+                color: #636e72;
+                font-size: 0.7rem;
+            }
+
+        select {
+            appearance: none;
+            padding-right: 2.5rem;
+        }
+
+        .input-with-tag {
+            position: relative;
+        }
+
+        .input-tag {
+            position: absolute;
+            right: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #dfe6e9;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: #636e72;
         }
 
         /* Submit Button */
         .form-actions {
             text-align: center;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
         }
 
         .btn-create {
             background: linear-gradient(135deg, #00b894, #55efc4);
             color: white;
             border: none;
-            padding: 0.8rem 2rem;
-            font-size: 1rem;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
             font-weight: 500;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s;
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
             box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
         }
 
-        .btn-create:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4);
-        }
-
-        /* Events List Section */
-        .events-list-section {
-            background: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .events-list {
-            display: grid;
-            gap: 1rem;
-        }
-
-        .event-card {
-            border: 1px solid #eee;
-            border-radius: 8px;
-            padding: 1.25rem;
-            transition: all 0.3s;
-        }
-
-        .event-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .event-card-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-
-        .event-card-header h3 {
-            margin: 0;
-            font-size: 1.1rem;
-        }
-
-        .event-date {
-            color: #666;
-            font-size: 0.85rem;
-        }
-
-        .event-description {
-            color: #555;
-            font-size: 0.9rem;
-            margin-bottom: 0.75rem;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .event-meta {
-            display: flex;
-            gap: 1rem;
-            font-size: 0.8rem;
-            color: #666;
-        }
-
-        .event-meta i {
-            margin-right: 0.3rem;
-        }
-
-        .event-card-footer {
-            margin-top: 1rem;
-            text-align: right;
-        }
-
-        .btn-view {
-            background: #0984e3;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-view i {
-            font-size: 0.8rem;
-        }
-
-        .no-events {
-            text-align: center;
-            padding: 2rem;
-            color: #888;
-        }
-
-        .no-events i {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
+            .btn-create:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4);
+            }
 
         /* Responsive Adjustments */
-        @@media (max-width: 992px) {
-            .event-container {
-                grid-template-columns: 1fr;
-            }
-        }
-
         @@media (max-width: 768px) {
             .event-header {
                 flex-direction: column;
@@ -379,6 +302,14 @@
             .header-icon {
                 margin-top: 1rem;
                 font-size: 2.5rem;
+            }
+
+            .form-section {
+                padding: 1.25rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
