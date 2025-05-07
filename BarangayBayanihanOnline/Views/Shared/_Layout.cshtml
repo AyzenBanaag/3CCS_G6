@@ -4,19 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Barangay Bayanihan Online</title>
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Freeman&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="~/css/site.css" />
-
     @RenderSection("Styles", required: false)
 </head>
 <body>
@@ -30,7 +23,6 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="mainNavbar">
                     <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
                         <li class="nav-item">
@@ -39,10 +31,9 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-action="MyEvents">Create Events</a>
                         </li>
-                        <li>
-                        <a class="nav-link" asp-controller="Home" asp-action="Mission">Our Mission</a>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Mission">Our Mission</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link" asp-action="OurProgram">Programs & Projects</a>
                         </li>
@@ -50,36 +41,46 @@
                             <a class="nav-link" asp-action="Volunteer">Volunteer</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-action="ContactUS">Contact</a>
+                            <a class="nav-link" asp-action="ContactUs">Contact</a>
                         </li>
-
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Admin" asp-action="Index">Admin Dashboard</a>
+                            </li>
+                        }
                         <li class="nav-item">
                             <a class="btn btn-warning text-dark fw-semibold ms-lg-3 rounded-pill px-4" asp-action="Donate">Donate</a>
                         </li>
-
                         <li class="nav-item">
-                            <button class="btn btn-outline-light ms-lg-2 rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#loginModal">
-                                <i class="fas fa-sign-in-alt me-1"></i> Login
-                            </button>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <form asp-controller="Home" asp-action="Logout" method="post">
+                                    <button type="submit" class="btn btn-outline-light ms-lg-2 rounded-pill px-3">
+                                        <i class="fas fa-sign-out-alt me-1"></i> Logout
+                                    </button>
+                                </form>
+                            }
+                            else
+                            {
+                                <button class="btn btn-outline-light ms-lg-2 rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                    <i class="fas fa-sign-in-alt me-1"></i> Login
+                                </button>
+                            }
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-
     </header>
-
     <main class="pb-3">
         @RenderBody()
     </main>
-
     <footer class="footer">
         <div class="container text-center p-4">
-            <p>&copy; 2025 Barangay Bayanihan Online. All rights reserved.</p>
+            <p>© 2025 Barangay Bayanihan Online. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Login Modal -->
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -89,18 +90,18 @@
                     <button type="button" class="btn-close position-absolute end-0 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="loginForm">
+                    <form asp-controller="Home" asp-action="Login" method="post">
                         <div class="mb-3">
                             <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control rounded-pill p-3" id="email" placeholder="Enter your email">
+                            <input type="email" class="form-control rounded-pill p-3" id="email" name="email" placeholder="Enter your email">
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control rounded-pill p-3" id="password" placeholder="Enter your password">
+                            <input type="password" class="form-control rounded-pill p-3" id="password" name="password" placeholder="Enter your password">
                         </div>
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
                                 <label class="form-check-label" for="rememberMe">Remember me</label>
                             </div>
                             <a href="#" class="text-decoration-none text-primary" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal" data-bs-dismiss="modal">Forgot password?</a>
@@ -112,8 +113,6 @@
             </div>
         </div>
     </div>
-
-
     <!-- Forgot Password Modal -->
     <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -122,12 +121,11 @@
                     <h5 class="modal-title fw-bold text-center w-100" id="forgotPasswordModalLabel">Forgot Password?</h5>
                     <button type="button" class="btn-close position-absolute end-0 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-
                 <div class="modal-body">
-                    <form id="forgotPasswordForm">
+                    <form asp-controller="Home" asp-action="ForgotPassword" method="post">
                         <div class="mb-3">
                             <label for="forgotEmail" class="form-label">Email Address</label>
-                            <input type="email" class="form-control rounded-pill p-3" id="forgotEmail" placeholder="Enter your email to reset your password">
+                            <input type="email" class="form-control rounded-pill p-3" id="forgotEmail" name="email" placeholder="Enter your email to reset your password">
                         </div>
                         <button type="submit" class="btn btn-primary w-100 rounded-pill p-3 fw-bold">Send Reset Link</button>
                     </form>
@@ -138,7 +136,6 @@
             </div>
         </div>
     </div>
-
     <!-- Signup Modal -->
     <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -148,22 +145,22 @@
                     <button type="button" class="btn-close position-absolute end-0 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="signupForm">
+                    <form asp-controller="Home" asp-action="Signup" method="post">
                         <div class="mb-3">
                             <label for="signupName" class="form-label">Full Name</label>
-                            <input type="text" class="form-control rounded-pill p-3" id="signupName" placeholder="Enter your full name">
+                            <input type="text" class="form-control rounded-pill p-3" id="signupName" name="fullName" placeholder="Enter your full name">
                         </div>
                         <div class="mb-3">
                             <label for="signupEmail" class="form-label">Email Address</label>
-                            <input type="email" class="form-control rounded-pill p-3" id="signupEmail" placeholder="Enter your email">
+                            <input type="email" class="form-control rounded-pill p-3" id="signupEmail" name="email" placeholder="Enter your email">
                         </div>
                         <div class="mb-3">
                             <label for="signupPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control rounded-pill p-3" id="signupPassword" placeholder="Enter a password">
+                            <input type="password" class="form-control rounded-pill p-3" id="signupPassword" name="password" placeholder="Enter a password">
                         </div>
                         <div class="mb-3">
                             <label for="confirmPassword" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control rounded-pill p-3" id="confirmPassword" placeholder="Confirm your password">
+                            <input type="password" class="form-control rounded-pill p-3" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
                         </div>
                         <button type="submit" class="btn btn-primary w-100 rounded-pill p-3 fw-bold">Sign Up</button>
                     </form>
@@ -174,9 +171,6 @@
             </div>
         </div>
     </div>
-
-
-    <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

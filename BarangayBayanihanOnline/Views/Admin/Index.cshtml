@@ -1,0 +1,443 @@
+﻿@model BarangayBayanihanOnline.Models.AdminViewModel
+
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="dashboard-container">
+    <h1 class="dashboard-title">Admin Dashboard</h1>
+
+    <div class="stats-cards">
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-info">
+                <h3>Users</h3>
+                <p class="stat-count">@Model.Users.Count()</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-file-alt"></i>
+            </div>
+            <div class="stat-info">
+                <h3>Events</h3>
+                <p class="stat-count">@Model.Events.Count()</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <div class="stat-info">
+                <h3>Messages</h3>
+                <p class="stat-count">@Model.ContactMessages.Count()</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-donate"></i>
+            </div>
+            <div class="stat-info">
+                <h3>Donations</h3>
+                <p class="stat-count">@Model.Donations.Count()</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-hand-holding-heart"></i>
+            </div>
+            <div class="stat-info">
+                <h3>Volunteers</h3>
+                <p class="stat-count">@Model.Volunteers.Count()</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-section">
+        <div class="accordion-item">
+            <h2 class="accordion-header">Users</h2>
+            <div class="accordion-content">
+                <div class="table-responsive">
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>User ID</th>
+                                <th>Full Name</th>
+                                <th>Email</th>
+                                <th>Is Admin</th>
+                                <th>Last Login</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var user in Model.Users)
+                            {
+                                <tr>
+                                    <td>@user.UserId</td>
+                                    <td>@user.FullName</td>
+                                    <td>@user.Email</td>
+                                    <td>@(user.IsAdmin ? "Yes" : "No")</td>
+                                    <td>@(user.LastLogin?.ToString("g") ?? "Never")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">Events</h2>
+            <div class="accordion-content">
+                <div class="table-header-actions">
+                    <a asp-controller="Admin" asp-action="AllEvents" class="btn btn-primary btn-sm">
+                        View All Events
+                    </a>
+                </div>
+                <div class="table-responsive">
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Event ID</th>
+                                <th>Name</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Created By</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var evt in Model.Events)
+                            {
+                                <tr>
+                                    <td>@evt.EventId</td>
+                                    <td>@evt.EventName</td>
+                                    <td>@evt.StartDateTime.ToString("g")</td>
+                                    <td>@evt.EndDateTime.ToString("g")</td>
+                                    <td>@(evt.User?.FullName ?? "Unknown")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">Donations</h2>
+            <div class="accordion-content">
+                <div class="table-responsive">
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Donation ID</th>
+                                <th>Amount</th>
+                                <th>Donor Name</th>
+                                <th>GCash Ref</th>
+                                <th>Status</th>
+                                <th>Donation Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var donation in Model.Donations)
+                            {
+                                <tr>
+                                    <td>@donation.DonationId</td>
+                                    <td>@donation.Amount.ToString("C")</td>
+                                    <td>@donation.DonorName</td>
+                                    <td>@donation.GCashReferenceNumber</td>
+                                    <td>@donation.Status</td>
+                                    <td>@donation.DonationDate.ToString("g")</td>
+                                    <td>
+                                        @if (donation.Status == "Pending")
+                                        {
+                                            <form asp-action="VerifyDonation" method="post" style="display:inline;">
+                                                <input type="hidden" name="donationId" value="@donation.DonationId" />
+                                                <button type="submit" class="btn btn-success btn-sm">Verify</button>
+                                            </form>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">Contact Messages</h2>
+            <div class="accordion-content">
+                <div class="table-responsive">
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Message ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Subject</th>
+                                <th>Message</th>
+                                <th>Status</th>
+                                <th>Submitted At</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var message in Model.ContactMessages)
+                            {
+                                <tr>
+                                    <td>@message.MessageId</td>
+                                    <td>@message.Name</td>
+                                    <td>@message.Email</td>
+                                    <td>@message.Subject</td>
+                                    <td>@message.Message</td>
+                                    <td>@message.Status</td>
+                                    <td>@message.SubmittedAt.ToString("g")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">Volunteers</h2>
+            <div class="accordion-content">
+                <div class="table-responsive">
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Volunteer ID</th>
+                                <th>Full Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Status</th>
+                                <th>Application Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var volunteer in Model.Volunteers)
+                            {
+                                <tr>
+                                    <td>@volunteer.VolunteerId</td>
+                                    <td>@volunteer.FullName</td>
+                                    <td>@volunteer.Email</td>
+                                    <td>@volunteer.PhoneNumber</td>
+                                    <td>@volunteer.Status</td>
+                                    <td>@volunteer.ApplicationDate.ToString("g")</td>
+                                    <td>
+                                        @if (volunteer.Status == "Pending")
+                                        {
+                                            <form asp-action="ApproveVolunteer" method="post" style="display:inline;">
+                                                <input type="hidden" name="volunteerId" value="@volunteer.VolunteerId" />
+                                                <button type="submit" class="btn btn-success btn-sm">Approve</button>
+                                            </form>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">Login History</h2>
+            <div class="accordion-content">
+                <div class="table-responsive">
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Login ID</th>
+                                <th>User</th>
+                                <th>Login Time</th>
+                                <th>IP Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var login in Model.LoginHistory)
+                            {
+                                <tr>
+                                    <td>@login.LoginId</td>
+                                    <td>@(login.User?.FullName ?? "Unknown")</td>
+                                    <td>@login.LoginTime.ToString("g")</td>
+                                    <td>@(login.IpAddress ?? "N/A")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    this.parentElement.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+}
+
+@section Styles {
+    <style>
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .dashboard-title {
+            margin-bottom: 30px;
+            color: #333;
+            text-align: center;
+        }
+
+        .stats-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+            .stat-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            }
+
+        .stat-icon {
+            font-size: 2rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #f0f8ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: #007bff;
+        }
+
+        .stat-info h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .stat-count {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 5px 0 0;
+            color: #333;
+        }
+
+        .accordion-section {
+            margin-top: 30px;
+        }
+
+        .accordion-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-header {
+            padding: 15px 20px;
+            background-color: #f8f9fa;
+            color: #333;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            transition: background-color 0.3s;
+        }
+
+            .accordion-header:after {
+                content: '+';
+                font-size: 1.5rem;
+                color: #777;
+            }
+
+        .accordion-item.active .accordion-header {
+            background-color: #e9ecef;
+        }
+
+            .accordion-item.active .accordion-header:after {
+                content: '-';
+            }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #fff;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 1000px;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            padding: 15px;
+        }
+
+        .dashboard-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 0;
+        }
+
+            .dashboard-table th,
+            .dashboard-table td {
+                padding: 12px 15px;
+                text-align: left;
+                border-bottom: 1px solid #e9ecef;
+            }
+
+            .dashboard-table th {
+                background-color: #f8f9fa;
+                color: #495057;
+                font-weight: 600;
+            }
+
+            .dashboard-table tr:hover {
+                background-color: #f1f3f5;
+            }
+
+        @@media (max-width: 768px) {
+            .stats-cards {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
+        @@media (max-width: 576px) {
+            .stats-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+}

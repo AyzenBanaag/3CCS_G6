@@ -1,9 +1,10 @@
-﻿@{
+﻿@model BarangayBayanihanOnline.Models.Volunteer
+@{
     ViewData["Title"] = "Join the Bayanihan Spirit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="volunteer-page">
-    <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content">
             <h1>Join the Bayanihan Spirit</h1>
@@ -15,13 +16,11 @@
         </div>
     </section>
 
-    <!-- Opportunities Section -->
     <section id="opportunities" class="opportunities-section">
         <div class="section-header">
             <h2>Volunteer Opportunities</h2>
-            <p>Be part of something bigger than yourself. As a Bayanihan Volunteer, you’ll help uplift the spirit of unity and cooperation within the community by offering your time, energy, and heart. </p>
+            <p>Be part of something bigger than yourself. As a Bayanihan Volunteer, you’ll help uplift the spirit of unity and cooperation within the community by offering your time, energy, and heart.</p>
         </div>
-
         <div class="opportunity-cards">
             <div class="opportunity-card">
                 <h3>Event Volunteers</h3>
@@ -33,35 +32,41 @@
                 </ul>
                 <a href="#volunteer-form" class="btn btn-card">Apply Now</a>
             </div>
-
-            <!-- Additional opportunity cards can be added here -->
         </div>
     </section>
 
-    <!-- Volunteer Form -->
     <section id="volunteer-form" class="form-section">
         <h2>Ready to Volunteer?</h2>
-        <form class="volunteer-form">
+        <form asp-action="Volunteer" method="post" class="volunteer-form">
+            @if (TempData["Message"] != null)
+            {
+                <div class="alert alert-success">@TempData["Message"]</div>
+            }
             <div class="form-group">
-                <label for="fullName">Full Name</label>
-                <input type="text" id="fullName" name="fullName" required>
+                <label asp-for="FullName">Full Name</label>
+                <input asp-for="FullName" class="form-control" required />
+                <span asp-validation-for="FullName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <label asp-for="Email">Email</label>
+                <input asp-for="Email" type="email" class="form-control" required />
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone">
+                <label asp-for="PhoneNumber">Phone Number</label>
+                <input asp-for="PhoneNumber" type="tel" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label>Areas of Interest</label>
+                <label asp-for="AreasOfInterest">Areas of Interest</label>
                 <div class="checkbox-group">
-                    <label><input type="checkbox" name="interest" value="events"> Event Volunteers</label>
-                    <label><input type="checkbox" name="interest" value="youth"> Youth Programs</label>
-                    <label><input type="checkbox" name="interest" value="cultural"> Cultural Activities</label>
-                    <label><input type="checkbox" name="interest" value="cultural"> Others</label>
+                    <label><input type="checkbox" name="Interests" value="Events"> Event Volunteers</label>
+                    <label><input type="checkbox" name="Interests" value="Youth Programs"> Youth Programs</label>
+                    <label><input type="checkbox" name="Interests" value="Cultural Activities"> Cultural Activities</label>
+                    <label><input type="checkbox" name="Interests" value="Others"> Others</label>
                 </div>
+                <input asp-for="AreasOfInterest" type="hidden" />
+                <span asp-validation-for="AreasOfInterest" class="text-danger"></span>
             </div>
             <button type="submit" class="btn btn-submit">Submit Application</button>
         </form>
@@ -70,14 +75,12 @@
 
 @section Styles {
     <style>
-        /* Base Styles */
         .volunteer-page {
             font-family: 'Poppins', sans-serif;
             color: #333;
             line-height: 1.6;
         }
 
-        /* Hero Section */
         .hero-section {
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/community-hero.jpg');
             background-size: cover;
@@ -107,32 +110,6 @@
             margin-top: 2rem;
         }
 
-        /* Stats Section */
-        .stats-section {
-            display: flex;
-            justify-content: space-around;
-            padding: 60px 20px;
-            background-color: #f8f9fa;
-            text-align: center;
-        }
-
-        .stat-item {
-            padding: 0 20px;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #e74c3c;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            color: #555;
-        }
-
-        /* Opportunities Section */
         .opportunities-section {
             padding: 60px 20px;
             max-width: 1200px;
@@ -191,7 +168,6 @@
                     top: -3px;
                 }
 
-        /* Form Section */
         .form-section {
             max-width: 800px;
             margin: 0 auto;
@@ -224,9 +200,7 @@
             color: #2c3e50;
         }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"] {
+        .form-control {
             width: 100%;
             padding: 12px 15px;
             border: 1px solid #ddd;
@@ -248,10 +222,8 @@
                 cursor: pointer;
             }
 
-        /* Buttons */
         .btn {
             display: inline-block;
-            
             border-radius: 6px;
             font-weight: 500;
             text-decoration: none;
@@ -263,6 +235,7 @@
             color: white;
             border: none;
             border-radius: 20px;
+            padding: 10px 20px;
         }
 
             .btn-primary:hover {
@@ -275,6 +248,7 @@
             color: white;
             border: 2px solid white;
             border-radius: 20px;
+            padding: 10px 20px;
         }
 
             .btn-outline:hover {
@@ -314,7 +288,6 @@
                 transform: translateY(-2px);
             }
 
-        /* Responsive Design */
         @@media (max-width: 768px) {
             .hero-content h1 {
                 font-size: 2rem;
@@ -329,14 +302,20 @@
                 align-items: center;
             }
 
-            .stats-section {
-                flex-direction: column;
-                gap: 40px;
-            }
-
             .volunteer-form {
                 padding: 30px 20px;
             }
         }
     </style>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        document.querySelector('.volunteer-form').addEventListener('submit', function (e) {
+            const checkboxes = document.querySelectorAll('input[name="Interests"]:checked');
+            const interests = Array.from(checkboxes).map(cb => cb.value).join(', ');
+            document.querySelector('input[name="AreasOfInterest"]').value = interests;
+        });
+    </script>
 }

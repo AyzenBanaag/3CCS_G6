@@ -1,0 +1,37 @@
+﻿@model List<Event>
+
+@{
+    ViewData["Title"] = "All Events";
+}
+
+<div class="container">
+    <h1>All Events</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Type</th>
+                <th>Created By</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var e in Model)
+            {
+                <tr>
+                    <td>@e.EventId</td>
+                    <td>@e.EventName</td>
+                    <td>@e.StartDateTime.ToString("g")</td>
+                    <td>@e.EndDateTime.ToString("g")</td>
+                    <td>@e.EventType</td>
+                    <td>@(e.User?.FullName ?? "System")</td>
+                    <td>@e.CreatedAt.ToString("g")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

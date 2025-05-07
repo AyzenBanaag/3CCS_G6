@@ -4,13 +4,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\BarangayBayanihanOnline.qni6895sv8.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-9r\u002BqowRhNGweymgvxQDr/cS/\u002Bt0S3o6zJlJHlJWDosI="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1141"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00229r\u002BqowRhNGweymgvxQDr/cS/\u002Bt0S3o6zJlJHlJWDosI=\u0022"},{"Name":"Last-Modified","Value":"Sun, 20 Apr 2025 09:44:08 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1141"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00229r\u002BqowRhNGweymgvxQDr/cS/\u002Bt0S3o6zJlJHlJWDosI=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 21:44:53 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/BarangayBayanihanOnline.qni6895sv8.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\BarangayBayanihanOnline.qni6895sv8.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"qni6895sv8"},{"Name":"integrity","Value":"sha256-9r\u002BqowRhNGweymgvxQDr/cS/\u002Bt0S3o6zJlJHlJWDosI="},{"Name":"label","Value":"_content/BarangayBayanihanOnline/BarangayBayanihanOnline.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1141"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00229r\u002BqowRhNGweymgvxQDr/cS/\u002Bt0S3o6zJlJHlJWDosI=\u0022"},{"Name":"Last-Modified","Value":"Sun, 20 Apr 2025 09:44:08 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1141"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00229r\u002BqowRhNGweymgvxQDr/cS/\u002Bt0S3o6zJlJHlJWDosI=\u0022"},{"Name":"Last-Modified","Value":"Thu, 01 May 2025 21:44:53 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BarangayBayanihanOnline/css/site.apmjvyq8si.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
