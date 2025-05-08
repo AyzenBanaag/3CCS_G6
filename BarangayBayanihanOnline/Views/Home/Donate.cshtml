@@ -4,73 +4,329 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div style="max-width: 600px; margin: 3rem auto; padding: 2.5rem; border-radius: 16px; background: linear-gradient(145deg, #ffffff, #f3f3f3); box-shadow: 0 6px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1.5rem; color: #333;">Support Our Mission</h2>
+<div class="donation-container">
+    <div class="donation-card">
+        <div class="donation-header">
+            <h2>Support Our Mission</h2>
+            <p class="subtitle">Your contribution helps our community thrive</p>
+        </div>
 
-    @if (TempData["Message"] != null)
-    {
-        <div class="alert alert-success">@TempData["Message"]</div>
-    }
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-success">@TempData["Message"]</div>
+        }
 
-    <div style="text-align: center; margin-bottom: 2rem;">
-        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">Send your donation via <strong>GCash</strong> to:</p>
-        <div style="font-size: 1.6rem; font-weight: 600; color: #0d6efd;">0910 836 1699</div>
-        <p style="color: #6c757d; font-size: 0.9rem;">(Account Name: Charles Banias)</p>
-        <div style="margin-top: 1rem;">
-            <img src="~/images/gcash-qr.png" alt="GCash QR Code" style="max-width: 200px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
-            <p style="font-size: 0.85rem; color: #888; margin-top: 0.5rem;">Scan this QR Code to donate instantly</p>
+        <div class="gcash-info">
+            <div class="gcash-logo">
+                <img src="~/images/gcash.jpg" alt="GCash Logo" />
+            </div>
+            <p>Send your donation via <strong>GCash</strong> to:</p>
+            <div class="gcash-number">0910 836 1699</div>
+            <p class="account-name">(Account Name: Charles Banias)</p>
+
+            <div class="qr-container">
+                <img src="~/images/gcash-qr.png" alt="GCash QR Code" class="qr-code" />
+                <p class="qr-caption">Scan this QR Code to donate instantly</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <form asp-action="Donate" method="post" class="donation-form">
+            <div class="form-section">
+                <label>Choose an amount:</label>
+                <div class="amount-buttons">
+                    @foreach (var amount in new[] { 100, 300, 500, 1000 })
+                    {
+                        <button type="button" class="amount-btn" data-amount="@amount">
+                            ₱@amount
+                        </button>
+                    }
+                </div>
+
+                <label for="custom-amount">Or enter a custom amount:</label>
+                <div class="input-group">
+                    <span class="input-group-text">₱</span>
+                    <input asp-for="Amount" id="custom-amount" type="number" step="0.01" class="form-control" required />
+                </div>
+                <span asp-validation-for="Amount" class="text-danger validation-message"></span>
+            </div>
+
+            <div class="form-section">
+                <label for="reference-number">GCash Reference Number:</label>
+                <input asp-for="GCashReferenceNumber" id="reference-number" type="text" class="form-control" required placeholder="e.g. 0123456789" />
+                <span asp-validation-for="GCashReferenceNumber" class="text-danger validation-message"></span>
+            </div>
+
+            <div class="form-section">
+                <label for="DonorName">Your Name:</label>
+                <input asp-for="DonorName" type="text" class="form-control" required placeholder="Enter your name" />
+                <span asp-validation-for="DonorName" class="text-danger validation-message"></span>
+            </div>
+
+            <div class="form-section submit-section">
+                <button type="submit" id="donatedBtn" class="donate-button">
+                    <i class="fas fa-check-circle"></i> I Have Donated
+                </button>
+            </div>
+        </form>
+
+        <div class="thank-you-message">
+            Thank you for your generosity and support!
         </div>
     </div>
-
-    <div style="border-top: 1px solid #ddd; margin: 2rem 0;"></div>
-
-    <form asp-action="Donate" method="post">
-        <div style="text-align: center;">
-            <p style="margin-bottom: 0.5rem;">Choose an amount:</p>
-            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 0.75rem;">
-                @foreach (var amount in new[] { 100, 300, 500, 1000 })
-                {
-                    <button type="button" class="amount-btn" data-amount="@amount" style="padding: 0.6rem 1.2rem; border: 1px solid #0d6efd; background: white; color: #0d6efd; font-weight: 500; border-radius: 8px; cursor: pointer; transition: all 0.2s ease-in-out;">
-                        ₱@amount
-                    </button>
-                }
-            </div>
-            <p style="margin-top: 1.5rem;">Or enter a custom amount:</p>
-            <input asp-for="Amount" id="custom-amount" type="number" step="0.01" class="form-control" style="padding: 0.6rem 1rem; width: 80%; max-width: 300px; border: 1px solid #ccc; border-radius: 8px; margin-top: 0.5rem;" required />
-            <span asp-validation-for="Amount" class="text-danger"></span>
-
-            <p style="margin-top: 1.5rem;">Enter your GCash Reference Number:</p>
-            <input asp-for="GCashReferenceNumber" id="reference-number" type="text" class="form-control" style="padding: 0.6rem 1rem; width: 80%; max-width: 300px; border: 1px solid #ccc; border-radius: 8px; margin-top: 0.5rem;" required />
-            <span asp-validation-for="GCashReferenceNumber" class="text-danger"></span>
-
-            <p style="margin-top: 1.5rem;">Donor Name:</p>
-            <input asp-for="DonorName" type="text" class="form-control" style="padding: 0.6rem 1rem; width: 80%; max-width: 300px; border: 1px solid #ccc; border-radius: 8px; margin-top: 0.5rem;" required />
-            <span asp-validation-for="DonorName" class="text-danger"></span>
-        </div>
-        <div style="text-align: center; margin-top: 2.5rem;">
-            <button type="submit" id="donatedBtn" style="background: #198754; color: white; padding: 0.8rem 2rem; border: none; border-radius: 10px; font-size: 1rem; font-weight: bold; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: background 0.3s;">
-                ✅ I Have Donated
-            </button>
-        </div>
-    </form>
 </div>
+
+<style>
+    .donation-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem 1rem;
+        background-color: #f8f9fa;
+    }
+
+    .donation-card {
+        width: 100%;
+        max-width: 550px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+    }
+
+    .donation-header {
+        background: linear-gradient(135deg, #4e54c8, #8f94fb);
+        color: white;
+        padding: 2rem;
+        text-align: center;
+    }
+
+        .donation-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+    .subtitle {
+        margin-top: 0.5rem;
+        opacity: 0.9;
+        font-size: 1rem;
+    }
+
+    .gcash-info {
+        padding: 2rem;
+        text-align: center;
+        background-color: #f8faff;
+    }
+
+    .gcash-logo {
+        margin-bottom: 1rem;
+    }
+
+        .gcash-logo img {
+            height: 40px;
+        }
+
+    .gcash-info p {
+        margin: 0.5rem 0;
+        color: #495057;
+    }
+
+    .gcash-number {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #0d6efd;
+        margin: 0.5rem 0;
+    }
+
+    .account-name {
+        font-size: 0.9rem;
+        color: #6c757d;
+    }
+
+    .qr-container {
+        margin-top: 1.5rem;
+    }
+
+    .qr-code {
+        max-width: 180px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .qr-caption {
+        font-size: 0.85rem;
+        color: #6c757d;
+        margin-top: 0.5rem;
+    }
+
+    .divider {
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1), transparent);
+        margin: 0.5rem 0;
+    }
+
+    .donation-form {
+        padding: 2rem;
+    }
+
+    .form-section {
+        margin-bottom: 1.5rem;
+    }
+
+        .form-section label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #343a40;
+        }
+
+    .amount-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .amount-btn {
+        padding: 0.7rem 1.5rem;
+        border: 2px solid #dee2e6;
+        background: white;
+        color: #495057;
+        font-weight: 600;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+        .amount-btn:hover {
+            border-color: #0d6efd;
+            color: #0d6efd;
+        }
+
+        .amount-btn.active {
+            background: #0d6efd;
+            border-color: #0d6efd;
+            color: white;
+        }
+
+    .input-group {
+        display: flex;
+        align-items: center;
+    }
+
+    .input-group-text {
+        padding: 0.6rem 1rem;
+        background: #f8f9fa;
+        border: 1px solid #ced4da;
+        border-right: none;
+        border-radius: 10px 0 0 10px;
+        font-weight: 600;
+    }
+
+    .form-control {
+        padding: 0.6rem 1rem;
+        border: 1px solid #ced4da;
+        border-radius: 0 10px 10px 0;
+        width: 100%;
+        font-size: 1rem;
+        transition: border-color 0.2s;
+    }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+        }
+
+    input[type="number"].form-control {
+        -moz-appearance: textfield;
+    }
+
+        input[type="number"].form-control::-webkit-outer-spin-button,
+        input[type="number"].form-control::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+    .validation-message {
+        display: block;
+        margin-top: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .submit-section {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .donate-button {
+        background: linear-gradient(135deg, #28a745, #20c997);
+        color: white;
+        padding: 0.8rem 2.5rem;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+        transition: all 0.3s;
+    }
+
+        .donate-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(40, 167, 69, 0.25);
+        }
+
+    .thank-you-message {
+        padding: 1rem 2rem 2rem;
+        text-align: center;
+        font-style: italic;
+        color: #6c757d;
+    }
+
+    /* Responsive adjustments */
+    @@media (max-width: 576px) {
+        .donation-header h2
+
+    {
+        font-size: 1.8rem;
+    }
+
+    .gcash-number {
+        font-size: 1.5rem;
+    }
+
+    .amount-buttons {
+        justify-content: center;
+    }
+
+    .amount-btn {
+        padding: 0.6rem 1.2rem;
+    }
+
+    }
+</style>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
     <script>
-        const amountButtons = document.querySelectorAll('.amount-btn');
-        const customAmountInput = document.getElementById('custom-amount');
+        document.addEventListener('DOMContentLoaded', function() {
+            const amountButtons = document.querySelectorAll('.amount-btn');
+            const customAmountInput = document.getElementById('custom-amount');
 
-        amountButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                amountButtons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                customAmountInput.value = btn.dataset.amount;
+            amountButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    amountButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    customAmountInput.value = btn.dataset.amount;
+                });
             });
-        });
 
-        customAmountInput.addEventListener('input', () => {
-            amountButtons.forEach(b => b.classList.remove('active'));
+            customAmountInput.addEventListener('input', () => {
+                amountButtons.forEach(b => b.classList.remove('active'));
+            });
         });
     </script>
 }

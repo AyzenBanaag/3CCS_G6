@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E8891D0B-D39A-4907-8502-285FE780B3B1}|BarangayBayanihanOnline.csproj|c:\\users\\nerdl\\source\\repos\\3ccs_g6\\barangaybayanihanonline\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8891D0B-D39A-4907-8502-285FE780B3B1}|BarangayBayanihanOnline.csproj|solutionrelative:views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8891D0B-D39A-4907-8502-285FE780B3B1}|BarangayBayanihanOnline.csproj|c:\\users\\nerdl\\source\\repos\\3ccs_g6\\barangaybayanihanonline\\views\\home\\donate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8891D0B-D39A-4907-8502-285FE780B3B1}|BarangayBayanihanOnline.csproj|solutionrelative:views\\home\\donate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8891D0B-D39A-4907-8502-285FE780B3B1}|BarangayBayanihanOnline.csproj|c:\\users\\nerdl\\source\\repos\\3ccs_g6\\barangaybayanihanonline\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8891D0B-D39A-4907-8502-285FE780B3B1}|BarangayBayanihanOnline.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8891D0B-D39A-4907-8502-285FE780B3B1}|BarangayBayanihanOnline.csproj|c:\\users\\nerdl\\source\\repos\\3ccs_g6\\barangaybayanihanonline\\views\\home\\volunteer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8891D0B-D39A-4907-8502-285FE780B3B1}|BarangayBayanihanOnline.csproj|solutionrelative:views\\home\\volunteer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8891D0B-D39A-4907-8502-285FE780B3B1}|BarangayBayanihanOnline.csproj|c:\\users\\nerdl\\source\\repos\\3ccs_g6\\barangaybayanihanonline\\views\\home\\contactus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8891D0B-D39A-4907-8502-285FE780B3B1}|BarangayBayanihanOnline.csproj|solutionrelative:views\\home\\contactus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8891D0B-D39A-4907-8502-285FE780B3B1}|BarangayBayanihanOnline.csproj|c:\\users\\nerdl\\source\\repos\\3ccs_g6\\barangaybayanihanonline\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8891D0B-D39A-4907-8502-285FE780B3B1}|BarangayBayanihanOnline.csproj|solutionrelative:models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8891D0B-D39A-4907-8502-285FE780B3B1}|BarangayBayanihanOnline.csproj|c:\\users\\nerdl\\source\\repos\\3ccs_g6\\barangaybayanihanonline\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8891D0B-D39A-4907-8502-285FE780B3B1}|BarangayBayanihanOnline.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8891D0B-D39A-4907-8502-285FE780B3B1}|BarangayBayanihanOnline.csproj|c:\\users\\nerdl\\source\\repos\\3ccs_g6\\barangaybayanihanonline\\models\\adminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8891D0B-D39A-4907-8502-285FE780B3B1}|BarangayBayanihanOnline.csproj|solutionrelative:models\\adminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E8891D0B-D39A-4907-8502-285FE780B3B1}|BarangayBayanihanOnline.csproj|c:\\users\\nerdl\\source\\repos\\3ccs_g6\\barangaybayanihanonline\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E8891D0B-D39A-4907-8502-285FE780B3B1}|BarangayBayanihanOnline.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -19,15 +51,117 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAOQDAAAAAAAAAAAYwPMDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-08T09:38:10.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Donate.cshtml",
+              "DocumentMoniker": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\Views\\Home\\Donate.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Donate.cshtml",
+              "ToolTip": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\Views\\Home\\Donate.cshtml",
+              "RelativeToolTip": "Views\\Home\\Donate.cshtml",
+              "ViewState": "AgIAADUBAAAAAAAAAAAYwEsBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-08T09:19:17.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Volunteer.cshtml",
+              "DocumentMoniker": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\Views\\Home\\Volunteer.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Volunteer.cshtml",
+              "ToolTip": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\Views\\Home\\Volunteer.cshtml",
+              "RelativeToolTip": "Views\\Home\\Volunteer.cshtml",
+              "ViewState": "AgIAACkBAAAAAAAAAAAIwEABAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-08T08:56:25.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAACYCAAAAAAAAAAA0wDgCAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T08:45:34.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ContactUs.cshtml",
+              "DocumentMoniker": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\Views\\Home\\ContactUs.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\ContactUs.cshtml",
+              "ToolTip": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\Views\\Home\\ContactUs.cshtml",
+              "RelativeToolTip": "Views\\Home\\ContactUs.cshtml",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAIwLEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-08T08:26:36.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAD4v0AAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T04:51:49.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdminViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\Models\\AdminViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\AdminViewModel.cs",
+              "ToolTip": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\Models\\AdminViewModel.cs",
+              "RelativeToolTip": "Models\\AdminViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T04:51:19.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Models\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAzwKcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T04:34:27.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\nerdl\\source\\repos\\3CCS_G6\\BarangayBayanihanOnline\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-22T21:37:00.113Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T21:37:00.113Z"
             }
           ]
         }

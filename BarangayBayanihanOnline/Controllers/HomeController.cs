@@ -58,6 +58,15 @@ namespace BarangayBayanihanOnline.Controllers
 
             _logger.LogInformation("Creating event: EventName={EventName}, StartDateTime={StartDateTime}", model.EventName, model.StartDateTime);
 
+            // Set these values BEFORE validation
+            model.UserId = await GetUserIdAsync();
+            model.CreatedAt = EnsureValidDateTime(DateTime.Now, "CreatedAt");
+
+            // Clear any model errors for these properties
+            ModelState.Remove("User");
+            ModelState.Remove("UserId");
+            ModelState.Remove("CreatedAt");
+
             if (ModelState.IsValid)
             {
                 try
@@ -67,8 +76,7 @@ namespace BarangayBayanihanOnline.Controllers
                         _logger.LogError("Events DbSet is null");
                         return StatusCode(500, "Database configuration error.");
                     }
-                    model.UserId = await GetUserIdAsync();
-                    model.CreatedAt = EnsureValidDateTime(DateTime.Now, "CreatedAt");
+
                     _context.Events.Add(model);
                     int rowsAffected = await _context.SaveChangesAsync();
                     _logger.LogInformation("Event saved successfully. Rows affected: {RowsAffected}", rowsAffected);
@@ -105,6 +113,17 @@ namespace BarangayBayanihanOnline.Controllers
 
             _logger.LogInformation("Submitting contact message: Name={Name}, Email={Email}, Subject={Subject}", model.Name, model.Email, model.Subject);
 
+            // Set these values BEFORE validation
+            model.UserId = await GetUserIdAsync();
+            model.SubmittedAt = EnsureValidDateTime(DateTime.Now, "SubmittedAt");
+            model.Status = "New";
+
+            // Clear any model errors for these properties that might have been set during initial validation
+            ModelState.Remove("User");
+            ModelState.Remove("Status");
+            ModelState.Remove("UserId");
+            ModelState.Remove("SubmittedAt");
+
             if (ModelState.IsValid)
             {
                 try
@@ -114,9 +133,7 @@ namespace BarangayBayanihanOnline.Controllers
                         _logger.LogError("ContactMessages DbSet is null");
                         return StatusCode(500, "Database configuration error.");
                     }
-                    model.UserId = await GetUserIdAsync();
-                    model.SubmittedAt = EnsureValidDateTime(DateTime.Now, "SubmittedAt");
-                    model.Status = "New";
+
                     _context.ContactMessages.Add(model);
                     int rowsAffected = await _context.SaveChangesAsync();
                     _logger.LogInformation("Contact message saved successfully. Rows affected: {RowsAffected}", rowsAffected);
@@ -153,6 +170,17 @@ namespace BarangayBayanihanOnline.Controllers
 
             _logger.LogInformation("Submitting volunteer application: FullName={FullName}, Email={Email}", model.FullName, model.Email);
 
+            // Set these values BEFORE validation
+            model.UserId = await GetUserIdAsync();
+            model.ApplicationDate = EnsureValidDateTime(DateTime.Now, "ApplicationDate");
+            model.Status = "Pending";
+
+            // Clear any model errors for these properties
+            ModelState.Remove("User");
+            ModelState.Remove("Status");
+            ModelState.Remove("UserId");
+            ModelState.Remove("ApplicationDate");
+
             if (ModelState.IsValid)
             {
                 try
@@ -162,9 +190,7 @@ namespace BarangayBayanihanOnline.Controllers
                         _logger.LogError("Volunteers DbSet is null");
                         return StatusCode(500, "Database configuration error.");
                     }
-                    model.UserId = await GetUserIdAsync();
-                    model.ApplicationDate = EnsureValidDateTime(DateTime.Now, "ApplicationDate");
-                    model.Status = "Pending";
+
                     _context.Volunteers.Add(model);
                     int rowsAffected = await _context.SaveChangesAsync();
                     _logger.LogInformation("Volunteer application saved successfully. Rows affected: {RowsAffected}", rowsAffected);
@@ -201,6 +227,17 @@ namespace BarangayBayanihanOnline.Controllers
 
             _logger.LogInformation("Submitting donation: DonorName={DonorName}, Amount={Amount}", model.DonorName, model.Amount);
 
+            // Set these values BEFORE validation
+            model.UserId = await GetUserIdAsync();
+            model.DonationDate = EnsureValidDateTime(DateTime.Now, "DonationDate");
+            model.Status = "Pending";
+
+            // Clear any model errors for these properties
+            ModelState.Remove("User");
+            ModelState.Remove("Status");
+            ModelState.Remove("UserId");
+            ModelState.Remove("DonationDate");
+
             if (ModelState.IsValid)
             {
                 try
@@ -210,9 +247,7 @@ namespace BarangayBayanihanOnline.Controllers
                         _logger.LogError("Donations DbSet is null");
                         return StatusCode(500, "Database configuration error.");
                     }
-                    model.UserId = await GetUserIdAsync();
-                    model.DonationDate = EnsureValidDateTime(DateTime.Now, "DonationDate");
-                    model.Status = "Pending";
+
                     _context.Donations.Add(model);
                     int rowsAffected = await _context.SaveChangesAsync();
                     _logger.LogInformation("Donation saved successfully. Rows affected: {RowsAffected}", rowsAffected);

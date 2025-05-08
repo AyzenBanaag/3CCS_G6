@@ -162,8 +162,8 @@ namespace BarangayBayanihanOnline.Models
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public string AreasOfInterest { get; set; }
-        public DateTime ApplicationDate { get; set; }
-        public string Status { get; set; }
+        public DateTime ApplicationDate { get; set; } = DateTime.Now;
+        public string Status { get; set; } = "Pending"; // Pending, Approved, Rejected
         public User User { get; set; }
     }
 
