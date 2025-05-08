@@ -1,0 +1,296 @@
+﻿@model BarangayBayanihanOnline.Models.User
+
+@{
+    ViewData["Title"] = "Edit User";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="page-container">
+    <div class="page-header">
+        <div class="header-content">
+            <h1 class="page-title">Edit User</h1>
+            <p class="page-subtitle">Update user information</p>
+        </div>
+        <div class="header-actions">
+            <a href="javascript:history.back()" class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left"></i> Back to Users
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <form asp-action="EditUser" method="post">
+                <input type="hidden" asp-for="UserId" />
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <h3>User Information</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="mb-4">
+                                <label asp-for="FullName" class="form-label">Full Name</label>
+                                <input asp-for="FullName" class="form-control" required />
+                                <span asp-validation-for="FullName" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-4">
+                                <label asp-for="Email" class="form-label">Email Address</label>
+                                <input asp-for="Email" class="form-control" required />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input asp-for="IsAdmin" class="form-check-input" />
+                                    <label asp-for="IsAdmin" class="form-check-label">Admin User</label>
+                                </div>
+                                <span asp-validation-for="IsAdmin" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label">Password</label>
+                                <div class="input-group">
+                                    <input type="password" id="NewPassword" name="NewPassword" class="form-control" placeholder="Leave blank to keep current password" />
+                                    <button class="btn btn-outline-secondary toggle-password" type="button">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="form-text">Only fill this if you want to change the user's password</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="user-profile-section">
+                                <div class="user-avatar-large">
+                                    @Model.FullName[0]
+                                </div>
+                                <div class="user-details">
+                                    <div class="detail-item">
+                                        <div class="detail-label">User ID</div>
+                                        <div class="detail-value">@Model.UserId</div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-label">Created At</div>
+                                        <div class="detail-value">@Model.CreatedAt.ToString("MMM d, yyyy")</div>
+                                    </div>
+                                    <div class="detail-item">
+                                        <div class="detail-label">Last Login</div>
+                                        <div class="detail-value">@(Model.LastLogin?.ToString("g") ?? "Never")</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save me-1"></i> Save Changes
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        /* Page styles */
+        .page-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .page-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 0 0 0.25rem;
+            color: var(--dark-color);
+        }
+
+        .page-subtitle {
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* Card styles */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        /* Form styles */
+        .form-section {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+
+        .section-header {
+            margin-bottom: 1.5rem;
+        }
+
+            .section-header h3 {
+                font-size: 1.25rem;
+                font-weight: 600;
+                margin: 0;
+                color: var(--dark-color);
+            }
+
+        .form-label {
+            font-weight: 500;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control {
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 0.625rem 1rem;
+            color: var(--text-color);
+            transition: all 0.2s;
+        }
+
+            .form-control:focus {
+                border-color: var(--primary-color);
+                box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+                outline: none;
+            }
+
+        .form-check-input:checked {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .form-text {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+
+        /* User profile section */
+        .user-profile-section {
+            background-color: var(--light-color);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .user-avatar-large {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .user-details {
+            width: 100%;
+        }
+
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+            .detail-item:last-child {
+                border-bottom: none;
+            }
+
+        .detail-label {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .detail-value {
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+
+        /* Form actions */
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* Password toggle */
+        .toggle-password {
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @@media (max-width: 768px) {
+            .page-header
+
+        {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .header-actions {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .form-actions {
+            flex-direction: column-reverse;
+        }
+
+            .form-actions .btn {
+                width: 100%;
+            }
+
+        }
+    </style>
+}
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Toggle password visibility
+            const toggleBtn = document.querySelector('.toggle-password');
+            const passwordField = document.querySelector('#NewPassword');
+
+            toggleBtn.addEventListener('click', function () {
+                const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordField.setAttribute('type', type);
+
+                // Toggle eye icon
+                const eyeIcon = toggleBtn.querySelector('i');
+                eyeIcon.classList.toggle('fa-eye');
+                eyeIcon.classList.toggle('fa-eye-slash');
+            });
+        });
+    </script>
+}

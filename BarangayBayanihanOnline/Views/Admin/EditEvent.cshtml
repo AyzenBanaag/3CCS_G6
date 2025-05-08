@@ -1,0 +1,243 @@
+﻿@model BarangayBayanihanOnline.Models.Event
+
+@{
+    ViewData["Title"] = "Edit Event";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="page-container">
+    <div class="page-header">
+        <div class="header-content">
+            <h1 class="page-title">Edit Event</h1>
+            <p class="page-subtitle">Update event information</p>
+        </div>
+        <div class="header-actions">
+            <a href="javascript:history.back()" class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left"></i> Back to Events
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <form asp-action="EditEvent" method="post">
+                <input type="hidden" asp-for="EventId" />
+                <input type="hidden" asp-for="CreatedAt" />
+                <input type="hidden" asp-for="UserId" />
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <h3>Basic Information</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-4">
+                                <label asp-for="EventName" class="form-label">Event Name</label>
+                                <input asp-for="EventName" class="form-control" required />
+                                <span asp-validation-for="EventName" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-4">
+                                <label asp-for="EventType" class="form-label">Event Type</label>
+                                <select asp-for="EventType" class="form-select">
+                                    <option value="Community Service">Community Service</option>
+                                    <option value="Workshop">Workshop</option>
+                                    <option value="Fundraiser">Fundraiser</option>
+                                    <option value="Meeting">Meeting</option>
+                                    <option value="Celebration">Celebration</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <span asp-validation-for="EventType" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-4">
+                                <label asp-for="Description" class="form-label">Description</label>
+                                <textarea asp-for="Description" class="form-control" rows="5"></textarea>
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <h3>Date and Time</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-4">
+                                <label asp-for="StartDateTime" class="form-label">Start Date & Time</label>
+                                <input asp-for="StartDateTime" class="form-control" type="datetime-local" required />
+                                <span asp-validation-for="StartDateTime" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-4">
+                                <label asp-for="EndDateTime" class="form-label">End Date & Time</label>
+                                <input asp-for="EndDateTime" class="form-control" type="datetime-local" required />
+                                <span asp-validation-for="EndDateTime" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save me-1"></i> Save Changes
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        /* Page styles */
+        .page-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .page-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 0 0 0.25rem;
+            color: var(--dark-color);
+        }
+
+        .page-subtitle {
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* Card styles */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        /* Form styles */
+        .form-section {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+
+        .section-header {
+            margin-bottom: 1.5rem;
+        }
+
+            .section-header h3 {
+                font-size: 1.25rem;
+                font-weight: 600;
+                margin: 0;
+                color: var(--dark-color);
+            }
+
+        .form-label {
+            font-weight: 500;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control, .form-select {
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 0.625rem 1rem;
+            color: var(--text-color);
+            transition: all 0.2s;
+        }
+
+            .form-control:focus, .form-select:focus {
+                border-color: var(--primary-color);
+                box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+                outline: none;
+            }
+
+        .form-check-input:checked {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .form-text {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Form actions */
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @@media (max-width: 768px) {
+            .page-header
+
+        {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .header-actions {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .form-actions {
+            flex-direction: column-reverse;
+        }
+
+            .form-actions .btn {
+                width: 100%;
+            }
+
+        }
+    </style>
+}
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Validate end date is after start date
+            const startDateInput = document.querySelector('input[name="StartDateTime"]');
+            const endDateInput = document.querySelector('input[name="EndDateTime"]');
+
+            function validateDates() {
+                const startDate = new Date(startDateInput.value);
+                const endDate = new Date(endDateInput.value);
+
+                if (endDate < startDate) {
+                    endDateInput.setCustomValidity('End date must be after start date');
+                } else {
+                    endDateInput.setCustomValidity('');
+                }
+            }
+
+            startDateInput.addEventListener('change', validateDates);
+            endDateInput.addEventListener('change', validateDates);
+        });
+    </script>
+}

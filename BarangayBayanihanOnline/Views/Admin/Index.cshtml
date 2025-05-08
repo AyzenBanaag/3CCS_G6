@@ -164,12 +164,12 @@
                                         <td>@(user.LastLogin?.ToString("g") ?? "Never")</td>
                                         <td>
                                             <div class="action-buttons">
-                                                <button class="action-btn edit-btn" title="Edit User">
+                                                <a href="@Url.Action("EditUser", "Admin", new { id = user.UserId })" class="action-btn edit-btn" title="Edit User">
                                                     <i class="fas fa-edit"></i>
-                                                </button>
-                                                <button class="action-btn delete-btn" title="Delete User">
+                                                </a>
+                                                <a href="@Url.Action("DeleteUser", "Admin", new { id = user.UserId })" class="action-btn delete-btn" title="Delete User">
                                                     <i class="fas fa-trash-alt"></i>
-                                                </button>
+                                                </a>
                                             </div>
                                         </td>
                                     </tr>
@@ -185,7 +185,7 @@
                         <h2>Events Management</h2>
                         <div class="tab-actions">
                             <a asp-controller="Admin" asp-action="AllEvents" class="btn btn-primary btn-with-icon">
-                                <i class="fas fa-plus"></i> New Event
+                                <i class="fas fa-list"></i> All Events
                             </a>
                             <div class="search-container">
                                 <input type="text" class="search-input" placeholder="Search events...">
@@ -216,13 +216,13 @@
                                         <td>@(evt.User?.FullName ?? "Unknown")</td>
                                         <td>
                                             <div class="action-buttons">
-                                                <button class="action-btn view-btn" title="View Event">
+                                                <button class="action-btn view-btn" title="View Event" data-event-id="@evt.EventId" data-event-name="@evt.EventName" onclick="openViewEventModal(this)">
                                                     <i class="fas fa-eye"></i>
                                                 </button>
-                                                <button class="action-btn edit-btn" title="Edit Event">
+                                                <a href="@Url.Action("EditEvent", "Admin", new { id = evt.EventId })" class="action-btn edit-btn" title="Edit Event">
                                                     <i class="fas fa-edit"></i>
-                                                </button>
-                                                <button class="action-btn delete-btn" title="Delete Event">
+                                                </a>
+                                                <button class="action-btn delete-btn" title="Delete Event" data-event-id="@evt.EventId" data-event-name="@evt.EventName" onclick="openDeleteEventModal(this)">
                                                     <i class="fas fa-trash-alt"></i>
                                                 </button>
                                             </div>
@@ -290,7 +290,14 @@
                                                         </button>
                                                     </form>
                                                 }
-                                                <button class="action-btn view-btn" title="View Details">
+                                                <button class="action-btn view-btn" title="View Details"
+                                                        data-donation-id="@donation.DonationId"
+                                                        data-donor-name="@donation.DonorName"
+                                                        data-amount="@donation.Amount.ToString("C")"
+                                                        data-gcash-ref="@donation.GCashReferenceNumber"
+                                                        data-status="@donation.Status"
+                                                        data-date="@donation.DonationDate.ToString("g")"
+                                                        onclick="openViewDonationModal(this)">
                                                     <i class="fas fa-eye"></i>
                                                 </button>
                                             </div>
@@ -352,10 +359,23 @@
                                         <td>@message.SubmittedAt.ToString("g")</td>
                                         <td>
                                             <div class="action-buttons">
-                                                <button class="action-btn view-btn" title="View Message">
+                                                <button class="action-btn view-btn" title="View Message"
+                                                        data-message-id="@message.MessageId"
+                                                        data-sender-name="@message.Name"
+                                                        data-sender-email="@message.Email"
+                                                        data-subject="@message.Subject"
+                                                        data-message-text="@message.Message"
+                                                        data-status="@message.Status"
+                                                        data-date="@message.SubmittedAt.ToString("g")"
+                                                        onclick="openViewMessageModal(this)">
                                                     <i class="fas fa-eye"></i>
                                                 </button>
-                                                <button class="action-btn reply-btn" title="Reply">
+                                                <button class="action-btn reply-btn" title="Reply"
+                                                        data-message-id="@message.MessageId"
+                                                        data-reply-to="@message.Email"
+                                                        data-reply-name="@message.Name"
+                                                        data-subject="@message.Subject"
+                                                        onclick="openReplyMessageModal(this)">
                                                     <i class="fas fa-reply"></i>
                                                 </button>
                                             </div>
@@ -426,7 +446,14 @@
                                                         </button>
                                                     </form>
                                                 }
-                                                <button class="action-btn view-btn" title="View Details">
+                                                <button class="action-btn view-btn" title="View Details"
+                                                        data-volunteer-id="@volunteer.VolunteerId"
+                                                        data-volunteer-name="@volunteer.FullName"
+                                                        data-volunteer-email="@volunteer.Email"
+                                                        data-volunteer-phone="@volunteer.PhoneNumber"
+                                                        data-status="@volunteer.Status"
+                                                        data-date="@volunteer.ApplicationDate.ToString("g")"
+                                                        onclick="openViewVolunteerModal(this)">
                                                     <i class="fas fa-eye"></i>
                                                 </button>
                                             </div>
@@ -485,6 +512,264 @@
     </div>
 </div>
 
+<!-- View Event Modal -->
+<div class="modal fade" id="viewEventModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">View Event</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4 id="viewEventName" class="text-center mb-4"></h4>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <div class="event-details-container">
+                                <div class="event-detail">
+                                    <div class="event-detail-label">Event ID:</div>
+                                    <div class="event-detail-value" id="viewEventId"></div>
+                                </div>
+                                <div class="event-details-grid">
+                                    <div class="event-detail">
+                                        <div class="event-detail-label">Start Date:</div>
+                                        <div class="event-detail-value" id="viewEventStart"></div>
+                                    </div>
+                                    <div class="event-detail">
+                                        <div class="event-detail-label">End Date:</div>
+                                        <div class="event-detail-value" id="viewEventEnd"></div>
+                                    </div>
+                                    <div class="event-detail">
+                                        <div class="event-detail-label">Location:</div>
+                                        <div class="event-detail-value" id="viewEventLocation">Plaza Roma, Intramuros</div>
+                                    </div>
+                                    <div class="event-detail">
+                                        <div class="event-detail-label">Type:</div>
+                                        <div class="event-detail-value" id="viewEventType">Community Service</div>
+                                    </div>
+                                </div>
+                                <div class="event-detail">
+                                    <div class="event-detail-label">Description:</div>
+                                    <div class="event-detail-value" id="viewEventDescription">
+                                        Annual community service event focusing on cleanup and beautification of our community areas.
+                                        Volunteers will work together to collect trash, plant trees, and repaint public spaces.
+                                    </div>
+                                </div>
+                                <div class="event-detail">
+                                    <div class="event-detail-label">Created By:</div>
+                                    <div class="event-detail-value" id="viewEventCreator">Admin User</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a id="editEventLink" href="#" class="btn btn-primary">Edit Event</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Event Modal -->
+<div class="modal fade" id="deleteEventModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete Event</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete event <strong id="deleteEventName"></strong>?</p>
+                <p class="text-danger">This action cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <form id="deleteEventForm" action="/Admin/DeleteEvent" method="post">
+                    <input type="hidden" id="deleteEventId" name="eventId">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- View Donation Modal -->
+<div class="modal fade" id="viewDonationModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Donation Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="donation-details">
+                    <div class="donation-icon">
+                        <i class="fas fa-donate"></i>
+                    </div>
+                    <div class="donation-info-container">
+                        <div class="donation-info">
+                            <span class="donation-label">Donor:</span>
+                            <span class="donation-value" id="viewDonorName"></span>
+                        </div>
+                        <div class="donation-info">
+                            <span class="donation-label">Amount:</span>
+                            <span class="donation-value amount" id="viewDonationAmount"></span>
+                        </div>
+                        <div class="donation-info">
+                            <span class="donation-label">Reference #:</span>
+                            <span class="donation-value" id="viewDonationGcashRef"></span>
+                        </div>
+                        <div class="donation-info">
+                            <span class="donation-label">Status:</span>
+                            <span class="donation-value" id="viewDonationStatus"></span>
+                        </div>
+                        <div class="donation-info">
+                            <span class="donation-label">Donation Date:</span>
+                            <span class="donation-value" id="viewDonationDate"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <div id="verifyDonationSection">
+                    <form id="verifyDonationForm" action="/Admin/VerifyDonation" method="post">
+                        <input type="hidden" id="verifyDonationId" name="donationId">
+                        <button type="submit" class="btn btn-success">Verify Donation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- View Message Modal -->
+<div class="modal fade" id="viewMessageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Message Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="message-details">
+                    <div class="message-header">
+                        <div class="message-from">
+                            <div class="user-info">
+                                <div class="user-avatar" id="viewMessageAvatar"></div>
+                                <div>
+                                    <div id="viewMessageName" class="sender-name"></div>
+                                    <div id="viewMessageEmail" class="email"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message-date" id="viewMessageDate"></div>
+                    </div>
+                    <div class="message-subject">
+                        <span class="subject-label">Subject:</span>
+                        <span id="viewMessageSubject" class="subject-text"></span>
+                    </div>
+                    <div class="message-body" id="viewMessageBody"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="replyMessageBtn">Reply</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Reply Message Modal -->
+<div class="modal fade" id="replyMessageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Reply to Message</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="replyMessageForm" action="/Admin/ReplyToMessage" method="post">
+                <div class="modal-body">
+                    <input type="hidden" id="replyMessageId" name="messageId">
+                    <div class="mb-3">
+                        <label for="replyTo" class="form-label">To:</label>
+                        <input type="text" class="form-control" id="replyTo" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="replySubject" class="form-label">Subject:</label>
+                        <input type="text" class="form-control" id="replySubject" name="subject">
+                    </div>
+                    <div class="mb-3">
+                        <label for="replyBody" class="form-label">Message:</label>
+                        <textarea class="form-control" id="replyBody" name="body" rows="8" required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Send Reply</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- View Volunteer Modal -->
+<div class="modal fade" id="viewVolunteerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Volunteer Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="volunteer-details">
+                    <div class="volunteer-header">
+                        <div class="volunteer-avatar" id="viewVolunteerAvatar"></div>
+                        <h4 id="viewVolunteerName" class="volunteer-name"></h4>
+                    </div>
+                    <div class="volunteer-info-container">
+                        <div class="volunteer-info">
+                            <span class="volunteer-label">Email:</span>
+                            <span class="volunteer-value" id="viewVolunteerEmail"></span>
+                        </div>
+                        <div class="volunteer-info">
+                            <span class="volunteer-label">Phone:</span>
+                            <span class="volunteer-value" id="viewVolunteerPhone"></span>
+                        </div>
+                        <div class="volunteer-info">
+                            <span class="volunteer-label">Status:</span>
+                            <span class="volunteer-value" id="viewVolunteerStatus"></span>
+                        </div>
+                        <div class="volunteer-info">
+                            <span class="volunteer-label">Application Date:</span>
+                            <span class="volunteer-value" id="viewVolunteerDate"></span>
+                        </div>
+                        <div class="volunteer-info">
+                            <span class="volunteer-label">Skills:</span>
+                            <span class="volunteer-value">Community Organizing, First Aid, Teaching</span>
+                        </div>
+                        <div class="volunteer-info">
+                            <span class="volunteer-label">Availability:</span>
+                            <span class="volunteer-value">Weekends, Evening Weekdays</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <div id="approveVolunteerSection">
+                    <form id="approveVolunteerForm" action="/Admin/ApproveVolunteer" method="post">
+                        <input type="hidden" id="approveVolunteerId" name="volunteerId">
+                        <button type="submit" class="btn btn-success">Approve Volunteer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 @section Scripts {
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -517,7 +802,7 @@
 
                     tableRows.forEach(row => {
                         const text = row.textContent.toLowerCase();
-                        if(text.includes(searchTerm)) {
+                        if (text.includes(searchTerm)) {
                             row.style.display = '';
                         } else {
                             row.style.display = 'none';
@@ -525,7 +810,140 @@
                     });
                 });
             });
+
+            // Initialize all modals
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                new bootstrap.Modal(modal);
+            });
         });
+
+        // Event Management Functions
+        function openViewEventModal(button) {
+            const eventId = button.getAttribute('data-event-id');
+            const eventName = button.getAttribute('data-event-name');
+
+            // In a real application, you would fetch additional details about the event here
+            document.getElementById('viewEventId').textContent = eventId;
+            document.getElementById('viewEventName').textContent = eventName;
+            document.getElementById('viewEventStart').textContent = "May 15, 2025 9:00 AM";
+            document.getElementById('viewEventEnd').textContent = "May 15, 2025 5:00 PM";
+            document.getElementById('editEventLink').href = `/Admin/EditEvent/${eventId}`;
+
+            const modal = new bootstrap.Modal(document.getElementById('viewEventModal'));
+            modal.show();
+        }
+
+        function openDeleteEventModal(button) {
+            const eventId = button.getAttribute('data-event-id');
+            const eventName = button.getAttribute('data-event-name');
+
+            document.getElementById('deleteEventId').value = eventId;
+            document.getElementById('deleteEventName').textContent = eventName;
+
+            const modal = new bootstrap.Modal(document.getElementById('deleteEventModal'));
+            modal.show();
+        }
+
+        // Donation Management Functions
+        function openViewDonationModal(button) {
+            const donationId = button.getAttribute('data-donation-id');
+            const donorName = button.getAttribute('data-donor-name');
+            const amount = button.getAttribute('data-amount');
+            const gcashRef = button.getAttribute('data-gcash-ref');
+            const status = button.getAttribute('data-status');
+            const date = button.getAttribute('data-date');
+
+            document.getElementById('viewDonorName').textContent = donorName;
+            document.getElementById('viewDonationAmount').textContent = amount;
+            document.getElementById('viewDonationGcashRef').textContent = gcashRef;
+            document.getElementById('viewDonationStatus').textContent = status;
+            document.getElementById('viewDonationDate').textContent = date;
+
+            // Show or hide verify button based on status
+            const verifySection = document.getElementById('verifyDonationSection');
+            if (status === 'Pending') {
+                verifySection.style.display = 'block';
+                document.getElementById('verifyDonationId').value = donationId;
+            } else {
+                verifySection.style.display = 'none';
+            }
+
+            const modal = new bootstrap.Modal(document.getElementById('viewDonationModal'));
+            modal.show();
+        }
+
+        // Message Management Functions
+        function openViewMessageModal(button) {
+            const messageId = button.getAttribute('data-message-id');
+            const senderName = button.getAttribute('data-sender-name');
+            const senderEmail = button.getAttribute('data-sender-email');
+            const subject = button.getAttribute('data-subject');
+            const messageText = button.getAttribute('data-message-text');
+            const status = button.getAttribute('data-status');
+            const date = button.getAttribute('data-date');
+
+            document.getElementById('viewMessageName').textContent = senderName;
+            document.getElementById('viewMessageEmail').textContent = senderEmail;
+            document.getElementById('viewMessageSubject').textContent = subject;
+            document.getElementById('viewMessageBody').textContent = messageText;
+            document.getElementById('viewMessageDate').textContent = date;
+            document.getElementById('viewMessageAvatar').textContent = senderName.charAt(0);
+
+            // Set up reply button to open reply modal
+            document.getElementById('replyMessageBtn').onclick = function() {
+                const viewModal = bootstrap.Modal.getInstance(document.getElementById('viewMessageModal'));
+                viewModal.hide();
+
+                openReplyMessageModal(button);
+            };
+
+            const modal = new bootstrap.Modal(document.getElementById('viewMessageModal'));
+            modal.show();
+        }
+
+        function openReplyMessageModal(button) {
+            const messageId = button.getAttribute('data-message-id');
+            const replyTo = button.getAttribute('data-reply-to');
+            const replyName = button.getAttribute('data-reply-name');
+            const subject = button.getAttribute('data-subject');
+
+            document.getElementById('replyMessageId').value = messageId;
+            document.getElementById('replyTo').value = `${replyName} <${replyTo}>`;
+            document.getElementById('replySubject').value = `Re: ${subject}`;
+
+            const modal = new bootstrap.Modal(document.getElementById('replyMessageModal'));
+            modal.show();
+        }
+
+        // Volunteer Management Functions
+        function openViewVolunteerModal(button) {
+            const volunteerId = button.getAttribute('data-volunteer-id');
+            const volunteerName = button.getAttribute('data-volunteer-name');
+            const volunteerEmail = button.getAttribute('data-volunteer-email');
+            const volunteerPhone = button.getAttribute('data-volunteer-phone');
+            const status = button.getAttribute('data-status');
+            const date = button.getAttribute('data-date');
+
+            document.getElementById('viewVolunteerName').textContent = volunteerName;
+            document.getElementById('viewVolunteerEmail').textContent = volunteerEmail;
+            document.getElementById('viewVolunteerPhone').textContent = volunteerPhone;
+            document.getElementById('viewVolunteerStatus').textContent = status;
+            document.getElementById('viewVolunteerDate').textContent = date;
+            document.getElementById('viewVolunteerAvatar').textContent = volunteerName.charAt(0);
+
+            // Show or hide approve button based on status
+            const approveSection = document.getElementById('approveVolunteerSection');
+            if (status === 'Pending') {
+                approveSection.style.display = 'block';
+                document.getElementById('approveVolunteerId').value = volunteerId;
+            } else {
+                approveSection.style.display = 'none';
+            }
+
+            const modal = new bootstrap.Modal(document.getElementById('viewVolunteerModal'));
+            modal.show();
+        }
     </script>
 }
 
@@ -811,6 +1229,34 @@
                 background-color: var(--primary-dark);
             }
 
+        .btn-secondary {
+            background-color: #f8f9fa;
+            color: var(--text-color);
+            border: 1px solid #dee2e6;
+        }
+
+            .btn-secondary:hover {
+                background-color: #e9ecef;
+            }
+
+        .btn-danger {
+            background-color: var(--danger-color);
+            color: white;
+        }
+
+            .btn-danger:hover {
+                background-color: #c0392b;
+            }
+
+        .btn-success {
+            background-color: var(--success-color);
+            color: white;
+        }
+
+            .btn-success:hover {
+                background-color: #27ae60;
+            }
+
         .btn-with-icon {
             display: flex;
             align-items: center;
@@ -998,58 +1444,244 @@
             text-overflow: ellipsis;
         }
 
-        /* Responsive Adjustments */
-        @@media (max-width: 992px) {
-            .search-input
-
-        {
-            width: 180px;
+        /* Modal Styles */
+        .modal-content {
+            border: none;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
         }
 
-        .search-input:focus {
-            width: 220px;
+        .modal-header {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.25rem 1.5rem;
         }
 
+        .modal-body {
+            padding: 1.5rem;
         }
 
-        @@media (max-width: 768px) {
-            .stats-container
-
-        {
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        .modal-footer {
+            border-top: 1px solid var(--border-color);
+            padding: 1.25rem 1.5rem;
         }
 
-        .tab-actions {
+        /* Event Details */
+        .event-details-container {
+            display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .event-details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .event-detail {
+            margin-bottom: 0.5rem;
+        }
+
+        .event-detail-label {
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 0.35rem;
+        }
+
+        .event-detail-value {
+            color: var(--text-color);
+        }
+
+        /* Donation Details */
+        .donation-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .donation-icon {
+            width: 64px;
+            height: 64px;
+            background-color: rgba(247, 37, 133, 0.1);
+            color: #f72585;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .donation-info-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
             gap: 0.75rem;
         }
 
-        .search-input, .search-input:focus {
-            width: 100%;
+        .donation-info {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
         }
 
+        .donation-label {
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        /* Message Details */
+        .message-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .message-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .message-from {
+            display: flex;
+            align-items: center;
+        }
+
+        .sender-name {
+            font-weight: 600;
+        }
+
+        .message-date {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .message-subject {
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .subject-label {
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-right: 0.5rem;
+        }
+
+        .subject-text {
+            font-weight: 600;
+        }
+
+        .message-body {
+            padding: 1rem;
+            background-color: var(--light-color);
+            border-radius: var(--radius);
+            white-space: pre-wrap;
+        }
+
+        /* Volunteer Details */
+        .volunteer-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .volunteer-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .volunteer-avatar {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .volunteer-name {
+            margin: 0;
+            text-align: center;
+        }
+
+        .volunteer-info-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .volunteer-info {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .volunteer-label {
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        /* Responsive Adjustments */
+        @@media (max-width: 992px) {
+            .search-input {
+                width: 180px;
+            }
+
+                .search-input:focus {
+                    width: 220px;
+                }
+        }
+
+        @@media (max-width: 768px) {
+            .stats-container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .tab-actions {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+
+            .search-input, .search-input:focus {
+                width: 100%;
+            }
+
+            .event-details-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @@media (max-width: 576px) {
-            .stats-container
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
 
-        {
-            grid-template-columns: 1fr;
-        }
+            .dashboard-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
 
-        .dashboard-header {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 1rem;
-        }
+            .tab-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
 
-        .tab-header {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-
+            .donation-info, .volunteer-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
         }
     </style>
 }

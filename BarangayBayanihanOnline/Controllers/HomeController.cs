@@ -45,8 +45,16 @@ namespace BarangayBayanihanOnline.Controllers
         [HttpGet]
         public IActionResult MyEvents()
         {
+            // Log authentication status to help diagnose issues
+            _logger.LogInformation("User is authenticated: {IsAuthenticated}", User.Identity.IsAuthenticated);
+            if (User.Identity.IsAuthenticated)
+            {
+                _logger.LogInformation("Authenticated user: {UserName}", User.Identity.Name);
+            }
+
             return View("MyEvents", new Event());
         }
+
         [HttpPost]
         public async Task<IActionResult> MyEvents(Event model)
         {
@@ -56,16 +64,44 @@ namespace BarangayBayanihanOnline.Controllers
                 return BadRequest("Invalid form data.");
             }
 
-            _logger.LogInformation("Creating event: EventName={EventName}, StartDateTime={StartDateTime}", model.EventName, model.StartDateTime);
+            // Log the received event data
+            _logger.LogInformation("Received event data: EventName={EventName}, Description={Description}, StartDateTime={StartDateTime}, EndDateTime={EndDateTime}, EventType={EventType}, Visibility={Visibility}, RepeatFrequency={RepeatFrequency}",
+                model.EventName, model.Description, model.StartDateTime, model.EndDateTime, model.EventType, model.Visibility, model.RepeatFrequency);
+
+            // Log authentication status before getting user ID
+            _logger.LogInformation("User is authenticated: {IsAuthenticated}", User.Identity.IsAuthenticated);
+            if (User.Identity.IsAuthenticated)
+            {
+                _logger.LogInformation("Authenticated user: {UserName}", User.Identity.Name);
+            }
+
+            // Get and log the user ID
+            var userId = await GetUserIdAsync();
+            _logger.LogInformation("Retrieved UserId: {UserId}", userId);
 
             // Set these values BEFORE validation
-            model.UserId = await GetUserIdAsync();
+            model.UserId = userId;
             model.CreatedAt = EnsureValidDateTime(DateTime.Now, "CreatedAt");
 
             // Clear any model errors for these properties
             ModelState.Remove("User");
             ModelState.Remove("UserId");
             ModelState.Remove("CreatedAt");
+
+            // Log detailed information about model state
+            _logger.LogInformation("ModelState IsValid: {IsValid}", ModelState.IsValid);
+            foreach (var kvp in ModelState)
+            {
+                var key = kvp.Key; // This is the property name
+                var value = kvp.Value; // This contains the attempted value and errors
+                _logger.LogInformation("Property: {Property}, Value: {Value}, ErrorCount: {ErrorCount}",
+                    key, value.AttemptedValue, value.Errors.Count);
+
+                foreach (var error in value.Errors)
+                {
+                    _logger.LogInformation("Error Message: {ErrorMessage}", error.ErrorMessage);
+                }
+            }
 
             if (ModelState.IsValid)
             {
@@ -79,7 +115,7 @@ namespace BarangayBayanihanOnline.Controllers
 
                     _context.Events.Add(model);
                     int rowsAffected = await _context.SaveChangesAsync();
-                    _logger.LogInformation("Event saved successfully. Rows affected: {RowsAffected}", rowsAffected);
+                    _logger.LogInformation("Event saved successfully. Rows affected: {RowsAffected}, Event ID: {EventId}", rowsAffected, model.EventId);
                     TempData["Message"] = "Event created successfully!";
                     return RedirectToAction("Index");
                 }

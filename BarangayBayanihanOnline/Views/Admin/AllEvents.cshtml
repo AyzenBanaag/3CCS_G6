@@ -1,37 +1,1057 @@
 ﻿@model List<Event>
-
 @{
-    ViewData["Title"] = "All Events";
+    ViewData["Title"] = "Events Dashboard";
 }
 
-<div class="container">
-    <h1>All Events</h1>
+<div class="dashboard-container">
+    <!-- Dashboard Header -->
+    <div class="dashboard-header">
+        <div class="header-left">
+            <h1 class="main-title">Events Dashboard</h1>
+            <p class="subtitle">Manage and monitor all community events</p>
+        </div>
+        <div class="header-right">
+            <div class="view-options">
+                <button class="view-option active" data-view="grid">
+                    <i class="fas fa-th-large"></i>
+                </button>
+                <button class="view-option" data-view="list">
+                    <i class="fas fa-list"></i>
+                </button>
+            </div>
+            <button class="btn-primary" id="createEventBtn">
+                <i class="fas fa-plus"></i>
+                <span>New Event</span>
+            </button>
+        </div>
+    </div>
 
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Start</th>
-                <th>End</th>
-                <th>Type</th>
-                <th>Created By</th>
-                <th>Created At</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var e in Model)
-            {
-                <tr>
-                    <td>@e.EventId</td>
-                    <td>@e.EventName</td>
-                    <td>@e.StartDateTime.ToString("g")</td>
-                    <td>@e.EndDateTime.ToString("g")</td>
-                    <td>@e.EventType</td>
-                    <td>@(e.User?.FullName ?? "System")</td>
-                    <td>@e.CreatedAt.ToString("g")</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    <!-- Event Stats -->
+    <div class="stats-container">
+        <div class="stat-card">
+            <div class="stat-icon">
+                <i class="fas fa-calendar-alt"></i>
+            </div>
+            <div class="stat-content">
+                <div class="stat-value">@Model.Count</div>
+                <div class="stat-label">Total Events</div>
+            </div>
+            <div class="stat-trend">
+                <div class="trend-icon up">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+                <div class="trend-value">3%</div>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon upcoming">
+                <i class="fas fa-hourglass-start"></i>
+            </div>
+            <div class="stat-content">
+                <div class="stat-value">@Model.Count(e => e.StartDateTime > DateTime.Now)</div>
+                <div class="stat-label">Upcoming</div>
+            </div>
+            <div class="stat-trend">
+                <div class="trend-icon up">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+                <div class="trend-value">5%</div>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon ongoing">
+                <i class="fas fa-spinner"></i>
+            </div>
+            <div class="stat-content">
+                <div class="stat-value">@Model.Count(e => e.StartDateTime <= DateTime.Now && e.EndDateTime >= DateTime.Now)</div>
+                <div class="stat-label">Ongoing</div>
+            </div>
+            <div class="stat-trend neutral">
+                <div class="trend-icon">
+                    <i class="fas fa-minus"></i>
+                </div>
+                <div class="trend-value">0%</div>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon completed">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="stat-content">
+                <div class="stat-value">@Model.Count(e => e.EndDateTime < DateTime.Now)</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-trend">
+                <div class="trend-icon up">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+                <div class="trend-value">7%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filters and Search -->
+    <div class="filters-row">
+        <div class="filter-pills">
+            <button class="filter-pill active" data-filter="all">All</button>
+            <button class="filter-pill" data-filter="upcoming">Upcoming</button>
+            <button class="filter-pill" data-filter="ongoing">Ongoing</button>
+            <button class="filter-pill" data-filter="completed">Completed</button>
+        </div>
+
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" id="eventSearch" placeholder="Search events...">
+        </div>
+    </div>
+
+    <!-- Event Grid -->
+    <div class="events-grid" id="eventsContainer">
+        @foreach (var e in Model)
+        {
+            var isUpcoming = e.StartDateTime > DateTime.Now;
+            var isOngoing = e.StartDateTime <= DateTime.Now && e.EndDateTime >= DateTime.Now;
+            var isCompleted = e.EndDateTime < DateTime.Now;
+
+            var statusClass = isUpcoming ? "upcoming" : (isOngoing ? "ongoing" : "completed");
+            var statusText = isUpcoming ? "Upcoming" : (isOngoing ? "Ongoing" : "Completed");
+
+            <div class="event-card @statusClass" data-status="@statusText.ToLower()" data-name="@e.EventName">
+                <div class="event-status">
+                    <span class="status-indicator"></span>
+                    <span class="status-text">@statusText</span>
+                </div>
+
+                <div class="event-header">
+                    <h3 class="event-title">@e.EventName</h3>
+                    <span class="event-type">@e.EventType</span>
+                </div>
+
+                <div class="event-dates">
+                    <div class="date-item">
+                        <div class="date-icon start">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="date-details">
+                            <div class="date-label">Starts</div>
+                            <div class="date-value">@e.StartDateTime.ToString("MMM d, yyyy")</div>
+                            <div class="time-value">@e.StartDateTime.ToString("h:mm tt")</div>
+                        </div>
+                    </div>
+
+                    <div class="date-item">
+                        <div class="date-icon end">
+                            <i class="fas fa-stop-circle"></i>
+                        </div>
+                        <div class="date-details">
+                            <div class="date-label">Ends</div>
+                            <div class="date-value">@e.EndDateTime.ToString("MMM d, yyyy")</div>
+                            <div class="time-value">@e.EndDateTime.ToString("h:mm tt")</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-meta">
+                    <div class="created-by">
+                        <div class="user-avatar">
+                            @{
+                                var name = e.User?.FullName ?? "System";
+                                var initials = string.Join("", name.Split(' ').Take(2).Select(s => s[0]));
+                            }
+                            @initials
+                        </div>
+                        <div class="creator-info">
+                            <div class="creator-name">@name</div>
+                            <div class="creation-date">Created @e.CreatedAt.ToString("MMM d, yyyy")</div>
+                        </div>
+                    </div>
+
+                    <div class="event-id">#@e.EventId</div>
+                </div>
+
+                <div class="event-actions">
+                    <button class="action-btn view-btn" title="View Details" onclick="location.href='/Events/Details/@e.EventId'">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                    <button class="action-btn edit-btn" title="Edit Event" onclick="location.href='/Events/Edit/@e.EventId'">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="action-btn delete-btn" title="Delete Event" data-id="@e.EventId" data-name="@e.EventName">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        }
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="empty-state">
+            <div class="empty-icon">
+                <i class="fas fa-calendar-times"></i>
+            </div>
+            <h2>No Events Found</h2>
+            <p>There are no events in the system yet.</p>
+            <button class="btn-primary create-empty" id="createEmptyBtn">
+                <i class="fas fa-plus"></i>
+                <span>Create Your First Event</span>
+            </button>
+        </div>
+    }
 </div>
+
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete Event</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="delete-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <p class="text-center">Are you sure you want to delete:</p>
+                <p class="event-name-delete text-center fw-bold"></p>
+                <p class="text-center text-muted small">This action cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-cancel" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn-danger" id="confirmDelete">Delete Event</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Variables */
+    :root {
+        --primary: #6366f1;
+        --primary-hover: #4f46e5;
+        --upcoming: #3b82f6;
+        --ongoing: #f59e0b;
+        --completed: #10b981;
+        --dark: #1e293b;
+        --medium: #64748b;
+        --light: #e2e8f0;
+        --lighter: #f1f5f9;
+        --white: #ffffff;
+        --border: #e5e7eb;
+        --danger: #ef4444;
+        --success: #22c55e;
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        --radius-sm: 0.25rem;
+        --radius: 0.5rem;
+        --radius-lg: 0.75rem;
+        --radius-full: 9999px;
+    }
+
+    /* Base Styles */
+    .dashboard-container {
+        padding: 2rem; /* Updated: Added padding on all sides */
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    /* Dashboard Header */
+    .dashboard-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 2rem; /* Increased bottom margin */
+        padding: 0.5rem; /* Added some padding */
+    }
+
+    .main-title {
+        margin: 0 0 0.5rem 0; /* Increased bottom margin */
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--dark);
+    }
+
+    .subtitle {
+        margin: 0;
+        color: var(--medium);
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .view-options {
+        display: flex;
+        background-color: var(--lighter);
+        border-radius: var(--radius);
+        overflow: hidden;
+    }
+
+    .view-option {
+        border: none;
+        background: transparent;
+        padding: 0.5rem 0.75rem;
+        cursor: pointer;
+        color: var(--medium);
+    }
+
+        .view-option.active {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+    .btn-primary {
+        background-color: var(--primary);
+        color: var(--white);
+        border: none;
+        border-radius: var(--radius);
+        padding: 0.6rem 1.2rem; /* Increased padding */
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+    /* Stats Section */
+    .stats-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Increased minimum width */
+        gap: 1.5rem; /* Increased gap */
+        margin-bottom: 2rem; /* Increased bottom margin */
+    }
+
+    .stat-card {
+        background-color: var(--white);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 1.5rem; /* Increased padding */
+        display: flex;
+        align-items: center;
+    }
+
+    .stat-icon {
+        width: 52px; /* Increased size */
+        height: 52px; /* Increased size */
+        border-radius: var(--radius);
+        background-color: rgba(99, 102, 241, 0.1);
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        margin-right: 1.25rem; /* Increased margin */
+    }
+
+        .stat-icon.upcoming {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--upcoming);
+        }
+
+        .stat-icon.ongoing {
+            background-color: rgba(245, 158, 11, 0.1);
+            color: var(--ongoing);
+        }
+
+        .stat-icon.completed {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--completed);
+        }
+
+    .stat-content {
+        flex: 1;
+        padding-right: 1rem; /* Added padding */
+    }
+
+    .stat-value {
+        font-size: 1.75rem; /* Increased font size */
+        font-weight: 700;
+        color: var(--dark);
+        line-height: 1.2;
+    }
+
+    .stat-label {
+        color: var(--medium);
+        font-size: 0.875rem;
+        margin-top: 0.25rem; /* Added top margin */
+    }
+
+    .stat-trend {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .trend-icon {
+        width: 20px;
+        height: 20px;
+        border-radius: var(--radius-full);
+        background-color: rgba(34, 197, 94, 0.1);
+        color: var(--success);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.625rem;
+    }
+
+        .trend-icon.up {
+            background-color: rgba(34, 197, 94, 0.1);
+            color: var(--success);
+        }
+
+        .trend-icon.down {
+            background-color: rgba(239, 68, 68, 0.1);
+            color: var(--danger);
+        }
+
+    .trend-value {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--success);
+    }
+
+    .neutral .trend-value {
+        color: var(--medium);
+    }
+
+    /* Filter and Search */
+    .filters-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem; /* Increased margin */
+        padding: 0.5rem; /* Added padding */
+    }
+
+    .filter-pills {
+        display: flex;
+        gap: 0.75rem; /* Increased gap */
+    }
+
+    .filter-pill {
+        background-color: var(--lighter);
+        border: none;
+        border-radius: var(--radius-full);
+        padding: 0.5rem 1.25rem; /* Increased padding */
+        font-size: 0.875rem;
+        color: var(--medium);
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+        .filter-pill:hover {
+            background-color: var(--light);
+        }
+
+        .filter-pill.active {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+    .search-container {
+        position: relative;
+    }
+
+        .search-container i {
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--medium);
+        }
+
+    #eventSearch {
+        padding: 0.6rem 1rem 0.6rem 2.5rem; /* Increased padding */
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        width: 260px; /* Increased width */
+        font-size: 0.875rem;
+    }
+
+        #eventSearch:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+    /* Events Grid */
+    .events-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Increased minimum width */
+        gap: 1.75rem; /* Increased gap */
+    }
+
+    .event-card {
+        background-color: var(--white);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        transition: transform 0.2s, box-shadow 0.2s;
+        position: relative;
+    }
+
+        .event-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+    .event-status {
+        padding: 0.85rem 1.5rem; /* Increased padding */
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: rgba(99, 102, 241, 0.05);
+    }
+
+    .event-card.upcoming .event-status {
+        background-color: rgba(59, 130, 246, 0.05);
+    }
+
+    .event-card.ongoing .event-status {
+        background-color: rgba(245, 158, 11, 0.05);
+    }
+
+    .event-card.completed .event-status {
+        background-color: rgba(16, 185, 129, 0.05);
+    }
+
+    .status-indicator {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--primary);
+    }
+
+    .upcoming .status-indicator {
+        background-color: var(--upcoming);
+    }
+
+    .ongoing .status-indicator {
+        background-color: var(--ongoing);
+    }
+
+    .completed .status-indicator {
+        background-color: var(--completed);
+    }
+
+    .status-text {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--medium);
+    }
+
+    .upcoming .status-text {
+        color: var(--upcoming);
+    }
+
+    .ongoing .status-text {
+        color: var(--ongoing);
+    }
+
+    .completed .status-text {
+        color: var(--completed);
+    }
+
+    .event-header {
+        padding: 1.5rem 1.5rem 0.85rem; /* Increased padding */
+    }
+
+    .event-title {
+        margin: 0 0 0.75rem 0; /* Increased margin */
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--dark);
+    }
+
+    .event-type {
+        display: inline-block;
+        padding: 0.3rem 0.65rem; /* Increased padding */
+        background-color: var(--lighter);
+        border-radius: var(--radius-sm);
+        font-size: 0.75rem;
+        color: var(--medium);
+    }
+
+    .event-dates {
+        padding: 0 1.5rem 1.5rem; /* Increased padding */
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Increased gap */
+    }
+
+    .date-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem; /* Increased gap */
+    }
+
+    .date-icon {
+        width: 32px; /* Increased size */
+        height: 32px; /* Increased size */
+        border-radius: var(--radius-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.875rem;
+    }
+
+        .date-icon.start {
+            background-color: rgba(34, 197, 94, 0.1);
+            color: var(--success);
+        }
+
+        .date-icon.end {
+            background-color: rgba(239, 68, 68, 0.1);
+            color: var(--danger);
+        }
+
+    .date-details {
+        flex: 1;
+    }
+
+    .date-label {
+        font-size: 0.75rem;
+        color: var(--medium);
+        margin-bottom: 0.35rem; /* Increased margin */
+    }
+
+    .date-value {
+        font-weight: 500;
+        font-size: 0.875rem;
+        color: var(--dark);
+        margin-bottom: 0.15rem; /* Added margin */
+    }
+
+    .time-value {
+        font-size: 0.75rem;
+        color: var(--medium);
+    }
+
+    .event-meta {
+        padding: 1.5rem; /* Increased padding */
+        border-top: 1px solid var(--border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .created-by {
+        display: flex;
+        align-items: center;
+        gap: 1rem; /* Increased gap */
+    }
+
+    .user-avatar {
+        width: 38px; /* Increased size */
+        height: 38px; /* Increased size */
+        background-color: var(--primary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem; /* Increased font size */
+        font-weight: 600;
+    }
+
+    .creator-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .creator-name {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--dark);
+        margin-bottom: 0.2rem; /* Added margin */
+    }
+
+    .creation-date {
+        font-size: 0.75rem;
+        color: var(--medium);
+    }
+
+    .event-id {
+        font-size: 0.8rem; /* Increased font size */
+        color: var(--medium);
+        font-weight: 500;
+    }
+
+    .event-actions {
+        padding: 1rem 1.5rem; /* Increased padding */
+        background-color: var(--lighter);
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem; /* Increased gap */
+    }
+
+    .action-btn {
+        width: 42px; /* Increased size */
+        height: 42px; /* Increased size */
+        border-radius: var(--radius-full);
+        background-color: var(--white);
+        color: var(--medium);
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+        }
+
+    .view-btn:hover {
+        background-color: var(--primary);
+        color: var(--white);
+    }
+
+    .edit-btn:hover {
+        background-color: var(--ongoing);
+        color: var(--white);
+    }
+
+    .delete-btn:hover {
+        background-color: var(--danger);
+        color: var(--white);
+    }
+
+    /* Empty State */
+    .empty-state {
+        text-align: center;
+        padding: 4rem 2rem;
+        background-color: var(--white);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        margin: 2rem 0; /* Added margin */
+    }
+
+    .empty-icon {
+        font-size: 3.5rem; /* Increased size */
+        color: var(--light);
+        margin-bottom: 2rem; /* Increased margin */
+    }
+
+    .empty-state h2 {
+        margin-bottom: 0.75rem; /* Increased margin */
+        color: var(--dark);
+    }
+
+    .empty-state p {
+        color: var(--medium);
+        margin-bottom: 2.5rem; /* Increased margin */
+    }
+
+    .create-empty {
+        margin: 0 auto;
+        padding: 0.75rem 1.5rem; /* Increased padding */
+    }
+
+    /* Modal Styling */
+    .modal-content {
+        border: none;
+        border-radius: var(--radius);
+        overflow: hidden;
+    }
+
+    .modal-header {
+        padding: 1.5rem; /* Increased padding */
+        border-bottom: 1px solid var(--border);
+    }
+
+    .modal-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--dark);
+    }
+
+    .modal-body {
+        padding: 2.5rem; /* Increased padding */
+    }
+
+    .delete-warning {
+        width: 72px; /* Increased size */
+        height: 72px; /* Increased size */
+        border-radius: var(--radius-full);
+        background-color: rgba(239, 68, 68, 0.1);
+        color: var(--danger);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem; /* Increased font size */
+        margin: 0 auto 2rem; /* Increased margin */
+    }
+
+    .event-name-delete {
+        font-size: 1.25rem; /* Increased font size */
+        margin: 0.75rem 0 1.25rem; /* Increased margin */
+    }
+
+    .modal-footer {
+        padding: 1.25rem 1.5rem; /* Increased padding */
+        border-top: 1px solid var(--border);
+        display: flex;
+        gap: 1rem; /* Increased gap */
+        justify-content: flex-end;
+    }
+
+    .btn-cancel {
+        background-color: var(--white);
+        color: var(--dark);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 0.6rem 1.25rem; /* Increased padding */
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+        .btn-cancel:hover {
+            background-color: var(--lighter);
+        }
+
+    .btn-danger {
+        background-color: var(--danger);
+        color: var(--white);
+        border: none;
+        border-radius: var(--radius);
+        padding: 0.6rem 1.25rem; /* Increased padding */
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+        .btn-danger:hover {
+            background-color: #dc2626;
+        }
+
+    /* Responsive Adjustments */
+    @@media (max-width: 768px) {
+        .dashboard-container
+
+    {
+        padding: 1.5rem; /* Reduced padding for mobile */
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+
+    .filters-row {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+
+    .filter-pills {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    #eventSearch {
+        width: 100%;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    }
+
+    /* List View Styles */
+    .events-list .event-card {
+        display: grid;
+        grid-template-columns: 200px 1fr 120px;
+        grid-template-rows: auto auto;
+    }
+
+    .events-list .event-status {
+        grid-column: 1;
+        grid-row: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.25rem; /* Increased padding */
+    }
+
+    .events-list .event-header {
+        grid-column: 2;
+        grid-row: 1;
+        padding: 1.5rem 1.5rem 0.75rem; /* Increased padding */
+    }
+
+    .events-list .event-dates {
+        grid-column: 2;
+        grid-row: 2;
+        padding: 0.75rem 1.5rem 1.5rem; /* Increased padding */
+    }
+
+    .events-list .event-meta {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.25rem; /* Increased gap */
+        border-top: none;
+        border-left: 1px solid var(--border);
+        padding: 1.5rem; /* Added explicit padding */
+    }
+
+    .events-list .event-actions {
+        grid-column: 1 / span 3;
+        grid-row: 3;
+        justify-content: flex-end;
+        padding: 1.25rem 2rem; /* Increased padding */
+    }
+
+    @@media (max-width: 992px) {
+        .events-list .event-card
+
+    {
+        grid-template-columns: 120px 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .events-list .event-meta {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+        flex-direction: row;
+        justify-content: space-between;
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding: 1.25rem 1.5rem; /* Added explicit padding */
+    }
+
+    .events-list .event-actions {
+        grid-column: 1 / span 2;
+        grid-row: 4;
+        padding: 1rem 1.5rem; /* Adjusted padding */
+    }
+
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Create Event buttons
+        document.getElementById('createEventBtn').addEventListener('click', function() {
+            window.location.href = '/Events/Create';
+        });
+
+        if (document.getElementById('createEmptyBtn')) {
+            document.getElementById('createEmptyBtn').addEventListener('click', function() {
+                window.location.href = '/Events/Create';
+            });
+        }
+
+        // View toggle
+        const viewButtons = document.querySelectorAll('.view-option');
+        const eventsContainer = document.getElementById('eventsContainer');
+
+        viewButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                viewButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                const viewType = this.getAttribute('data-view');
+
+                if (viewType === 'list') {
+                    eventsContainer.classList.add('events-list');
+                } else {
+                    eventsContainer.classList.remove('events-list');
+                }
+            });
+        });
+
+        // Filter buttons
+        const filterButtons = document.querySelectorAll('.filter-pill');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                const filterType = this.getAttribute('data-filter');
+                const eventCards = document.querySelectorAll('.event-card');
+
+                eventCards.forEach(card => {
+                    if (filterType === 'all') {
+                        card.style.display = '';
+                    } else {
+                        if (card.getAttribute('data-status') === filterType) {
+                            card.style.display = '';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('eventSearch');
+
+        searchInput.addEventListener('keyup', function() {
+            const searchTerm = this.value.toLowerCase();
+            const eventCards = document.querySelectorAll('.event-card');
+
+            eventCards.forEach(card => {
+                const eventName = card.getAttribute('data-name').toLowerCase();
+
+                if (eventName.includes(searchTerm)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Delete confirmation
+        const deleteButtons = document.querySelectorAll('.delete-btn');
+        const deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const eventId = this.getAttribute('data-id');
+                const eventName = this.getAttribute('data-name');
+
+                document.querySelector('.event-name-delete').textContent = eventName;
+
+                document.getElementById('confirmDelete').addEventListener('click', function() {
+                    window.location.href = `/Events/Delete/${eventId}`;
+                });
+
+                deleteModal.show();
+            });
+        });
+    });
+</script>

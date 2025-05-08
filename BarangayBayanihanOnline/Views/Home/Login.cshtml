@@ -1,38 +1,499 @@
 ﻿@model dynamic
 @{
     ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container mt-5">
-    <h2>Login</h2>
-    <form asp-action="Login" method="post">
-        <div class="mb-3">
-            <label for="email" class="form-label">Email Address</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
-        </div>
-        <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
-        </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
-            <label class="form-check-label" for="rememberMe">Remember me</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Login</button>
-        <a href="#" class="ms-2" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal" data-bs-dismiss="modal">Forgot password?</a>
-        <p class="mt-2">Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal" data-bs-dismiss="modal">Sign up</a></p>
-    </form>
-    @if (!string.IsNullOrEmpty(TempData["Message"]?.ToString()))
-    {
-        <div class="alert alert-info mt-3">@TempData["Message"]</div>
-    }
-    @if (ViewData.ModelState.Any(x => x.Value.Errors.Any()))
-    {
-        <div class="alert alert-danger mt-3">
-            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+<div class="login-page">
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h2 class="login-title">Welcome Back</h2>
+                <p class="login-subtitle">Enter your credentials to access your account</p>
+            </div>
+
+            @if (!string.IsNullOrEmpty(TempData["Message"]?.ToString()))
             {
-                <p>@error.ErrorMessage</p>
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle"></i>
+                    <span>@TempData["Message"]</span>
+                </div>
             }
+
+            @if (ViewData.ModelState.Any(x => x.Value.Errors.Any()))
+            {
+                <div class="alert alert-danger">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <div>
+                        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                        {
+                            <p>@error.ErrorMessage</p>
+                        }
+                    </div>
+                </div>
+            }
+
+            <form asp-action="Login" method="post" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="password-label-row">
+                        <label for="password">Password</label>
+                        <a href="#" class="forgot-link" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal" data-bs-dismiss="modal">
+                            Forgot password?
+                        </a>
+                    </div>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group remember-me">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="login-button">
+                        <span>Log In</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+
+            <div class="login-footer">
+                <p>Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal" data-bs-dismiss="modal">Sign up</a></p>
+            </div>
         </div>
-    }
+
+        <div class="login-image">
+            <div class="image-content">
+                <div class="logo-container">
+                    <img src="~/images/logo.png" alt="Barangay Bayanihan Online" class="logo">
+                </div>
+                <div class="slogan">
+                    <h3>Barangay Bayanihan Online</h3>
+                    <p>Serving our community together</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<style>
+    :root {
+        --primary-color: #4361ee;
+        --primary-light: #4895ef;
+        --primary-dark: #3a0ca3;
+        --secondary-color: #4cc9f0;
+        --success-color: #2ecc71;
+        --warning-color: #f39c12;
+        --danger-color: #e74c3c;
+        --light-color: #f8f9fa;
+        --dark-color: #343a40;
+        --text-color: #495057;
+        --text-muted: #6c757d;
+        --border-color: #e9ecef;
+        --card-bg: #ffffff;
+        --body-bg: #f5f8fa;
+        --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+        --shadow: 0 4px 6px rgba(0,0,0,0.1);
+        --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+        --radius-sm: 4px;
+        --radius: 8px;
+        --radius-lg: 16px;
+        --font-main: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    }
+
+    body {
+        background-color: var(--body-bg);
+        font-family: var(--font-main);
+        color: var(--text-color);
+    }
+
+    /* Main Login Container */
+    .login-page {
+        min-height: calc(100vh - 100px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 1rem;
+    }
+
+    .login-container {
+        width: 100%;
+        max-width: 1000px;
+        display: flex;
+        box-shadow: var(--shadow-lg);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        background: var(--card-bg);
+    }
+
+    /* Login Form Side */
+    .login-card {
+        flex: 1;
+        padding: 2.5rem;
+        min-width: 400px;
+    }
+
+    .login-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .login-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--dark-color);
+        margin-bottom: 0.5rem;
+    }
+
+    .login-subtitle {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+    }
+
+    /* Alerts */
+    .alert {
+        padding: 1rem;
+        border-radius: var(--radius);
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+        .alert i {
+            font-size: 1.25rem;
+            margin-top: 0.125rem;
+        }
+
+    .alert-info {
+        background-color: rgba(76, 201, 240, 0.1);
+        border-left: 4px solid var(--secondary-color);
+        color: #0c7697;
+    }
+
+    .alert-danger {
+        background-color: rgba(231, 76, 60, 0.1);
+        border-left: 4px solid var(--danger-color);
+        color: #a93226;
+    }
+
+    /* Form Elements */
+    .login-form {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+
+    .password-label-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .forgot-link {
+        font-size: 0.85rem;
+        color: var(--primary-color);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+        .forgot-link:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+    .input-with-icon {
+        position: relative;
+    }
+
+        .input-with-icon i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        .input-with-icon input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 2.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+            .input-with-icon input:focus {
+                outline: none;
+                border-color: var(--primary-light);
+                box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+            }
+
+    .toggle-password {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--text-muted);
+        transition: color 0.2s;
+    }
+
+        .toggle-password:hover {
+            color: var(--primary-color);
+        }
+
+    /* Checkbox Styling */
+    .remember-me {
+        margin-bottom: 1.75rem;
+    }
+
+    .checkbox-container {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+        font-size: 0.95rem;
+        color: var(--text-color);
+    }
+
+        .checkbox-container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+    .checkmark {
+        position: relative;
+        height: 18px;
+        width: 18px;
+        margin-right: 8px;
+        background-color: #fff;
+        border: 2px solid var(--border-color);
+        border-radius: 3px;
+        transition: all 0.2s;
+    }
+
+    .checkbox-container:hover input ~ .checkmark {
+        border-color: var(--primary-light);
+    }
+
+    .checkbox-container input:checked ~ .checkmark {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 5px;
+        top: 2px;
+        width: 4px;
+        height: 8px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+
+    .checkbox-container input:checked ~ .checkmark:after {
+        display: block;
+    }
+
+    /* Button */
+    .form-actions {
+        margin-bottom: 1.5rem;
+    }
+
+    .login-button {
+        width: 100%;
+        background: linear-gradient(to right, var(--primary-color), var(--primary-dark));
+        color: white;
+        border: none;
+        border-radius: var(--radius);
+        padding: 0.85rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+        .login-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(67, 97, 238, 0.3);
+        }
+
+        .login-button i {
+            transition: transform 0.3s;
+        }
+
+        .login-button:hover i {
+            transform: translateX(4px);
+        }
+
+    /* Footer */
+    .login-footer {
+        text-align: center;
+    }
+
+        .login-footer p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .login-footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+            .login-footer a:hover {
+                color: var(--primary-dark);
+                text-decoration: underline;
+            }
+
+    /* Login footer styling */
+
+    /* Image Side */
+    .login-image {
+        flex: 1;
+        background: linear-gradient(135deg, #4361ee, #3a0ca3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        text-align: center;
+    }
+
+        .login-image::before {
+            content: "";
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0) 60%);
+            top: -25%;
+            left: -25%;
+        }
+
+    .image-content {
+        position: relative;
+        z-index: 1;
+        padding: 2rem;
+    }
+
+    .logo-container {
+        margin-bottom: 2rem;
+    }
+
+    .logo {
+        max-width: 120px;
+        height: auto;
+    }
+
+    .slogan h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    .slogan p {
+        font-size: 1rem;
+        opacity: 0.8;
+    }
+
+    /* Responsive Styles */
+    @@media (max-width: 992px) {
+        .login-container
+
+    {
+        flex-direction: column;
+        max-width: 500px;
+    }
+
+    .login-card {
+        min-width: auto;
+        order: 2;
+    }
+
+    .login-image {
+        min-height: 200px;
+        order: 1;
+    }
+
+    }
+
+    @@media (max-width: 576px) {
+        .login-card
+
+    {
+        padding: 1.5rem;
+    }
+
+    .login-image {
+        min-height: 150px;
+    }
+
+    .input-with-icon input {
+        padding: 0.6rem 1rem 0.6rem 2.5rem;
+    }
+
+    }
+</style>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Toggle password visibility
+            const togglePassword = document.querySelector('.toggle-password');
+            const passwordField = document.querySelector('#password');
+
+            togglePassword.addEventListener('click', function() {
+                const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordField.setAttribute('type', type);
+
+                // Toggle eye icon
+                const eyeIcon = togglePassword.querySelector('i');
+                eyeIcon.classList.toggle('fa-eye');
+                eyeIcon.classList.toggle('fa-eye-slash');
+            });
+        });
+    </script>
+}
